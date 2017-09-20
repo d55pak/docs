@@ -30,7 +30,7 @@
     
     
       <style>.async-hide{opacity:0!important}</style>
-      <script>!function(e,n,t,a,o,c,i,m,s){n.className+=" "+t,c.start=1*new Date,c.end=i=function(){n.className=n.className.replace(RegExp(" ?"+t),"")},(e[a]=e[a]||[]).hide=c,setTimeout(function(){i(),c.end=null},o),c.timeout=o}(window,document.documentElement,"async-hide","dataLayer",1e3,{"GTM-PCPBXCN":!0})</script>
+      <script>!function(e,n,t,a,o,c,i,s,m){n.className+=" "+t,c.start=1*new Date,c.end=i=function(){n.className=n.className.replace(RegExp(" ?"+t),"")},(e[a]=e[a]||[]).hide=c,setTimeout(function(){i(),c.end=null},o),c.timeout=o}(window,document.documentElement,"async-hide","dataLayer",1e3,{"GTM-PCPBXCN":!0})</script>
     
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
@@ -137,24 +137,21 @@
             <p class="branch-header-label">Support</p>
           </a>
         </div>
-        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
-          <a href="#dialog-search" id="header-search" title="Search">
-            <i class="branch-header-icon md-icon material-icons">search</i>
-            <p class="branch-header-label">Search</p>
-          </a>
-        </div>
-        <div class="md-flex__cell md-flex__cell--shrink" style="display:none">
       
+      <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
           
+            <a href="#dialog-search" id="header-search" title="Search">
+              <label class="md-icon md-icon--search md-header-nav__button"></label>
+              
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="search"></label>
   <div class="md-search__inner">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+      
+        <i class="branch-header-search md-icon material-icons">search</i>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -168,6 +165,8 @@
     </div>
   </div>
 </div>
+            </a>
+          
         
       </div>
       
@@ -2028,7 +2027,7 @@
       
     </div>
     
-      <script src="../../../assets/javascripts/application-1206de5a52.js"></script>
+      <script src="../../../assets/javascripts/application-26aeb842c9.js"></script>
       <script>app.initialize({url:{base:"../../.."}})</script>
       
         <script src="../../../js/router.js"></script>
@@ -2041,7 +2040,7 @@
       
         <script src="../../../js/buttons.js"></script>
       
-        <script src="../../../js/analytics.js"></script>
+        <script src="../../../js/progress.js"></script>
       
         <script src="../../../js/tabs.js"></script>
       
@@ -2059,7 +2058,23 @@
         <script>!function(e,t){if(!t.__SV){var n=window;try{var i,a,p,o=n.location,r=o.hash;i=function(e,t){return(a=e.match(RegExp(t+"=([^&]*)")))?a[1]:null},r&&i(r,"state")&&(p=JSON.parse(decodeURIComponent(i(r,"state"))),"mpeditor"===p.action&&(n.sessionStorage.setItem("_mpcehash",r),history.replaceState(p.desiredHash||"",e.title,o.pathname+o.search)))}catch(e){}var l,s;window.mixpanel=t,t._i=[],t.init=function(e,n,i){function a(e,t){var n=t.split(".");2==n.length&&(e=e[n[0]],t=n[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var p=t;for("undefined"!=typeof i?p=t[i]=[]:i="mixpanel",p.people=p.people||[],p.toString=function(e){var t="mixpanel";return"mixpanel"!==i&&(t+="."+i),e||(t+=" (stub)"),t},p.people.toString=function(){return p.toString(1)+".people (stub)"},l="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "),s=0;s<l.length;s++)a(p,l[s]);t._i.push([e,n,i])},t.__SV=1.2,n=e.createElement("script"),n.type="text/javascript",n.async=!0,n.src="undefined"!=typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js",i=e.getElementsByTagName("script")[0],i.parentNode.insertBefore(n,i)}}(document,window.mixpanel||[]),mixpanel.init("47ec8ea9ac102b1370221dcda476091c")</script>
       
       
-        <script>!function(e,t,a,n,o,c,g){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),g=t.getElementsByTagName(a)[0],c.async=1,c.src=n,g.parentNode.insertBefore(c,g)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-98205710-1","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+        <script>!function(e,t,a,o,n,c,s){e.GoogleAnalyticsObject=n,e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},e[n].l=1*new Date,c=t.createElement(a),s=t.getElementsByTagName(a)[0],c.async=1,c.src=o,s.parentNode.insertBefore(c,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-53307642-1","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+      
+      
+        <script>!function(e,t,n,o,c,a,f){e.fbq||(c=e.fbq=function(){c.callMethod?c.callMethod.apply(c,arguments):c.queue.push(arguments)},e._fbq||(e._fbq=c),c.push=c,c.loaded=!0,c.version="2.0",c.queue=[],a=t.createElement(n),a.async=!0,a.src=o,f=t.getElementsByTagName(n)[0],f.parentNode.insertBefore(a,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1040694199304729"),fbq("track","PageView")</script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1040694199304729&ev=PageView&noscript=1"></noscript>
+      
+      
+        <script>_linkedin_data_partner_id="21211",function(){var e=document.getElementsByTagName("script")[0],t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://snap.licdn.com/li.lms-analytics/insight.min.js",e.parentNode.insertBefore(t,e)}()</script>
+      
+      
+      
+      
+        <script>!function(){function e(){n===!1&&(n=!0,Munchkin.init("315-FTT-121",{domainLevel:2}))}var n=!1,t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="//munchkin.marketo.net/munchkin.js",t.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||e()},t.onload=e,document.getElementsByTagName("head")[0].appendChild(t)}()</script>
+      
+      
+        <script>!function(e,t,n,o,c,p){e.qp||(o=e.qp=function(){o.qp?o.qp.apply(o,arguments):o.queue.push(arguments)},o.queue=[],c=document.createElement(t),c.async=!0,c.src=n,p=document.getElementsByTagName(t)[0],p.parentNode.insertBefore(c,p))}(window,"script","https://a.quora.com/qevents.js"),qp("init","247e840cafa44cae9ac4b50a0cc1965a"),qp("track","ViewContent")</script>
+        <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/247e840cafa44cae9ac4b50a0cc1965a/pixel?tag=ViewContent&noscript=1"></noscript>
       
     
   </body>

@@ -38,7 +38,7 @@ var buttons = (function() {
               for (var i = 0; i < value.length; i++) {
                 var element = value[i];
                 element.setAttribute('href', button.url);
-                analytics.track('pressed button ' + key1);
+                progress.track('pressed button ' + key1);
               }
             }
           }

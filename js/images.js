@@ -47,7 +47,7 @@ var images = (function() {
   function _displayRoute() {
     var src = utils.readQueryString('src');
     if (!src) return;
-    analytics.track('viewed modal image ' + src);
+    progress.track('viewed modal image ' + src);
     modals.toggle('modal-image', 'dialog');
     link.setAttribute('href', src);
     image.setAttribute('src', src);

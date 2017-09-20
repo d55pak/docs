@@ -44,17 +44,26 @@ var modals = (function() {
   function route() {
     var search = document.getElementById('algolia-doc-search');
     router.add('#dialog-helpful', function() {
-      analytics.track('viewed modal helpful');
+      progress.track('viewed modal helpful');
       modals.toggle('modal-helpful', 'notification', 1500);
     });
     router.add('#dialog-unhelpful', function() {
-      analytics.track('viewed modal unhelpful');
+      progress.track('viewed modal unhelpful');
       modals.toggle('modal-unhelpful', 'dialog');
     });
     router.add('#dialog-search', function() {
-      analytics.track('viewed modal search');
+      progress.track('viewed modal search');
       modals.toggle('modal-search', 'dialog');
       search.focus();
+    });
+    window.addEventListener('keydown', function(e) {
+      if (e.keyCode === 70) {
+        window.location.hash = '#dialog-search';
+      }
+      if (e.keyCode === 27) {
+        clear();
+        router.remove();
+      }
     });
   }
 
@@ -65,21 +74,40 @@ var modals = (function() {
     var time = (duration) ? duration : 0;
     var types = (type === 'notification') ? 'notification' : 'dialog';
 
-    isModalOpen ? modal.classList.remove('active') : modal.className += ' active';
-    if (types === 'dialog') {
-      isModalOpen ? document.body.classList.remove('modal') : document.body.className += ' modal';
-      isModalOpen ? router.remove() : null;
-    } else if (types === 'notification') {
+    isModalOpen ? _handleModalClose(modal) : _handleModalOpen(modal)
+
+    if (types === 'notification') {
       setTimeout(function() {
-        modal.classList.remove('active');
-        router.remove();
+        _handleModalClose(modal);
       }, time);
     }
+  }
+
+  function _handleModalClose(modal) {
+    modal.classList.remove('active')
+    document.body.classList.remove('modal')
+    router.remove()
+  }
+
+  function _handleModalOpen(modal) {
+    modal.className += ' active'
+    document.body.className += ' modal'
+  }
+
+  function clear() {
+    for (var key in cache) {
+      if (cache.hasOwnProperty(key)) {
+        var modal = cache[key]
+        modal.classList.remove('active');
+      }
+    }
+    document.body.classList.remove('modal');
   }
 
   // public
   return {
     toggle: toggle,
-    route: route
+    route: route,
+    clear: clear
   };
 })();

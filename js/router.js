@@ -3,6 +3,7 @@
 var router = (function() {
   // listener
   window.addEventListener('hashchange', function(event) {
+    modals.clear();
     var hash = _cleanHash(event.target.location.hash);
     _route(hash);
   }, false);

@@ -1,6 +1,6 @@
 // analytics
 'use strict';
-var analytics = (function() {
+var progress = (function() {
   // public
   function track(event, category, action) {
     utils.waitForPageLoad(function() {

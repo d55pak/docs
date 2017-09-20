@@ -3,7 +3,7 @@
   'use strict';
 
   // page load
-  analytics.track('viewed page ' + window.location.href);
+  progress.track('viewed page ' + window.location.href);
   buttons.init();
   tabs.init();
   images.init();
