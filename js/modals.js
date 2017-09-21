@@ -56,15 +56,24 @@ var modals = (function() {
       modals.toggle('modal-search', 'dialog');
       search.focus();
     });
-    window.addEventListener('keydown', function(e) {
-      if (e.keyCode === 70) {
+
+    var keyPressed = {};
+    document.addEventListener('keydown', function(e) {
+      keyPressed[e.keyCode] = true;
+      // shift + f
+      if (keyPressed[16] === true && keyPressed[70] === true) {
         window.location.hash = '#dialog-search';
       }
-      if (e.keyCode === 27) {
+      // escape
+      if (keyPressed[27] === true) {
         clear();
         router.remove();
       }
-    });
+    }, false);
+    document.addEventListener('keyup', function(e) {
+      keyPressed[e.keyCode] = false;
+      keyPressed = {};
+    }, false);
   }
 
   function toggle(id, type, duration) {
