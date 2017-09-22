@@ -599,6 +599,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-test-key" title="Use test key" class="md-nav__link">
+    Use test key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sample-app" title="Sample app" class="md-nav__link">
     Sample app
   </a>
@@ -1866,6 +1873,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#use-test-key" title="Use test key" class="md-nav__link">
+    Use test key
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#sample-app" title="Sample app" class="md-nav__link">
     Sample app
   </a>
@@ -2573,6 +2587,43 @@ only the symbols you are using.</p>
 </tr>
 </tbody>
 </table>
+</li>
+<li>
+<h4 id="use-test-key">Use test key<a class="headerlink" href="#use-test-key" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Use the Branch <code>test key</code> instead of the <code>live key</code></p>
+</li>
+<li>
+<p>In iOS, add before <code>initSession</code> <a href="#initialize-branch">Initialize Branch</a></p>
+</li>
+<li>
+<p>In iOS, update <code>branch_key</code> in your <code>Info.plist</code> to a dictionary (<a href="https://github.com/BranchMetrics/ios-branch-deep-linking/blob/master/Branch-TestBed/Branch-TestBed/Branch-TestBed-Info.plist#L58-L63">example</a>)</p>
+</li>
+<li>
+<p>In Android, set <code>test mode</code> to <code>true</code></p>
+</li>
+<li>
+<p>The <code>test key</code> of your app must match the <code>test key</code> of your deep link</p>
+</li>
+<li>
+<p>Remove before releasing to production</p>
+</li>
+<li>
+<p><em>Swift 3</em></p>
+<p>```swift
+    RNBranch.useTestInstance()  <br />
+    <div class="codehilite"><pre><span></span><span class="o">-</span> <span class="o">*</span><span class="n">Objective</span> <span class="n">C</span><span class="o">*</span>
+
+    <span class="err">```</span><span class="n">objc</span>
+<span class="p">[</span><span class="n">RNBranch</span> <span class="n">useTestInstance</span><span class="p">]</span>
+</pre></div></p>
+</li>
+<li>
+<p><em>Android</em></p>
+<p><code>&lt;meta-data android:name="io.branch.sdk.TestMode" android:value="true" /&gt;</code></p>
+</li>
+</ul>
 </li>
 <li>
 <h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
