@@ -85,6 +85,18 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://docs.branch.io/pages/apps/v2event/</loc>
+     <lastmod>2017-09-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/dashboard/unified-analytics/</loc>
+     <lastmod>2017-09-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
