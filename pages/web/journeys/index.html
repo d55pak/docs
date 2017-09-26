@@ -857,6 +857,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#is-viewing-a-page-with-metadata-key" title="Is viewing a page with metadata key" class="md-nav__link">
+    Is viewing a page with metadata key
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2401,6 +2408,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#is-viewing-a-page-with-metadata-key" title="Is viewing a page with metadata key" class="md-nav__link">
+    Is viewing a page with metadata key
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3090,6 +3104,10 @@ You can target a user based on the last touch point before they entered your web
 <p>A user is grouped into "Has clicked on Email" when they've clicked a link from <a href="https://dashboard.branch.io/email">Deep Linked Email</a>.</p>
 <p>Use this to target users who have been part of an email campaign; maybe with a specific call to action to get them download the app if they don't have it and they've landed on mobile web.</p>
 <p>The technical definition is that they've clicked on a link with an Email Service Provider's custom <code>$3p</code> value in link data, but you just need to consider the way the link is created - in this case, through a Deep Linked Email integration.</p>
+<h4 id="is-viewing-a-page-with-metadata-key">Is viewing a page with metadata key<a class="headerlink" href="#is-viewing-a-page-with-metadata-key" title="Permanent link">&para;</a></h4>
+<p>Use this filter to target users viewing web pages with certain <a href="https://docs.branch.io/pages/web/hosted-data/#add-metatags-to-your-site">Branch-specific metatags</a> on them (in the form of the HTML <code>&lt;meta&gt;</code> tag). </p>
+<p>For example, you could target users on pages containing the metadata key “foo” and value “bar” by adding this tag to the HTML: <code>&lt;meta name="branch:deeplink:foo" content="bar" /&gt;</code>. Only metadata in this format will be targetable.</p>
+<p>Once metadata has been added to a webpage, you can target users on that page using the “Is viewing a page with metadata key” audience filter.</p>
 <h3 id="set-up-split-testing">Set up split testing<a class="headerlink" href="#set-up-split-testing" title="Permanent link">&para;</a></h3>
 <p>Note that if you are planning on just using the free banner, you can skip this section. This feature allows you to run A/B tests by designing multiple templates and assigning a percentage of your audience to each one.</p>
 <ol>
