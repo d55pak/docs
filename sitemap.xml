@@ -296,13 +296,43 @@
     </url>
         
     <url>
+     <loc>https://docs.branch.io/pages/emails/bronto/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://docs.branch.io/pages/emails/epsilon/</loc>
      <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
+     <loc>https://docs.branch.io/pages/emails/kahuna/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/leanplum/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://docs.branch.io/pages/emails/mailgun/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/mailjet/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/mandrill/</loc>
      <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -333,6 +363,18 @@
         
     <url>
      <loc>https://docs.branch.io/pages/emails/sendgrid/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/sparkpost/</loc>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/vero/</loc>
      <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
