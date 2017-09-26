@@ -2954,9 +2954,9 @@
 <p>Journeys introduces many more advanced features on top of the basic smart app banner functionality, but <strong>you can still create an Android and iOS smart app banner for free if your MAU are under 20k</strong>. After 20k MAU, we'd ask that you pay a small fee for use. Premium-only advanced features (including the option to run multiple Journeys simultaneously) are available through a 14 day trial.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">Pre-reqs</p>
+<p>You should integrate the Branch SDK into your app and configure deep link routing for deferred deep linking and attribution before implementing Journeys.</p>
 </div>
-<p>You should integrate the Branch SDK into your app and configure deep link routing for deferred deep linking and attribution before implementing Journeys..</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Include your alternate domain for Universal Links</p>
@@ -3203,7 +3203,7 @@ You can target a user based on the last touch point before they entered your web
 <p>Use this to target users who have been part of an email campaign; maybe with a specific call to action to get them download the app if they don't have it and they've landed on mobile web.</p>
 <p>The technical definition is that they've clicked on a link with an Email Service Provider's custom <code>$3p</code> value in link data, but you just need to consider the way the link is created - in this case, through a Deep Linked Email integration.</p>
 <h4 id="is-viewing-a-page-with-metadata-key">Is viewing a page with metadata key<a class="headerlink" href="#is-viewing-a-page-with-metadata-key" title="Permanent link">&para;</a></h4>
-<p>Use this filter to target users viewing web pages with certain <a href="https://docs.branch.io/pages/web/hosted-data/#add-metatags-to-your-site">Branch-specific metatags</a> on them (in the form of the HTML <code>&lt;meta&gt;</code> tag). </p>
+<p>Use this filter to target users viewing web pages with certain <a href="https://docs.branch.io/pages/web/hosted-data/#add-metatags-to-your-site">Branch-specific metatags</a> on them (in the form of the HTML <code>&lt;meta&gt;</code> tag).</p>
 <p>For example, you could target users on pages containing the metadata key “foo” and value “bar” by adding this tag to the HTML: <code>&lt;meta name="branch:deeplink:foo" content="bar" /&gt;</code>. Only metadata in this format will be targetable.</p>
 <p>Once metadata has been added to a webpage, you can target users on that page using the “Is viewing a page with metadata key” audience filter.</p>
 <h3 id="set-up-split-testing">Set up split testing<a class="headerlink" href="#set-up-split-testing" title="Permanent link">&para;</a></h3>
