@@ -1830,9 +1830,7 @@
 </li>
 <li>Now log in to Facebook and navigate to <a href="http://developers.facebook.com/apps" target="_blank">developers.facebook.com/apps</a> and select your app. You'll need both the <strong>App ID</strong> and <strong>App Secret</strong> values.
 <img alt="Facebook Auth" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/fb-auth-id-secret.png" /></li>
-<li>Go to the following <a href="https://developers.facebook.com/tools/explorer/?method=GET&amp;path=oauth%2Faccess_token%3Fclient_id%3D1234%26client_secret%3D5678%26grant_type%3Dclient_credentials&amp;version=v2.10">page</a> to retrieve your app access token. Where it shows client_id, replace <code>1234</code> with your Facebook <strong>App ID</strong>. Where it shows client_secret, replace <code>5678</code> with your Facebook <strong>App Secret</strong>. Hit submit and copy the returned value of <code>access_token</code>.
-<img alt="Facebook Access Token" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/og-fb.png" /></li>
-<li>Return to the Branch Ad Partner Management Page and fill out the <strong>OG App ID</strong> and <strong>App Access Token</strong> fields which correspond to the Facebook <strong>App ID</strong> and the <strong>access token</strong> respectively.
+<li>Return to the Branch Ad Partner Management Page and fill out the <strong>OG App ID</strong> and <strong>App Access Token</strong> fields which correspond to the Facebook <strong>App ID</strong> and the <strong>App Secret</strong> respectively. We do not store the App Secret, and instead convert it into an App Access Token.
 <img alt="Facebook Auth" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/branch-dash-fb-values.png" /></li>
 <li>Click the <code>Save and Enable</code> button in the lower right hand corner.
 <img alt="Save and Enable Facebook in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-facebook-ad-partner/save-and-enable-facebook.png" /></li>
