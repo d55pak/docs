@@ -3328,6 +3328,9 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </pre></div>
 
 </li>
+<li>
+<p>Make sure <code>OS_ACTIVITY_MODE</code> is not disabled (<a href="https://stackoverflow.com/a/39503602/2690774">link</a>)</p>
+</li>
 </ul>
 </li>
 <li>
@@ -3402,7 +3405,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <li>Use for Universal Linking if you want to get the <code>true/false</code> response from <code>Branch.getInstance().continue(userActivity)</code> within <code>continueUserActivity</code> without a Branch network call</li>
 <li>Use only if you have a custom link domain</li>
 <li>
-<p>Add your link domain from your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a> to your <code>info.plist</code></p>
+<p>Add <code>branch_universal_link_domains</code> to your <code>info.plist</code> with an array of your link domain from your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
 <p><img alt="image" src="https://i.imgur.com/ECNnpyS.png" /></p>
 </li>
 </ul>
