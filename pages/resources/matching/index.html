@@ -1,0 +1,2475 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Branch documentation for mobile deep linking">
+      
+      
+        <link rel="canonical" href="https://docs.branch.io/pages/resources/matching/">
+      
+      
+        <meta name="author" content="Branch">
+      
+      
+        <link rel="shortcut icon" href="../../../img/favicon-96x96.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Branch Matching Overview - Branch documentation</title>
+      
+    
+    
+      <script src="../../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <style>.async-hide{opacity:0!important}</style>
+      <script>!function(e,n,t,a,o,c,i,s,m){n.className+=" "+t,c.start=1*new Date,c.end=i=function(){n.className=n.className.replace(RegExp(" ?"+t),"")},(e[a]=e[a]||[]).hide=c,setTimeout(function(){i(),c.end=null},o),c.timeout=o}(window,document.documentElement,"async-hide","dataLayer",1e3,{"GTM-PCPBXCN":!0})</script>
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css">
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/application-a20f419c8e.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../../css/main.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="light-blue" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://docs.branch.io" title="Branch documentation" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../../img/logo.svg">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <a href="https://docs.branch.io" title="Branch documentation">
+            <div class="branch-header-subtitle">&nbsp;|&nbsp;Docs</div>
+          </a>
+        </div>
+      
+      
+        <div class="md-flex__cell md-flex__cell--stretch">
+          <span class="md-flex__ellipsis md-header-nav__title">
+            
+              
+                
+              
+              Branch Matching Overview
+            
+          </span>
+        </div>
+      
+      
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#dialog-helpful" id="header-helpful" title="Helpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_up</i>
+            <p class="branch-header-label">Helpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#dialog-unhelpful" id="header-unhelpful" title="Unhelpful">
+            <i class="branch-header-icon md-icon material-icons">thumb_down</i>
+            <p class="branch-header-label">Unhelpful</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#" class="improve-doc" title="Improve This Doc">
+            <i class="branch-header-icon md-icon material-icons">mode_edit</i>
+            <p class="branch-header-label">Improve</p>
+          </a>
+        </div>
+        <div class="branch-header-button md-flex__cell md-flex__cell--shrink">
+          <a href="#" class="contact-support" title="Contact support">
+            <i class="branch-header-icon md-icon material-icons">help_outline</i>
+            <p class="branch-header-label">Support</p>
+          </a>
+        </div>
+      
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <a href="#dialog-search" id="header-search" title="Search">
+              <label class="md-icon md-icon--search md-header-nav__button"></label>
+              
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      
+        <i class="branch-header-search md-icon material-icons">search</i>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </a>
+          
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../../img/logo.svg">
+        
+      
+    </div>
+    Branch documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/branchmetrics/docs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Branch documentation
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Basic integration
+          </li>
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../../dashboard/integrate/" title="Configure your dashboard" class="md-nav__link">
+      Configure your dashboard
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Configure your app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Configure your app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/ios/" title="iOS" class="md-nav__link">
+      iOS
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/android/" title="Android" class="md-nav__link">
+      Android
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/adobe-air/" title="Adobe AIR" class="md-nav__link">
+      Adobe AIR
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/cordova-phonegap-ionic/" title="Cordova PhoneGap Ionic" class="md-nav__link">
+      Cordova PhoneGap Ionic
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-android/" title="mParticle Android" class="md-nav__link">
+      mParticle Android
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/mparticle-ios/" title="mParticle iOS" class="md-nav__link">
+      mParticle iOS
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/titanium/" title="Titanium" class="md-nav__link">
+      Titanium
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/react-native/" title="React Native" class="md-nav__link">
+      React Native
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/unity/" title="Unity" class="md-nav__link">
+      Unity
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/api/" title="API" class="md-nav__link">
+      API
+    </a>
+  </li>
+
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Configure your deep linking
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Configure your deep linking
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linking/universal-links/" title="iOS Universal Links" class="md-nav__link">
+      iOS Universal Links
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linking/android-app-links/" title="Android App Links" class="md-nav__link">
+      Android App Links
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linking/routing/" title="In-app deep link routing" class="md-nav__link">
+      In-app deep link routing
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Launch your app
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Launch your app
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/ios-launch/" title="Apple App Store" class="md-nav__link">
+      Apple App Store
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../apps/android-launch/" title="Google Play" class="md-nav__link">
+      Google Play
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../../web/integrate/" title="Configure your website" class="md-nav__link">
+      Configure your website
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Basic usage
+          </li>
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../../links/integrate/" title="Create deep links" class="md-nav__link">
+      Create deep links
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../../dashboard/analytics/" title="Track analytics" class="md-nav__link">
+      Track analytics
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Advanced usage
+          </li>
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Links on your website
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Links on your website
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../web/deep-views/" title="Deepviews" class="md-nav__link">
+      Deepviews
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../web/journeys/" title="Journeys App Banners" class="md-nav__link">
+      Journeys App Banners
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../web/amp-journeys/" title="AMP Journeys" class="md-nav__link">
+      AMP Journeys
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../web/text-me-the-app/" title="Text Me The App" class="md-nav__link">
+      Text Me The App
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../web/hosted-data/" title="Hosted Deep Link Data" class="md-nav__link">
+      Hosted Deep Link Data
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Links in your paid ads
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        Links in your paid ads
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/dynamic-product-feeds/" title="Dynamic Product Feeds" class="md-nav__link">
+      Dynamic Product Feeds
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/branch-universal-ads/" title="Branch Universal Ads" class="md-nav__link">
+      Branch Universal Ads
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/apple/" title="Apple Search" class="md-nav__link">
+      Apple Search
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/doubleclick/" title="Doubleclick" class="md-nav__link">
+      Doubleclick
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/google-ads-overview/" title="Google" class="md-nav__link">
+      Google
+    </a>
+  </li>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/facebook-ads-overview/" title="Facebook" class="md-nav__link">
+      Facebook
+    </a>
+  </li>
+
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../deep-linked-ads/twitter/" title="Twitter" class="md-nav__link">
+      Twitter
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Links in your emails
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        Links in your emails
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/appboy/" title="Appboy" class="md-nav__link">
+      Appboy
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/blueshift/" title="Blueshift" class="md-nav__link">
+      Blueshift
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/bronto/" title="Bronto" class="md-nav__link">
+      Bronto
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/epsilon/" title="Epsilon" class="md-nav__link">
+      Epsilon
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/kahuna/" title="Kahuna" class="md-nav__link">
+      Kahuna
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/leanplum/" title="Leanplum" class="md-nav__link">
+      Leanplum
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/mailgun/" title="Mailgun" class="md-nav__link">
+      Mailgun
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/mailjet/" title="Mailjet" class="md-nav__link">
+      Mailjet
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/mandrill/" title="Mandrill" class="md-nav__link">
+      Mandrill
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/postup/" title="PostUp" class="md-nav__link">
+      PostUp
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/responsys/" title="Responsys" class="md-nav__link">
+      Responsys
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sailthru/" title="Sailthru" class="md-nav__link">
+      Sailthru
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/salesforce/" title="Salesforce" class="md-nav__link">
+      Salesforce
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sendgrid/" title="SendGrid" class="md-nav__link">
+      SendGrid
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/sparkpost/" title="SparkPost" class="md-nav__link">
+      SparkPost
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/vero/" title="Vero" class="md-nav__link">
+      Vero
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/zeta/" title="Zeta" class="md-nav__link">
+      Zeta
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../emails/self-serve/" title="Self Serve" class="md-nav__link">
+      Self Serve
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Links in push notifications
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        Links in push notifications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../push/generic-push/" title="Generic push support" class="md-nav__link">
+      Generic push support
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Links in organic search
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Links in organic search
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../organic-search/firebase/" title="Firebase App Indexing" class="md-nav__link">
+      Firebase App Indexing
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../organic-search/spotlight/" title="Spotlight Search" class="md-nav__link">
+      Spotlight Search
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Links for viral & referral
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        Links for viral & referral
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../viral/content-sharing/" title="Content sharing" class="md-nav__link">
+      Content sharing
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../viral/referrals/" title="Referral programs" class="md-nav__link">
+      Referral programs
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../viral/facebook-app-invites/" title="Facebook App Invites" class="md-nav__link">
+      Facebook App Invites
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-15" type="checkbox" id="nav-15">
+    
+    <label class="md-nav__link" for="nav-15">
+      Links in new app platforms
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-15">
+        Links in new app platforms
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/android-instant-apps/" title="Android Instant Apps" class="md-nav__link">
+      Android Instant Apps
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../app-to-app/imessage-apps/" title="iMessage Apps" class="md-nav__link">
+      iMessage Apps
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Export Branch data
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        Export Branch data
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/api/" title="Export API" class="md-nav__link">
+      Export API
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../exports/webhooks/" title="Webhooks" class="md-nav__link">
+      Webhooks
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Send data to other tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        Send data to other tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/adobe-analytics/" title="Abobe Analytics" class="md-nav__link">
+      Abobe Analytics
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/adjust/" title="Adjust" class="md-nav__link">
+      Adjust
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/amplitude/" title="Amplitude" class="md-nav__link">
+      Amplitude
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appmetrica/" title="AppMetrica" class="md-nav__link">
+      AppMetrica
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appboy/" title="Appboy" class="md-nav__link">
+      Appboy
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/appsflyer/" title="Appsflyer" class="md-nav__link">
+      Appsflyer
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/fabric-answers/" title="Fabric Answers" class="md-nav__link">
+      Fabric Answers
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/google-analytics/" title="Google Analytics" class="md-nav__link">
+      Google Analytics
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/kochava/" title="Kochava" class="md-nav__link">
+      Kochava
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/localytics/" title="Localytics" class="md-nav__link">
+      Localytics
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/mixpanel/" title="Mixpanel" class="md-nav__link">
+      Mixpanel
+    </a>
+  </li>
+
+          
+        
+          
+            
+            
+            
+
+
+  <li class="md-nav__item">
+    <a href="../../integrations/tune/" title="Tune" class="md-nav__link">
+      Tune
+    </a>
+  </li>
+
+          
+        
+      </ul>
+    </nav>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+          <li class="md-nav__item md-nav__link branch-nav-header">
+            Resources
+          </li>
+        
+      
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Branch Matching Overview
+      </label>
+    
+    <a href="./" title="Branch Matching Overview" class="md-nav__link md-nav__link--active">
+      Branch Matching Overview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-with-100-match-accuracy" title="Methods with 100% match accuracy" class="md-nav__link">
+    Methods with 100% match accuracy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-deeplinking" title="Direct deeplinking" class="md-nav__link">
+    Direct deeplinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-id-token-matching-across-the-branch-network" title="Device ID token matching across the Branch Network" class="md-nav__link">
+    Device ID token matching across the Branch Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leveraging-other-match-techniques" title="Leveraging other match techniques" class="md-nav__link">
+    Leveraging other match techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-without-100-match-accuracy" title="Methods without 100% match accuracy" class="md-nav__link">
+    Methods without 100% match accuracy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-to-app-snapshot-match" title="Browser to app snapshot match" class="md-nav__link">
+    Browser to app snapshot match
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-ios-app-for-100-match" title="Configuring Your iOS App for 100% Match" class="md-nav__link">
+    Configuring Your iOS App for 100% Match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-safariservicesframework" title="Include SafariServices.framework" class="md-nav__link">
+    Include SafariServices.framework
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-matching-domain-to-applink" title="Set the matching domain to app.link" class="md-nav__link">
+    Set the matching domain to app.link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-to-disable-safariviewcontroller" title="Need to disable SafariViewController?" class="md-nav__link">
+    Need to disable SafariViewController?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-android-app-for-100-match" title="Configuring Your Android App for 100% Match" class="md-nav__link">
+    Configuring Your Android App for 100% Match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-cookie-matching" title="Enable cookie matching" class="md-nav__link">
+    Enable cookie matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-legacy-bnclt-domain-for-cookie-matching" title="Use the legacy bnc.lt domain for cookie matching" class="md-nav__link">
+    Use the legacy bnc.lt domain for cookie matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../validation-tools/" title="Validation Tools" class="md-nav__link">
+      Validation Tools
+    </a>
+  </li>
+
+      
+    
+      
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+      
+        
+
+
+  <li class="md-nav__item">
+    <a href="../case-studies/" title="Case Studies and Infographics" class="md-nav__link">
+      Case Studies and Infographics
+    </a>
+  </li>
+
+      
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods-with-100-match-accuracy" title="Methods with 100% match accuracy" class="md-nav__link">
+    Methods with 100% match accuracy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-deeplinking" title="Direct deeplinking" class="md-nav__link">
+    Direct deeplinking
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#device-id-token-matching-across-the-branch-network" title="Device ID token matching across the Branch Network" class="md-nav__link">
+    Device ID token matching across the Branch Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leveraging-other-match-techniques" title="Leveraging other match techniques" class="md-nav__link">
+    Leveraging other match techniques
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods-without-100-match-accuracy" title="Methods without 100% match accuracy" class="md-nav__link">
+    Methods without 100% match accuracy
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browser-to-app-snapshot-match" title="Browser to app snapshot match" class="md-nav__link">
+    Browser to app snapshot match
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-ios-app-for-100-match" title="Configuring Your iOS App for 100% Match" class="md-nav__link">
+    Configuring Your iOS App for 100% Match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#include-safariservicesframework" title="Include SafariServices.framework" class="md-nav__link">
+    Include SafariServices.framework
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-matching-domain-to-applink" title="Set the matching domain to app.link" class="md-nav__link">
+    Set the matching domain to app.link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-to-disable-safariviewcontroller" title="Need to disable SafariViewController?" class="md-nav__link">
+    Need to disable SafariViewController?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-android-app-for-100-match" title="Configuring Your Android App for 100% Match" class="md-nav__link">
+    Configuring Your Android App for 100% Match
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enable-cookie-matching" title="Enable cookie matching" class="md-nav__link">
+    Enable cookie matching
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-legacy-bnclt-domain-for-cookie-matching" title="Use the legacy bnc.lt domain for cookie matching" class="md-nav__link">
+    Use the legacy bnc.lt domain for cookie matching
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/resources/matching.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>Branch Matching Overview</h1>
+                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>There are several mechanisms Branch uses to pass data through to the app and attribute app sessions back to the source. We always use the method with the highest match confidence rate.</p>
+<h3 id="methods-with-100-match-accuracy">Methods with 100% match accuracy<a class="headerlink" href="#methods-with-100-match-accuracy" title="Permanent link">&para;</a></h3>
+<h4 id="direct-deeplinking">Direct deeplinking<a class="headerlink" href="#direct-deeplinking" title="Permanent link">&para;</a></h4>
+<p>If the app is currently installed on the phone, and you've configured your Branch links with your app's URI scheme (<code>myapp://</code>) or to use Universal or App Links, we will open the app immediately and pass a click identifier through to our native library. This click identifier is then sent to the Branch servers to retrieve the dictionary of data associated with the link.</p>
+<p>For example, we'd call <code>myapp://open?link_click_id=123456</code> to open the app immediately. The Branch native library parses out <code>link_click_id: 123456</code> and passes it back to the Branch API to retrieve the data dictionary associated with that link click.</p>
+<h4 id="device-id-token-matching-across-the-branch-network">Device ID token matching across the Branch Network<a class="headerlink" href="#device-id-token-matching-across-the-branch-network" title="Permanent link">&para;</a></h4>
+<p>When a user clicks a Branch link for your app, and we've seen that user click a link for <em>another</em> app on our partner network, we've already matched them up to a corresponding device identifier. This means that when they install the app, we know with 100% certainty that they just came from that link click.</p>
+<p>The fact that we have such a global network of apps with hundreds of millions of users clicking links, means that when you join the platform, you can benefit from the crowd-sourced accuracy gained through all our apps contributing the browser-app profiles. Read more about how important this is on <a href="https://blog.branch.io/the-importance-of-matching-accuracy-in-deep-linking">our blog</a>.</p>
+<h4 id="leveraging-other-match-techniques">Leveraging other match techniques<a class="headerlink" href="#leveraging-other-match-techniques" title="Permanent link">&para;</a></h4>
+<p>We've built out custom deep linking mechanisms that are specific to each platform to ensure that deep linking is accurate. Here are some of those techniques we use:</p>
+<table>
+<thead>
+<tr>
+<th>Match Method</th>
+<th>Implementation Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Facebook deferred deep linking API</strong></td>
+<td>We've built a custom integration with Facebook where if a user originates from an app invite or advertisement, we connect with Facebook's API to know with 100% certainty if the install originated from this source. You'll need to authenticate with Facebook on the Branch dash if you want to support this.</td>
+</tr>
+<tr>
+<td><strong>Android Google Play referrer</strong></td>
+<td>Google Play supports passing a referrer through the install process that we listen for. It's notoriously unreliable and currently unsupported when redirecting from Chrome. However, we'll use it when available. Enabling this method is covered in the <a href="../../../pages/apps/android/#configure-app">SDK Integration Guide</a>.</td>
+</tr>
+<tr>
+<td><strong>iOS 9/10 Safari cookie passthrough</strong></td>
+<td>We built a custom technique into our iOS SDK that will guarantee 100% accuracy on iOS 9/10 when a user clicks from the Safari browser. This only applies if you include SafariServices.framework in your app. Please see our new recommended <a href="../../../pages/resources/matching/#configuring-your-ios-app-for-100-match">path to use this feature</a>. Note that this method has some risks due to a policy change on iOS on 9/1/16.</td>
+</tr>
+<tr>
+<td><strong>Android Chrome Tabs cookie passthrough</strong></td>
+<td>We built a custom technique into our Android SDK that will guarantee 100% accuracy when a user originates from the Chrome browser. We're automatically cookie match based on app.link, but you can configure the domain depending on your use case. Please see <a href="../../../pages/resources/matching/#configuring-your-android-app-for-100-match">the guide here</a>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="methods-without-100-match-accuracy">Methods without 100% match accuracy<a class="headerlink" href="#methods-without-100-match-accuracy" title="Permanent link">&para;</a></h3>
+<h4 id="browser-to-app-snapshot-match">Browser to app snapshot match<a class="headerlink" href="#browser-to-app-snapshot-match" title="Permanent link">&para;</a></h4>
+<p>Branch collects information about devices both when a user is in the browser -- via a click on a Branch link -- and then after they open the app. This information includes <strong>IP Address</strong>, <strong>OS</strong>, <strong>OS version</strong>, <strong>device model</strong> and other parameters. This is the user's <strong><em>digital snapshot</em></strong> and can be obtained in the browser and in the app.</p>
+<p>When no 100% match method is available, we connect the unique snapshot collected in the app to the unique snapshot collected in the browser to determine where user originated.</p>
+<div class="admonition tip">
+<p class="admonition-title">Customize the snapshot matching criteria</p>
+<p>If you are concerned that users may potentially have the same snapshot, you can choose to have us not match users if two identical snapshots are outstanding. On the Dashboard's <a href="https://dashboard.branch.io/link-settings">Link Settings</a> page, under advanced options, you should set <strong>Match Type</strong> to <code>Unique</code>. You can also modify the 7200 second (2 hour) default expiration for all links, or <a href="../../../pages/links/integrate/#deep-linking">configure it for individual links</a> by using the <code>$match_duration</code> control parameter.</p>
+<p><img alt="image" src="../../../img/pages/resources/matching/match_type.png" /></p>
+<p>This means that if two users with the same snapshot, on the same wifi, were to click a Branch link for your app, we would blacklist those digital snapshots for the expiration duration. Therefore, when either user opens up your app, no match would be made.</p>
+</div>
+<h2 id="configuring-your-ios-app-for-100-match">Configuring Your iOS App for 100% Match<a class="headerlink" href="#configuring-your-ios-app-for-100-match" title="Permanent link">&para;</a></h2>
+<p>100% match is a bit of a misnomer, as it is only 100% match from when a user clicks from the Safari browser. According to our analysis, clicking through Safari happens about 50-75% of the time depending on the use case. For example, clicking from Facebook or Chrome won't trigger a 100% match here. However, it's still beneficial to the matching accuracy, so we recommend employing it.</p>
+<h3 id="include-safariservicesframework">Include SafariServices.framework<a class="headerlink" href="#include-safariservicesframework" title="Permanent link">&para;</a></h3>
+<p>First off, you'll need to include the <code>SafariServices.framework</code> into your app to leverage this. Currently, as soon as you add the Framework, Branch will start triggering the Safari-based 100% match technique. To add the framework, simply go to your Xcode project:</p>
+<ul>
+<li>Select the right build target</li>
+<li>Select the <code>General</code> tab</li>
+<li>Scroll down to <code>Linked Frameworks and Libraries</code></li>
+<li>Click the <code>+</code> button</li>
+<li>Add <code>SafariServices.framework</code></li>
+</ul>
+<h3 id="set-the-matching-domain-to-applink">Set the matching domain to app.link<a class="headerlink" href="#set-the-matching-domain-to-applink" title="Permanent link">&para;</a></h3>
+<p>Because our Safari View Controller matching method works based on comparing the cookie Branch set on a click to the cookie set with the View Controller, the domains must be consistent. iOS assumes that you're on the <code>bnc.lt</code> domain, so if you're using <code>app.link</code> domain as your default (most apps), you must specify this domain in your PLIST file.</p>
+<p>Please set the <code>branch_app_domain</code> to <code>app.link</code> in your PLIST as shown below:</p>
+<p><img alt="image" src="../../../img/pages/resources/matching/branch_app_domain.png" /></p>
+<h3 id="need-to-disable-safariviewcontroller">Need to disable SafariViewController?<a class="headerlink" href="#need-to-disable-safariviewcontroller" title="Permanent link">&para;</a></h3>
+<p>Note that this mechanism can be <strong>disabled</strong> using the following method, which should be called <em>before</em> <code>initSession</code>.</p>
+<ul>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">disableCookieBasedMatching</span><span class="p">];</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Swift</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">disableCookieBasedMatching</span><span class="p">()</span>
+</pre></div>
+
+</li>
+</ul>
+<h2 id="configuring-your-android-app-for-100-match">Configuring Your Android App for 100% Match<a class="headerlink" href="#configuring-your-android-app-for-100-match" title="Permanent link">&para;</a></h2>
+<p>Similar to iOS, 100% match is a bit of a misnomer since this method will only work if a user clicks via the Chrome browser. Other browsers such as Facebook and Twitter will not benefit from this method. We haven't pull the stats on usage like we do on iOS, but we'd assume it's similar to Safari (50-75% of clicks).</p>
+<h3 id="enable-cookie-matching">Enable cookie matching<a class="headerlink" href="#enable-cookie-matching" title="Permanent link">&para;</a></h3>
+<p>Add <code>compile 'com.android.support:customtabs:23.3.0'</code> to the dependencies section of your <code>build.gradle</code> file.</p>
+<h3 id="use-the-legacy-bnclt-domain-for-cookie-matching">Use the legacy bnc.lt domain for cookie matching<a class="headerlink" href="#use-the-legacy-bnclt-domain-for-cookie-matching" title="Permanent link">&para;</a></h3>
+<p>Unlike on iOS where we assume that your domain is on <code>bnc.lt</code>, on Android we assume it is the <code>app.link</code> domain. If you want to override it, you must set the domain you want via a call to Branch like so:</p>
+<div class="codehilite"><pre><span></span><span class="c1">// call before calling getAutoInstance in the Application class</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">enableCookieBasedMatching</span><span class="o">(</span><span class="s">&quot;bnc.lt&quot;</span><span class="o">);</span>
+<span class="n">Branch</span><span class="o">.</span><span class="na">getAutoInstance</span><span class="o">(</span><span class="k">this</span><span class="o">);</span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+                  <h2 id="__comments">Comments</h2>
+                  <div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "https://docs.branch.io/pages/resources/matching/";
+    this.page.identifier =
+      "/pages/resources/matching/";
+  };
+  (function() {
+    var d = document, s = d.createElement("script");
+    s.src = "//branch-docs.disqus.com/embed.js";
+    s.setAttribute("data-timestamp", +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+          <div class="branch-floater branch-beta">Beta Release</div>
+        
+        
+          <a class="branch-floater branch-old-docs" href="http://dev.branch.io/" title="old docs">&#8678; Old docs</a>
+        
+      
+      
+        <div class="modals">
+          <div id="modal-search" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content" id="algolia-search-container">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Search</h2>
+              <input type="text" placeholder="search docs..." id="algolia-doc-search" autofocus>
+            </div>
+          </div>
+          <div id="modal-unhelpful" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Unhelpful?</h2>
+              <p>How can we improve or assist you?</p>
+              <a href="#" class="improve-doc" title="Improve This Doc">Improve this doc</a>
+              <a href="#" class="contact-support" title="Contact support">Contact support</a>
+            </div>
+          </div>
+          <div id="modal-choose-app" class="modal dialog">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Choose your app</h2>
+              <button type="button">iOS</button>
+              <button type="button">Android</button>
+              <button type="button">Cordova Ionic PhoneGap</button>
+              <button type="button">React Native</button>
+            </div>
+          </div>
+          <div id="modal-helpful" class="modal notification">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Thank you</h2>
+            </div>
+          </div>
+          <div id="modal-image" class="modal dialog image">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Image</h2>
+              <a id="modal-image-link" href="#">
+                <img id="modal-image-img">
+              </a>
+            </div>
+          </div>
+          <div id="modal-code" class="modal dialog code">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+              <i class="material-icons modal-close right">close</i>
+              <h2>Select your platform</h2>
+              <div class="flex">
+                <button id="modal-code-ios">iOS</button>
+                <button id="modal-code-android">Android</button>
+              </div>
+              <div class="flex">
+                <button id="modal-code-adobe">Adobe AIR</button>
+                <button id="modal-code-cordova">Cordova PhoneGap Ionic</button>
+              </div>
+              <div class="flex">
+                <button id="modal-code-mparticle-android">mParticle Android</button>
+                <button id="modal-code-mparticle-ios">mParticle iOS</button>
+              </div>
+              <div class="flex">
+                <button id="modal-code-titanium">Titanium</button>
+                <button id="modal-code-react">React Native</button>
+              </div>
+              <div class="flex">
+                <button id="modal-code-unity">Unity</button>
+                <button id="modal-code-xamarin">Xamarin</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 <a href="https://branch.io">Branch</a>
+          </div>
+        
+        All rights reserved
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://branch.io" class="md-footer-social__link fa fa-globe"></a>
+    
+      <a href="https://github.com/branchmetrics/docs" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/branchmetrics" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.facebook.com/branchmetrics" class="md-footer-social__link fa fa-facebook"></a>
+    
+      <a href="https://www.linkedin.com/company-beta/3813083" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/application-26aeb842c9.js"></script>
+      <script>app.initialize({url:{base:"../../.."}})</script>
+      
+        <script src="../../../js/router.js"></script>
+      
+        <script src="../../../js/events.js"></script>
+      
+        <script src="../../../js/modals.js"></script>
+      
+        <script src="../../../js/images.js"></script>
+      
+        <script src="../../../js/buttons.js"></script>
+      
+        <script src="../../../js/progress.js"></script>
+      
+        <script src="../../../js/tabs.js"></script>
+      
+        <script src="../../../js/languages.js"></script>
+      
+        <script src="../../../js/utils.js"></script>
+      
+        <script src="../../../js/main.js"></script>
+      
+      
+        <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+        <script>docsearch({apiKey:"887017d17a2c1e9490ad2c44caa7e817",indexName:"branchmetrics",inputSelector:"#algolia-doc-search",debug:"True",algoliaOptions:{hitsPerPage:"15"}})</script>
+      
+      
+        <script>!function(e,t){if(!t.__SV){var n=window;try{var i,a,p,o=n.location,r=o.hash;i=function(e,t){return(a=e.match(RegExp(t+"=([^&]*)")))?a[1]:null},r&&i(r,"state")&&(p=JSON.parse(decodeURIComponent(i(r,"state"))),"mpeditor"===p.action&&(n.sessionStorage.setItem("_mpcehash",r),history.replaceState(p.desiredHash||"",e.title,o.pathname+o.search)))}catch(e){}var l,s;window.mixpanel=t,t._i=[],t.init=function(e,n,i){function a(e,t){var n=t.split(".");2==n.length&&(e=e[n[0]],t=n[1]),e[t]=function(){e.push([t].concat(Array.prototype.slice.call(arguments,0)))}}var p=t;for("undefined"!=typeof i?p=t[i]=[]:i="mixpanel",p.people=p.people||[],p.toString=function(e){var t="mixpanel";return"mixpanel"!==i&&(t+="."+i),e||(t+=" (stub)"),t},p.people.toString=function(){return p.toString(1)+".people (stub)"},l="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" "),s=0;s<l.length;s++)a(p,l[s]);t._i.push([e,n,i])},t.__SV=1.2,n=e.createElement("script"),n.type="text/javascript",n.async=!0,n.src="undefined"!=typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js",i=e.getElementsByTagName("script")[0],i.parentNode.insertBefore(n,i)}}(document,window.mixpanel||[]),mixpanel.init("47ec8ea9ac102b1370221dcda476091c")</script>
+      
+      
+        <script>!function(e,t,a,o,n,c,s){e.GoogleAnalyticsObject=n,e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)},e[n].l=1*new Date,c=t.createElement(a),s=t.getElementsByTagName(a)[0],c.async=1,c.src=o,s.parentNode.insertBefore(c,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-53307642-1","auto"),ga("require","GTM-PCPBXCN"),ga("send","pageview")</script>
+      
+      
+        <script>!function(e,t,n,o,c,a,f){e.fbq||(c=e.fbq=function(){c.callMethod?c.callMethod.apply(c,arguments):c.queue.push(arguments)},e._fbq||(e._fbq=c),c.push=c,c.loaded=!0,c.version="2.0",c.queue=[],a=t.createElement(n),a.async=!0,a.src=o,f=t.getElementsByTagName(n)[0],f.parentNode.insertBefore(a,f))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init","1040694199304729"),fbq("track","PageView")</script>
+        <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1040694199304729&ev=PageView&noscript=1"></noscript>
+      
+      
+        <script>_linkedin_data_partner_id="21211",function(){var e=document.getElementsByTagName("script")[0],t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://snap.licdn.com/li.lms-analytics/insight.min.js",e.parentNode.insertBefore(t,e)}()</script>
+      
+      
+      
+      
+        <script>!function(){function e(){n===!1&&(n=!0,Munchkin.init("315-FTT-121",{domainLevel:2}))}var n=!1,t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="//munchkin.marketo.net/munchkin.js",t.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||e()},t.onload=e,document.getElementsByTagName("head")[0].appendChild(t)}()</script>
+      
+      
+        <script>!function(e,t,n,o,c,p){e.qp||(o=e.qp=function(){o.qp?o.qp.apply(o,arguments):o.queue.push(arguments)},o.queue=[],c=document.createElement(t),c.async=!0,c.src=n,p=document.getElementsByTagName(t)[0],p.parentNode.insertBefore(c,p))}(window,"script","https://a.quora.com/qevents.js"),qp("init","247e840cafa44cae9ac4b50a0cc1965a"),qp("track","ViewContent")</script>
+        <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/247e840cafa44cae9ac4b50a0cc1965a/pixel?tag=ViewContent&noscript=1"></noscript>
+      
+    
+  </body>
+</html>
