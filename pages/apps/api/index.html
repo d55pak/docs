@@ -626,8 +626,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#referral-create-rule" title="Referral create rule" class="md-nav__link">
+    Referral create rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#referral-troubleshooting" title="Referral troubleshooting" class="md-nav__link">
     Referral troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook" title="Webhook" class="md-nav__link">
+    Webhook
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-create" title="Webhook create" class="md-nav__link">
+    Webhook create
   </a>
   
 </li>
@@ -2265,8 +2292,35 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#referral-create-rule" title="Referral create rule" class="md-nav__link">
+    Referral create rule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#referral-troubleshooting" title="Referral troubleshooting" class="md-nav__link">
     Referral troubleshooting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webhook" title="Webhook" class="md-nav__link">
+    Webhook
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webhook-create" title="Webhook create" class="md-nav__link">
+    Webhook create
   </a>
   
 </li>
@@ -3177,9 +3231,122 @@ curl -XGET <span class="s1">&#39;https://api.branch.io/v1/profile?branch_key=key
 </ul>
 </li>
 <li>
+<h4 id="referral-create-rule">Referral create rule<a class="headerlink" href="#referral-create-rule" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><em>Request</em></p>
+<div class="codehilite"><pre><span></span>curl -XPOST https://api.branch.io/v1/eventresponse <span class="se">\</span>
+  -d <span class="s1">&#39;{</span>
+<span class="s1">  &quot;branch_key&quot;: &quot;key_live_kaFuWw8WvY7yn1d9yYiP8gokwqjV0Swt&quot;,</span>
+<span class="s1">  &quot;branch_secret&quot;: &quot;secret_live_RrrsLqpzVcoVWf5t4ncQVpzlg2pRpGH9&quot;,</span>
+<span class="s1">  &quot;calculation_type&quot;: 2,</span>
+<span class="s1">  &quot;location&quot;: 4,</span>
+<span class="s1">  &quot;type&quot;: &quot;credit&quot;,</span>
+<span class="s1">  &quot;event&quot;: &quot;signup&quot;,</span>
+<span class="s1">  &quot;metadata&quot;: {</span>
+<span class="s1">    &quot;web_hook_url&quot;: &quot;http://www.example.com&quot;,</span>
+<span class="s1">    &quot;amount&quot;: &quot;20&quot;,    </span>
+<span class="s1">    &quot;bucket&quot;: &quot;default&quot;</span>
+<span class="s1">  },</span>
+<span class="s1">  &quot;filter&quot;: {</span>
+<span class="s1">  &quot;viewed_tutorial&quot;: true,</span>
+<span class="s1">  &quot;geo&quot;: &quot;over_here&quot;</span>
+<span class="s1">  }</span>
+<span class="s1">}</span>
+<span class="s1">&#39;</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Response</em></p>
+<div class="codehilite"><pre><span></span><span class="p">{}</span>
+</pre></div>
+
+</li>
+<li>
+<p>Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th align="center">Value</th>
+<th>Usage</th>
+<th align="center">Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>branch_key</td>
+<td align="center"><code>string</code></td>
+<td>From your <a href="https://dashboard.branch.io/settings">Branch Settings Dashboard</a></td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>branch_secret</td>
+<td align="center"><code>string</code></td>
+<td>From your <a href="https://dashboard.branch.io/settings">Branch Settings Dashboard</a></td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>calculation_type</td>
+<td align="center"><code>int</code></td>
+<td><code>0</code> reward for each use, <code>1</code> reward for first use only</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>location</td>
+<td align="center"><code>int</code></td>
+<td><code>0</code> all acting users, <code>1</code> referring users, <code>4</code>, referred acting users</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>type</td>
+<td align="center"><code>string</code></td>
+<td><code>credit</code> reward points, <code>web_hook</code> reward webhook callback</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td>web_hook</td>
+<td align="center"><code>string</code></td>
+<td>The url to call when an event occurs</td>
+<td align="center"><code>type</code> = <code>web_hook</code></td>
+</tr>
+<tr>
+<td>amount</td>
+<td align="center"><code>string</code></td>
+<td>Number of credits</td>
+<td align="center"><code>type</code> = <code>credit</code></td>
+</tr>
+<tr>
+<td>bucket</td>
+<td align="center"><code>string</code></td>
+<td>The category where the credits are save to</td>
+<td align="center"><code>type</code> = <code>credit</code></td>
+</tr>
+<tr>
+<td>filter</td>
+<td align="center"><code>json</code></td>
+<td>This is the set of keys and values that must be contained in the event metadata for this reward to be issued</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
 <h4 id="referral-troubleshooting">Referral troubleshooting<a class="headerlink" href="#referral-troubleshooting" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Referral <code>credits</code> cannot go below zero</li>
+</ul>
+</li>
+</ul>
+<h2 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="webhook-create">Webhook create<a class="headerlink" href="#webhook-create" title="Permanent link">&para;</a></h4>
+<ul>
+<li>See <a href="#referral-create-rule">Referral create rule</a></li>
 </ul>
 </li>
 </ul>
