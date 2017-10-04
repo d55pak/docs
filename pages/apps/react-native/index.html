@@ -578,6 +578,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-apple-search-ads" title="Track Apple Search Ads" class="md-nav__link">
+    Track Apple Search Ads
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -606,8 +613,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-app" title="Sample app" class="md-nav__link">
-    Sample app
+  <a href="#sample-apps" title="Sample apps" class="md-nav__link">
+    Sample apps
   </a>
   
 </li>
@@ -2240,6 +2247,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#track-apple-search-ads" title="Track Apple Search Ads" class="md-nav__link">
+    Track Apple Search Ads
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2268,8 +2282,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sample-app" title="Sample app" class="md-nav__link">
-    Sample app
+  <a href="#sample-apps" title="Sample apps" class="md-nav__link">
+    Sample apps
   </a>
   
 </li>
@@ -2328,6 +2342,14 @@
 <div class="codehilite"><pre><span></span>npm install --save react-native-branch
 </pre></div>
 
+</li>
+<li>
+<p>(Optional) Add a branch.json file to the root of your app (next to package.json).
+    You can configure the contents at any time, but it must be present when you
+    run <code>react-native link</code> in order to be automatically included in your native
+    projects. This allows you to configure certain behaviors that otherwise require
+    native code changes. See <a href="https://rnbranch.app.link/branch-json">https://rnbranch.app.link/branch-json</a> for full details
+    on the branch.json file.</p>
 </li>
 <li>
 <p>In a pure React Native app using <code>react-native link</code></p>
@@ -2495,7 +2517,7 @@ Note that the location of <code>node_modules</code> relative to your <code>Podfi
 <li>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Swift 3.0 <code>AppDelegate.swift</code></li>
+<li>Swift 3 &amp; 4 <code>AppDelegate.swift</code></li>
 </ul>
 <p>Add <code>#import &lt;react-native-branch/RNBranch.h&gt;</code> to your Bridging header if you have one.</p>
 <p>If you are using the <code>React</code> pod in a native app with <code>use_frameworks!</code>, you may simply use
@@ -2946,6 +2968,87 @@ only the symbols you are using.</p>
 </li>
 </ul>
 </li>
+<li>
+<h4 id="track-apple-search-ads">Track Apple Search Ads<a class="headerlink" href="#track-apple-search-ads" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Allows Branch to track Apple Search Ads deep linking analytics</p>
+</li>
+<li>
+<p>Analytics from Apple's API have been slow which will make our analytics lower. Additionally, Apple's API does not send us all the data of an ad every time which will make ads tracked by us to show a generic campaign sometimes.</p>
+</li>
+<li>
+<p>This requires an option to be set before the native SDK initializes, which
+    happens before JS finishes loading. There are two options:</p>
+<ol>
+<li>
+<p>Add <code>"delayInitToCheckForSearchAds": true</code> to your <code>branch.json</code> file:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;delayInitToCheckForSearchAds&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+<li>
+<p>Modify your AppDelegate in Xcode. Insert the following before the call
+    to <code>[RNBranch initSessionWithLaunchOptions:isReferrable:]</code>.</p>
+<ul>
+<li>
+<p><em>Swift 3 &amp; 4</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">delayInitToCheckForSearchAds</span><span class="p">()</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective C</em></p>
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">delayInitToCheckForSearchAds</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Test with fake campaign params (do not test in production)</p>
+<ol>
+<li>
+<p>Add <code>"appleSearchAdsDebugMode": true</code> to <code>branch.debug.json</code>. Do
+    not set this parameter in <code>branch.json</code>, or it will be enabled in
+    release builds.</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;delayInitToCheckForSearchAds&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;appleSearchAdsDebugMode&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+<li>
+<p>Add the following call to your AppDelegate (before the <code>initSession</code>) call.
+    Use conditional compilation or remove before releasing to production.</p>
+<ul>
+<li>
+<p><em>Swift 3 &amp; 4</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">#if</span> <span class="cp">DEBUG</span>
+    <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">setAppleSearchAdsDebugMode</span><span class="p">()</span>
+<span class="cp">#endif</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective C</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">#ifdef DEBUG</span>
+    <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">setAppleSearchAdsDebugMode</span><span class="p">];</span>
+<span class="cp">#endif</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
@@ -3012,14 +3115,14 @@ only the symbols you are using.</p>
 <p>Remove before releasing to production</p>
 </li>
 <li>
-<p><em>Swift 3</em></p>
-<p>```swift
-    RNBranch.useTestInstance()  <br />
-    <div class="codehilite"><pre><span></span><span class="o">-</span> <span class="o">*</span><span class="n">Objective</span> <span class="n">C</span><span class="o">*</span>
-
-    <span class="err">```</span><span class="n">objc</span>
-<span class="p">[</span><span class="n">RNBranch</span> <span class="n">useTestInstance</span><span class="p">]</span>
-</pre></div></p>
+<p><em>Swift 3 &amp; 4</em></p>
+<p><code>swift
+  RNBranch.useTestInstance()</code></p>
+</li>
+<li>
+<p><em>Objective C</em></p>
+<p><code>objc
+  [RNBranch useTestInstance]</code></p>
 </li>
 <li>
 <p><em>Android</em></p>
@@ -3028,10 +3131,11 @@ only the symbols you are using.</p>
 </ul>
 </li>
 <li>
-<h4 id="sample-app">Sample app<a class="headerlink" href="#sample-app" title="Permanent link">&para;</a></h4>
-<p><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples">Examples</a></p>
+<h4 id="sample-apps">Sample apps<a class="headerlink" href="#sample-apps" title="Permanent link">&para;</a></h4>
 </li>
 </ul>
+<p><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples">Examples</a><br />
+<a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples/webview_tutorial">Tutorial</a></p>
                 
                   
                 
