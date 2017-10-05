@@ -3456,10 +3456,19 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 <h4 id="enable-100-matching">Enable 100% matching<a class="headerlink" href="#enable-100-matching" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Use the <code>SFViewController</code> to increase the attribution matching success</p>
+<p>Use the <code>SFSafariViewController</code> to increase the attribution matching success</p>
 </li>
 <li>
 <p>The 100% match is a bit of a misnomer, as it is only 100% match from when a user clicks from the Safari browser. According to our analysis, clicking through Safari happens about 50-75% of the time depending on the use case. For example, clicking from Facebook, Gmail or Chrome won’t trigger a 100% match here. However, it’s still beneficial to the matching accuracy, so we recommend employing it.</p>
+</li>
+<li>
+<p>When using a custom domain, add a <code>branch_app_domain</code> string key in your Info.plist with your custom domain
+to enable 100% matching.</p>
+</li>
+<li>
+<p>By default, cookie-based matching is enabled on iOS 9 and 10 if the <code>SafariServices.framework</code>
+is included in an app's dependencies, and the app uses an app.link subdomain or sets the <code>branch_app_domain</code>
+in the Info.plist. It can be disabled with a call to the SDK.</p>
 </li>
 <li>
 <p>Add before <code>initSession</code> <a href="#initialize-branch">Initialize Branch</a></p>
@@ -3704,7 +3713,7 @@ target <span class="s1">&#39;APP_NAME&#39;</span> <span class="k">do</span>
 </li>
 <li>
 <p><em>Objective C</em></p>
-<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">registerDeepLinkController</span><span class="p">:</span><span class="n">customViewController</span> <span class="nl">forKey</span><span class="p">:</span><span class="s">@&quot;my-key&quot;</span><span class="nl">withPresentation</span><span class="p">:</span><span class="n">BNCViewControllerOptionShow</span><span class="p">];</span> 
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">registerDeepLinkController</span><span class="p">:</span><span class="n">customViewController</span> <span class="nl">forKey</span><span class="p">:</span><span class="s">@&quot;my-key&quot;</span><span class="nl">withPresentation</span><span class="p">:</span><span class="n">BNCViewControllerOptionShow</span><span class="p">];</span>
 </pre></div>
 
 </li>
