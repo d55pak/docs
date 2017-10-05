@@ -23,7 +23,7 @@ var buttons = (function() {
     var trim = window.location.pathname.replace(/^\/|\/$/g, '').split('/');
     trim = trim[0] === 'docs' ? trim.slice(1, trim.length).join('/') : trim.join('/');
     var path = (trim === '') ? 'index' : trim;
-    return 'https://github.com/branchmetrics/docs/edit/master/src/' + path + '.md';
+    return 'https://github.com/branchmetrics/docs/edit/master/src/' + path + '.md' + '?description=Click%20on%20"Propose%20file%20change"%20for%20your%20improvements%20to%20be%20reviewed%20and%20merged%20by%20our%20team.';
   }
 
   // public
