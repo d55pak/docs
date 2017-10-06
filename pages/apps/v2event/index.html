@@ -2209,6 +2209,60 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#track-custom-events" title="Track Custom Events" class="md-nav__link">
+    Track Custom Events
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios_7" title="iOS" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android_7" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-support" title="Current Support" class="md-nav__link">
+    Current Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acceptance" title="Acceptance" class="md-nav__link">
+    Acceptance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" title="Limitations" class="md-nav__link">
+    Limitations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
         <li class="md-nav__item">
@@ -2522,6 +2576,32 @@
 <h3 id="unlock-achievement">Unlock achievement<a class="headerlink" href="#unlock-achievement" title="Permanent link">&para;</a></h3>
 <p>Fire this event when a user hits an achievement point in your app.
 --&gt;</p>
+<h2 id="track-custom-events">Track Custom Events<a class="headerlink" href="#track-custom-events" title="Permanent link">&para;</a></h2>
+<p>If you want to track an event that isn't a pre-defined event, simply do the following:</p>
+<h3 id="ios_7">iOS<a class="headerlink" href="#ios_7" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">BranchEvent</span><span class="p">.</span><span class="n">customEventWithName</span><span class="p">(</span><span class="s">@&quot;User_Scanned_Item&quot;</span><span class="p">)</span> <span class="n">logEvent</span><span class="p">];</span>
+</pre></div>
+
+<h3 id="android_7">Android<a class="headerlink" href="#android_7" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="k">new</span> <span class="n">BranchEvent</span><span class="o">(</span><span class="s">&quot;Some Custom Event&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addCustomProperty</span><span class="o">(</span><span class="s">&quot;Custom_Event_Property_Key11&quot;</span><span class="o">,</span> <span class="s">&quot;Custom_Event_Property_val11&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">addCustomProperty</span><span class="o">(</span><span class="s">&quot;Custom_Event_Property_Key22&quot;</span><span class="o">,</span> <span class="s">&quot;Custom_Event_Property_val22&quot;</span><span class="o">)</span>
+    <span class="o">.</span><span class="na">logEvent</span><span class="o">(</span><span class="n">MainActivity</span><span class="o">.</span><span class="na">this</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+
+<h2 id="current-support">Current Support<a class="headerlink" href="#current-support" title="Permanent link">&para;</a></h2>
+<h3 id="acceptance">Acceptance<a class="headerlink" href="#acceptance" title="Permanent link">&para;</a></h3>
+<p>These events tracked through the SDK will appear to ad networks, like Criteo.</p>
+<p>These events will also have analytics, so you can understand their performance, using the new Analytics Platform. Read more about the new Analytics Platform [here]((<a href="https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics">https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics</a>).</p>
+<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<p>As of now, any calls made through these SDK methods will <strong>not</strong>:</p>
+<ul>
+<li>Appear in your .csv exports or Liveview.</li>
+<li>Be settable events for Webhooks or sent via Data Integrations.</li>
+<li>Be events you can target a Journey with.</li>
+<li>See Analytics on the old Analytics pipeline. Read more about our new <a href="https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics">Analytics</a>.</li>
+</ul>
                 
                   
                 
