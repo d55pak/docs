@@ -1952,6 +1952,19 @@
     Cutoff date
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#differences-from-cutoff-date" title="Differences From Cutoff Date" class="md-nav__link">
+    Differences From Cutoff Date
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2160,6 +2173,8 @@ Behavior | Old Analytics | New Analytics
 <p>We now default every visualization in the dashboard to be unique. This means that if you are testing Branch links, and click a link 5 times, we will display that as one click. If you'd like to see <em>all</em> clicks, export our data. This applies to all events, as well.</p>
 <h3 id="cutoff-date">Cutoff date<a class="headerlink" href="#cutoff-date" title="Permanent link">&para;</a></h3>
 <p>We have a cut off date -- September 16th -- which represents the data where you can't mix and match data. As we've introduced this new analytics platform, we've kept systems running in parallel. However, there is the above date which represents dates where you can't mix old data with new. You can query data from any time before September 16th up until September 16th. You can query data from September 16th onwards. If you wanted to do, say, September 15th to September 17th, you would need two separate queries.</p>
+<h4 id="differences-from-cutoff-date">Differences From Cutoff Date<a class="headerlink" href="#differences-from-cutoff-date" title="Permanent link">&para;</a></h4>
+<p>If you are tracking Purchase events, and want to see unique values for Purchases before the cut off date of September 16th, those values will display as 0. This is because the Purchase event hasn't stored unique counts before September 16th. However, moving forward, it does.</p>
 <h2 id="changes-to-the-branch-dashboard">Changes to the Branch Dashboard<a class="headerlink" href="#changes-to-the-branch-dashboard" title="Permanent link">&para;</a></h2>
 <h3 id="branch-summary-analytics">Branch Summary Analytics<a class="headerlink" href="#branch-summary-analytics" title="Permanent link">&para;</a></h3>
 <p>This section covers the changes found on the main page of the Branch <a href="https://dashboard.branch.io">dashboard</a>.  </p>
