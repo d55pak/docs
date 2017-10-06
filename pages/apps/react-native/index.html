@@ -591,6 +591,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#track-commerce" title="Track commerce" class="md-nav__link">
     Track commerce
   </a>
@@ -625,15 +632,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
-    Track content properties
+  <a href="#use-test-key" title="Use test key" class="md-nav__link">
+    Use test key
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-test-key" title="Use test key" class="md-nav__link">
-    Use test key
+  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
+    Simulate an install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-getlatestreferringparams-to-handle-link-opens" title="Using getLatestReferringParams to handle link opens" class="md-nav__link">
+    Using getLatestReferringParams to handle link opens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-troubleshooting" title="General troubleshooting" class="md-nav__link">
+    General troubleshooting
   </a>
   
 </li>
@@ -2260,6 +2281,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
+    Track content properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#track-commerce" title="Track commerce" class="md-nav__link">
     Track commerce
   </a>
@@ -2294,15 +2322,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#track-content-properties" title="Track content properties" class="md-nav__link">
-    Track content properties
+  <a href="#use-test-key" title="Use test key" class="md-nav__link">
+    Use test key
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-test-key" title="Use test key" class="md-nav__link">
-    Use test key
+  <a href="#simulate-an-install" title="Simulate an install" class="md-nav__link">
+    Simulate an install
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-getlatestreferringparams-to-handle-link-opens" title="Using getLatestReferringParams to handle link opens" class="md-nav__link">
+    Using getLatestReferringParams to handle link opens
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-troubleshooting" title="General troubleshooting" class="md-nav__link">
+    General troubleshooting
   </a>
   
 </li>
@@ -2569,7 +2611,7 @@ a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>
 
 <ul>
 <li>
-<p>Objective C <code>AppDelegate.m</code></p>
+<p>Objective-C <code>AppDelegate.m</code></p>
 <div class="codehilite"><pre><span></span><span class="hll"><span class="cp">#import &lt;react-native-branch/RNBranch.h&gt; </span><span class="c1">// at the top</span>
 </span>
 <span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
@@ -2950,6 +2992,49 @@ only the symbols you are using.</p>
 
 </li>
 <li>
+<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RegisterViewEvent</td>
+<td>User viewed the object</td>
+</tr>
+<tr>
+<td>AddToWishlistEvent</td>
+<td>User added the object to their wishlist</td>
+</tr>
+<tr>
+<td>AddToCartEvent</td>
+<td>User added object to cart</td>
+</tr>
+<tr>
+<td>PurchaseInitiatedEvent</td>
+<td>User started to check out</td>
+</tr>
+<tr>
+<td>PurchasedEvent</td>
+<td>User purchased the item</td>
+</tr>
+<tr>
+<td>ShareInitiatedEvent</td>
+<td>User started to share the object</td>
+</tr>
+<tr>
+<td>ShareCompletedEvent</td>
+<td>User completed a share</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
 <h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Use the <code>branch.sendCommerceEvent</code> method to record commerce events</li>
@@ -3026,7 +3111,7 @@ only the symbols you are using.</p>
 
 </li>
 <li>
-<p><em>Objective C</em></p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">delayInitToCheckForSearchAds</span><span class="p">];</span>
 </pre></div>
 
@@ -3062,7 +3147,7 @@ only the symbols you are using.</p>
 
 </li>
 <li>
-<p><em>Objective C</em></p>
+<p><em>Objective-C</em></p>
 <div class="codehilite"><pre><span></span><span class="cp">#ifdef DEBUG</span>
     <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">setAppleSearchAdsDebugMode</span><span class="p">];</span>
 <span class="cp">#endif</span>
@@ -3079,81 +3164,128 @@ only the symbols you are using.</p>
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
-<table>
-<thead>
-<tr>
-<th>Event</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>RegisterViewEvent</td>
-<td>User viewed the object</td>
-</tr>
-<tr>
-<td>AddToWishlistEvent</td>
-<td>User added the object to their wishlist</td>
-</tr>
-<tr>
-<td>AddToCartEvent</td>
-<td>User added object to cart</td>
-</tr>
-<tr>
-<td>PurchaseInitiatedEvent</td>
-<td>User started to check out</td>
-</tr>
-<tr>
-<td>PurchasedEvent</td>
-<td>User purchased the item</td>
-</tr>
-<tr>
-<td>ShareInitiatedEvent</td>
-<td>User started to share the object</td>
-</tr>
-<tr>
-<td>ShareCompletedEvent</td>
-<td>User completed a share</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
 <h4 id="use-test-key">Use test key<a class="headerlink" href="#use-test-key" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Use the Branch <code>test key</code> instead of the <code>live key</code></p>
+<p>Use the Branch <code>test key</code> instead of the <code>live key</code>.</p>
 </li>
 <li>
-<p>In iOS, add before <code>initSession</code> <a href="#initialize-branch">Initialize Branch</a></p>
+<p>In iOS, add before <code>initSession</code> <a href="#initialize-branch">Initialize Branch</a>.</p>
 </li>
 <li>
-<p>In iOS, update <code>branch_key</code> in your <code>Info.plist</code> to a dictionary (<a href="https://github.com/BranchMetrics/ios-branch-deep-linking/blob/master/Branch-TestBed/Branch-TestBed/Branch-TestBed-Info.plist#L58-L63">example</a>)</p>
+<p>In iOS, update <code>branch_key</code> in your <code>Info.plist</code> to a dictionary (<a href="https://github.com/BranchMetrics/ios-branch-deep-linking/blob/master/Branch-TestBed/Branch-TestBed/Branch-TestBed-Info.plist#L58-L63">example</a>).</p>
 </li>
 <li>
-<p>In Android, set <code>test mode</code> to <code>true</code></p>
+<p>In Android, set <code>test mode</code> to <code>true</code>.</p>
 </li>
 <li>
-<p>The <code>test key</code> of your app must match the <code>test key</code> of your deep link</p>
+<p>The <code>test key</code> of your app must match the <code>test key</code> of your deep link.</p>
 </li>
 <li>
-<p>Remove before releasing to production</p>
-</li>
+<p>Use conditional compilation or remove before releasing to production.</p>
+<ul>
 <li>
 <p><em>Swift 3 &amp; 4</em></p>
-<p><code>swift
-  RNBranch.useTestInstance()</code></p>
+<div class="codehilite"><pre><span></span><span class="cp">#if</span> <span class="cp">DEBUG</span>
+    <span class="n">RNBranch</span><span class="p">.</span><span class="n">useTestInstance</span><span class="p">()</span>
+<span class="cp">#endif</span>
+</pre></div>
+
 </li>
 <li>
-<p><em>Objective C</em></p>
-<p><code>objc
-  [RNBranch useTestInstance]</code></p>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">#ifdef DEBUG</span>
+    <span class="p">[</span><span class="n">RNBranch</span> <span class="n">useTestInstance</span><span class="p">];</span>
+<span class="cp">#endif</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
-<p><em>Android</em></p>
+<p><em>Android:</em> Use this in a build type or product flavor or be sure to remove before
+    releasing to production.</p>
 <p><code>&lt;meta-data android:name="io.branch.sdk.TestMode" android:value="true" /&gt;</code></p>
 </li>
+</ul>
+</li>
+<li>
+<h4 id="simulate-an-install">Simulate an install<a class="headerlink" href="#simulate-an-install" title="Permanent link">&para;</a></h4>
+<p><strong>Do not test in production.</strong></p>
+<p>This requires a native method call that must be made before JS has loaded. There are two options.</p>
+<ol>
+<li>
+<p>Use a <code>branch.json</code> file with your project. See <a href="https://rnbranch.app.link/branch-json">https://rnbranch.app.link/branch-json</a> for full details.
+    Add <code>"debugMode": true</code> to <code>branch.debug.json</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;appleSearchAdsDebugMode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;debugMode&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;delayInitToCheckForSearchAds&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Do not add this setting to <code>branch.json</code>, or it will be enabled for release builds.</p>
+</li>
+<li>
+<p>Modify your native app code.</p>
+<p><strong>Android</strong></p>
+<p>Simulated installs may be enabled on Android by adding <code>&lt;meta-data android:name="io.branch.sdk.TestMode" android:value="true"/&gt;</code> to the <code>application</code> element of your Android manifest. Use this in a build type
+such as <code>debug</code> or a product flavor, or be sure to remove it from your manifest before releasing to prod.
+See <a href="https://docs.branch.io/pages/apps/android/#simulate-an-install">https://docs.branch.io/pages/apps/android/#simulate-an-install</a> for full details.</p>
+<p>Alternately, add <code>RNBranchModule.setDebug();</code> in your MainActivity before the call to <code>initSession</code>. Be sure to remove it
+before releasing to prod.</p>
+<div class="codehilite"><pre><span></span>    <span class="c1">// Remove before prod release</span>
+    <span class="n">RNBranchModule</span><span class="o">.</span><span class="na">setDebug</span><span class="o">();</span>
+    <span class="n">RNBranchModule</span><span class="o">.</span><span class="na">initSession</span><span class="o">(</span><span class="n">getIntent</span><span class="o">().</span><span class="na">getData</span><span class="o">(),</span> <span class="k">this</span><span class="o">);</span>
+</pre></div>
+
+<p><strong>iOS</strong></p>
+<p>Add <code>[RNBranch setDebug];</code> or <code>RNBranch.setDebug()</code> in your AppDelegate before the call to <code>initSession</code>.
+Use conditional compilation or remove before releasing to prod.</p>
+<ul>
+<li>
+<p><em>Swift 3 &amp; 4</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">#if</span> <span class="cp">DEBUG</span>
+    <span class="n">RNBranch</span><span class="p">.</span><span class="n">setDebug</span><span class="p">()</span>
+<span class="cp">#endif</span>
+<span class="n">RNBranch</span><span class="p">.</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">,</span> <span class="n">isReferrable</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective-C</em></p>
+<div class="codehilite"><pre><span></span><span class="cp">#ifdef DEBUG</span>
+    <span class="p">[</span><span class="n">RNBranch</span> <span class="n">setDebug</span><span class="p">];</span>
+<span class="cp">#endif</span>
+<span class="p">[</span><span class="n">RNBranch</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">isReferrable</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<h4 id="using-getlatestreferringparams-to-handle-link-opens">Using getLatestReferringParams to handle link opens<a class="headerlink" href="#using-getlatestreferringparams-to-handle-link-opens" title="Permanent link">&para;</a></h4>
+<p>The <code>getLatestReferringParams</code> method is essentially a synchronous method that retrieves the latest
+referring link parameters stored by the native SDK. However, React Native does not support synchronous
+calls to native code from JavaScript, so the method returns a promise. You must <code>await</code> the response
+or use <code>then</code> to receive the result. The same remarks apply to the <code>getFirstReferringParams</code> method.
+However, this is only a restriction of React Native. The purpose of <code>getLatestReferringParams</code> is to
+retrieve those parameters one time. The promise will only return one result. It will not continue
+to return results when links are opened or wait for a link to be opened. This method is not intended
+to notify the app when a link has been opened.</p>
+<p>To receive notification whenever a link is opened, <em>including at app launch</em>, call
+<code>branch.subscribe</code>. The callback to this method will return any initial link that launched the
+app and all subsequent link opens. There is no need to call <code>getLatestReferringParams</code> at app
+launch to check for an initial link. Use <code>branch.subscribe</code> to handle all link opens.</p>
+</li>
+<li>
+<h4 id="general-troubleshooting">General troubleshooting<a class="headerlink" href="#general-troubleshooting" title="Permanent link">&para;</a></h4>
+<p>See the troubleshooting guide for each native SDK:</p>
+<ul>
+<li><a href="https://docs.branch.io/pages/apps/ios/#troubleshoot-issues">iOS</a></li>
+<li><a href="https://docs.branch.io/pages/apps/android/#troubleshoot-issues">Android</a></li>
 </ul>
 </li>
 <li>
