@@ -2140,9 +2140,20 @@
 <p>Once users have credits, they should be able to redeem them. Checking the balance involves loading the most recent balance from the server and then reading the balance. These can be two separate steps but for the sake of simplicity we have combined them into one example:</p>
 <ul>
 <li>
+<p><em>iOS - Swift</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">loadRewards</span> <span class="p">{</span> <span class="p">(</span><span class="n">changed</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">credits</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getCredits</span><span class="p">()</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;credit: </span><span class="si">\(</span><span class="n">credits</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+<li>
 <p><em>iOS - Objective C</em></p>
-<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">loadRewardsWithCallback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">changed</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">loadRewardsWithCallback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">changed</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;credit: %lu&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">getCredits</span><span class="p">]);</span>
     <span class="p">}</span>
 <span class="p">}];</span>
@@ -2167,9 +2178,20 @@
 <p>If you want to see the number of credits in a custom bucket you've specified, such as <code>myBucket</code>, then you can do the following:</p>
 <ul>
 <li>
+<p><em>iOS - Swift</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">loadRewards</span> <span class="p">{</span> <span class="p">(</span><span class="n">changed</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="p">==</span> <span class="kc">nil</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">creditsForBucket</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getCreditsForBucket</span><span class="p">()</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;credit for bucket: </span><span class="si">\(</span><span class="n">creditsForBucket</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+</li>
+<li>
 <p><em>iOS - Objective C</em></p>
-<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">loadRewardsWithCallback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">changed</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">err</span><span class="p">)</span> <span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">loadRewardsWithCallback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">changed</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
         <span class="bp">NSString</span> <span class="o">*</span><span class="n">bucket</span> <span class="o">=</span> <span class="s">@&quot;myBucket&quot;</span><span class="p">;</span>
         <span class="n">NSLog</span><span class="p">(</span><span class="s">@&quot;credit for %@ bucket: %lu&quot;</span><span class="p">,</span> <span class="n">bucket</span><span class="p">,</span> <span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">getCreditsForBucket</span><span class="p">:</span><span class="n">bucket</span><span class="p">]);</span>
     <span class="p">}</span>
@@ -2198,6 +2220,19 @@
 <p>When users spend credits, you can make a simple call to redeem their credits.</p>
 <ul>
 <li>
+<p><em>iOS - Swift</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">redeemRewards</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="p">{(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">success</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Redeemed 5 credits!&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Failed to redeem credits: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+</li>
+<li>
 <p><em>iOS - Objective C</em></p>
 <div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">redeemRewards</span><span class="p">:</span><span class="mi">5</span> <span class="nl">callback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
@@ -2219,6 +2254,19 @@
 </ul>
 <p>If you want to redeem credits in a custom bucket you've specified, such as <code>myBucket</code>, then you can do the following:</p>
 <ul>
+<li>
+<p><em>iOS - Swift</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">redeemRewards</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">forBucket</span><span class="p">:</span> <span class="s">&quot;myBucket&quot;</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="p">{(</span><span class="n">success</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="n">success</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Redeemed 5 credits for myBucket!&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;Failed to redeem credits: </span><span class="si">\(</span><span class="n">error</span><span class="si">)</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+
+</li>
 <li>
 <p><em>iOS - Objective C</em></p>
 <div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">redeemRewards</span><span class="p">:</span><span class="mi">5</span> <span class="nl">forBucket</span><span class="p">:</span><span class="s">@&quot;myBucket&quot;</span> <span class="nl">callback</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">success</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
@@ -2247,6 +2295,22 @@
 <li>Call the <code>redeemRewards</code> method and show a progress dialog.</li>
 <li>
 <p>Show a completion dialog and reflect updates in balance.</p>
+</li>
+<li>
+<p><em>iOS - Swift</em></p>
+<div class="codehilite"><pre><span></span>    <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">loadRewards</span><span class="p">(</span><span class="n">withCallback</span><span class="p">:</span> <span class="p">{(</span><span class="kc">_</span> <span class="n">changed</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">,</span> <span class="kc">_</span> <span class="n">error</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="o">!</span><span class="p">(</span><span class="n">error</span> <span class="o">&amp;&amp;</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getCredits</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">redeemRewards</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">callback</span><span class="p">:</span> <span class="p">{(</span><span class="kc">_</span> <span class="n">success</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">,</span> <span class="kc">_</span> <span class="n">err</span><span class="p">:</span> <span class="n">Error</span><span class="p">?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">err</span> <span class="p">==</span> <span class="kc">nil</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nv">newBalance</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">getCredits</span><span class="p">()</span>
+                    <span class="kd">var</span> <span class="nv">successMsg</span> <span class="p">=</span> <span class="s">&quot;You redeemed 5 credits! You have </span><span class="si">\(</span><span class="nb">Int</span><span class="si">(</span><span class="n">newBalance</span><span class="si">))</span><span class="s"> remaining.&quot;</span>
+                    <span class="bp">UIAlertView</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">&quot;Success&quot;</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">successMsg</span><span class="p">,</span> <span class="n">delegate</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">cancelButtonTitle</span><span class="p">:</span> <span class="s">&quot;OK&quot;</span><span class="p">,</span> <span class="n">otherButtonTitles</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">).</span><span class="n">show</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+</pre></div>
+
 </li>
 <li>
 <p><em>iOS - Objective C</em></p>

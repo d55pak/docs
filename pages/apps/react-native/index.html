@@ -2402,14 +2402,19 @@
 <h4 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h4>
 <ul>
 <li>
-<p>Install the NPM module</p>
-<div class="codehilite"><pre><span></span>yarn add react-native-branch
-</pre></div>
-
-<p>or</p>
-<div class="codehilite"><pre><span></span>npm install --save react-native-branch
-</pre></div>
-
+<p>Install the module</p>
+<ul>
+<li>
+<p><em>Yarn</em>
+    <div class="codehilite"><pre><span></span>yarn add react-native-branch
+</pre></div></p>
+</li>
+<li>
+<p><em>NPM</em>
+    <div class="codehilite"><pre><span></span>npm install --save react-native-branch
+</pre></div></p>
+</li>
+</ul>
 </li>
 <li>
 <p>(Optional) Add a branch.json file to the root of your app (next to package.json).
@@ -2585,33 +2590,35 @@ Note that the location of <code>node_modules</code> relative to your <code>Podfi
 <li>
 <h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Swift 3 &amp; 4 <code>AppDelegate.swift</code></li>
-</ul>
-<p>Add <code>#import &lt;react-native-branch/RNBranch.h&gt;</code> to your Bridging header if you have one.</p>
-<p>If you are using the <code>React</code> pod in a native app with <code>use_frameworks!</code>, you may simply use
-a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>.</p>
+<li>
+<p>iOS</p>
+<p>If you are using Swift, add <code>#import &lt;react-native-branch/RNBranch.h&gt;</code> to your Bridging header if you have one.</p>
+<p>If you are using the <code>React</code> pod in a native app with <code>use_frameworks!</code>, you may simply use a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>.</p>
+<ul>
+<li>
+<p><em>Swift 3 &amp; 4- AppDelegate.swift</em></p>
 <div class="codehilite"><pre><span></span><span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
 <span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-<span class="hll">    <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
-</span><span class="hll">    <span class="c1">// RNBranch.useTestInstance()</span>
-</span><span class="hll">    <span class="n">RNBranch</span><span class="p">.</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">,</span> <span class="n">isReferrable</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// &lt;-- add this</span>
+<span class="hll">  <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
+</span><span class="hll">  <span class="c1">// RNBranch.useTestInstance()</span>
+</span><span class="hll">  <span class="n">RNBranch</span><span class="p">.</span><span class="n">initSession</span><span class="p">(</span><span class="n">launchOptions</span><span class="p">:</span> <span class="n">launchOptions</span><span class="p">,</span> <span class="n">isReferrable</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">// &lt;-- add this</span>
 </span>
-    <span class="c1">//...</span>
+  <span class="c1">//...</span>
 <span class="p">}</span>
 
 <span class="hll"><span class="c1">// Add the openURL and continueUserActivity functions</span>
 </span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">app</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="n">url</span><span class="p">:</span> <span class="n">URL</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[</span><span class="n">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="nb">Any</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:])</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">open</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span>
+</span><span class="hll">  <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span><span class="p">.</span><span class="n">application</span><span class="p">(</span><span class="n">app</span><span class="p">,</span> <span class="n">open</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="n">options</span><span class="p">)</span>
 </span><span class="hll"><span class="p">}</span>
 </span><span class="hll">
 </span><span class="hll"><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="kc">_</span> <span class="n">application</span><span class="p">:</span> <span class="bp">UIApplication</span><span class="p">,</span> <span class="k">continue</span> <span class="n">userActivity</span><span class="p">:</span> <span class="bp">NSUserActivity</span><span class="p">,</span> <span class="n">restorationHandler</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">([</span><span class="nb">Any</span><span class="p">]?)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
-</span><span class="hll">    <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
+</span><span class="hll">  <span class="k">return</span> <span class="n">RNBranch</span><span class="p">.</span><span class="k">continue</span><span class="p">(</span><span class="n">userActivity</span><span class="p">)</span>
 </span><span class="hll"><span class="p">}</span>
 </span></pre></div>
 
-<ul>
+</li>
 <li>
-<p>Objective-C <code>AppDelegate.m</code></p>
+<p><em>Objective-C - AppDelegate.m</em></p>
 <div class="codehilite"><pre><span></span><span class="hll"><span class="cp">#import &lt;react-native-branch/RNBranch.h&gt; </span><span class="c1">// at the top</span>
 </span>
 <span class="c1">// Initialize the Branch Session at the top of existing application:didFinishLaunchingWithOptions:</span>
@@ -2620,13 +2627,12 @@ a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>
 <span class="hll">    <span class="c1">// Uncomment this line to use the test key instead of the live one.</span>
 </span><span class="hll">    <span class="c1">// [RNBranch useTestInstance]</span>
 </span><span class="hll">    <span class="p">[</span><span class="n">RNBranch</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">isReferrable</span><span class="p">:</span><span class="nb">YES</span><span class="p">];</span> <span class="c1">// &lt;-- add this</span>
-</span>
-    <span class="bp">NSURL</span> <span class="o">*</span><span class="n">jsCodeLocation</span><span class="p">;</span>
+</span>    <span class="bp">NSURL</span> <span class="o">*</span><span class="n">jsCodeLocation</span><span class="p">;</span>
     <span class="c1">//...</span>
 <span class="p">}</span>
 
-<span class="hll"><span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span> <span class="p">{</span>
-</span><span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">openURL</span><span class="p">:</span><span class="n">url</span> <span class="nl">sourceApplication</span><span class="p">:</span><span class="n">sourceApplication</span> <span class="nl">annotation</span><span class="p">:</span><span class="n">annotation</span><span class="p">])</span> <span class="p">{</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">application</span> <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span> <span class="nf">sourceApplication:</span><span class="p">(</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">sourceApplication</span> <span class="nf">annotation:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">annotation</span> <span class="p">{</span>
+<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="n">RNBranch</span><span class="p">.</span><span class="n">branch</span> <span class="nl">application</span><span class="p">:</span><span class="n">application</span> <span class="nl">openURL</span><span class="p">:</span><span class="n">url</span> <span class="nl">sourceApplication</span><span class="p">:</span><span class="n">sourceApplication</span> <span class="nl">annotation</span><span class="p">:</span><span class="n">annotation</span><span class="p">])</span> <span class="p">{</span>
 </span><span class="hll">        <span class="c1">// do other deep link routing for the Facebook SDK, Pinterest SDK, etc</span>
 </span><span class="hll">    <span class="p">}</span>
 </span><span class="hll">    <span class="k">return</span> <span class="nb">YES</span><span class="p">;</span>
@@ -2637,6 +2643,8 @@ a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>
 </span><span class="hll"><span class="p">}</span>
 </span></pre></div>
 
+</li>
+</ul>
 </li>
 <li>
 <p>Android</p>
@@ -2669,10 +2677,8 @@ a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>
 </pre></div>
 
 </li>
-</ul>
-</li>
 <li>
-<p>MainActivity.java</p>
+<p><code>MainActivity.java</code></p>
 <div class="codehilite"><pre><span></span><span class="hll"><span class="kn">import</span> <span class="nn">io.branch.rnbranch.*</span><span class="o">;</span> <span class="c1">// &lt;-- add this</span>
 </span><span class="hll"><span class="kn">import</span> <span class="nn">android.content.Intent</span><span class="o">;</span> <span class="c1">// &lt;-- and this</span>
 </span>
@@ -2698,6 +2704,8 @@ a Swift import in the AppDelegate.swift: <code>import react_native_branch</code>
 <span class="o">}</span>
 </pre></div>
 
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -2993,8 +3001,6 @@ only the symbols you are using.</p>
 </li>
 <li>
 <h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
-</li>
-</ul>
 <table>
 <thead>
 <tr>
@@ -3033,7 +3039,7 @@ only the symbols you are using.</p>
 </tr>
 </tbody>
 </table>
-<ul>
+</li>
 <li>
 <h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3290,10 +3296,12 @@ launch to check for an initial link. Use <code>branch.subscribe</code> to handle
 </li>
 <li>
 <h4 id="sample-apps">Sample apps<a class="headerlink" href="#sample-apps" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples">Examples</a>  </li>
+<li><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples/webview_tutorial">Tutorial</a></li>
+</ul>
 </li>
 </ul>
-<p><a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples">Examples</a><br />
-<a href="https://github.com/BranchMetrics/react-native-branch-deep-linking/tree/master/examples/webview_tutorial">Tutorial</a></p>
                 
                   
                 
