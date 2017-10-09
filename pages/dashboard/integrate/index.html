@@ -2425,7 +2425,9 @@
 <ul>
 <li>Choose a <code>link domain</code> which will be used for all your links</li>
 <li>The <code>link domain</code> is the website which hosts your deep links</li>
-<li>The <code>link domain</code> is not a deep link<ul>
+<li>
+<p>The <code>link domain</code> is not a deep link</p>
+<ul>
 <li>Deep links will have an <code>alias</code> behind them to uniquely identify them<ul>
 <li><a href="https://example.app.link/VZsTctoINF">https://example.app.link/VZsTctoINF</a></li>
 <li><a href="https://example.app.link/custom-alias">https://example.app.link/custom-alias</a>
@@ -2433,6 +2435,10 @@
 </ul>
 </li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Alias must be unique and cannot include '/'</p>
+<p>If an alias is already taken, creating the link will result in a 409 conflict error. Also, including a '/' will modify the structure and invalidate the Branch link.</p>
+</div>
 </li>
 </ul>
 </li>
