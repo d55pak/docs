@@ -10,7 +10,7 @@
         <meta name="description" content="Branch documentation for mobile deep linking">
       
       
-        <link rel="canonical" href="https://docs.branch.io/pages/push/generic-push/">
+        <link rel="canonical" href="https://docs.branch.io/pages/advance/push-notifications/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Generic push support - Branch documentation</title>
+        <title>Links in push notifications - Branch documentation</title>
       
     
     
@@ -128,12 +128,8 @@
             
               
                 
-                  <span class="md-header-nav__parent">
-                    Links in push notifications
-                  </span>
-                
               
-              Generic push support
+              Links in push notifications
             
           </span>
         </div>
@@ -1286,39 +1282,17 @@
   
 
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12" checked>
-    
-    <label class="md-nav__link" for="nav-12">
-      Links in push notifications
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Links in push notifications
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-            
-            
-            
-
-  
-
-
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        Generic push support
+        Links in push notifications
       </label>
     
-    <a href="./" title="Generic push support" class="md-nav__link md-nav__link--active">
-      Generic push support
+    <a href="./" title="Links in push notifications" class="md-nav__link md-nav__link--active">
+      Links in push notifications
     </a>
     
       
@@ -1337,8 +1311,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup" title="Setup" class="md-nav__link">
-    Setup
+  <a href="#configure" title="Configure" class="md-nav__link">
+    Configure
   </a>
   
     <nav class="md-nav">
@@ -1382,12 +1356,6 @@
   
 </nav>
     
-  </li>
-
-          
-        
-      </ul>
-    </nav>
   </li>
 
       
@@ -1982,8 +1950,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#setup" title="Setup" class="md-nav__link">
-    Setup
+  <a href="#configure" title="Configure" class="md-nav__link">
+    Configure
   </a>
   
     <nav class="md-nav">
@@ -2035,21 +2003,36 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/push/generic-push.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/advance/push-notifications.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Generic push support</h1>
+                  <h1>Links in push notifications</h1>
                 
                 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Push notifications are a great way to engage your existing app users. The Branch platform does not actually send push notifications, but you can add Branch links to your push notifications to get the benefit of deep linking and attribution.</p>
-<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
-<p>This guide requires you to have already <a href="#dialog-code">integrated the Branch SDK</a> into your app for tracking.</p>
-<h3 id="receive-push-notification-links">Receive push notification links<a class="headerlink" href="#receive-push-notification-links" title="Permanent link">&para;</a></h3>
-<p>Please ensure that your Branch SDK is correctly configured to receive the push notification and parse out the link. You can find the specific methods needed on <a href="#dialog-code?ios=handle-push-notifications&amp;android=handle-push-notification">this page of the integration guide</a>. Only native iOS and Android supported.</p>
-<h3 id="create-a-branch-powered-push-message">Create a Branch powered push message<a class="headerlink" href="#create-a-branch-powered-push-message" title="Permanent link">&para;</a></h3>
-<p>Now that your app is setup, you just need to <a href="../../../pages/links/integrate/">create a Branch deep link</a> and place it into your push message. Simply add the link as additional key/value to your payload. Use the key <code>branch</code> and place the link as the value.</p>
-<p>You're ready to rock!</p>
+<ul>
+<li>Push notifications are a great way to engage your existing app users. The Branch platform does not actually send push notifications, but you can add Branch links to your push notifications to get the benefit of deep linking and attribution.</li>
+</ul>
+<h2 id="configure">Configure<a class="headerlink" href="#configure" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<h4 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h4>
+<ul>
+<li>This guide requires you to have already <a href="#dialog-code">integrated the Branch SDK</a> into your app for tracking.</li>
+</ul>
+</li>
+<li>
+<h4 id="receive-push-notification-links">Receive push notification links<a class="headerlink" href="#receive-push-notification-links" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Please ensure that your Branch SDK is correctly configured to receive the push notification and parse out the link. You can find the specific methods needed on <a href="#dialog-code?ios=handle-push-notifications&amp;android=handle-push-notification">this page of the integration guide</a>. Only native iOS and Android supported.</li>
+</ul>
+</li>
+<li>
+<h4 id="create-a-branch-powered-push-message">Create a Branch powered push message<a class="headerlink" href="#create-a-branch-powered-push-message" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Now that your app is setup, you just need to <a href="../../../pages/links/integrate/">create a Branch deep link</a> and place it into your push message. Simply add the link as additional key/value to your payload. Use the key <code>branch</code> and place the link as the value.</li>
+</ul>
+</li>
+</ul>
                 
                   
                 
@@ -2060,9 +2043,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://docs.branch.io/pages/push/generic-push/";
+    this.page.url = "https://docs.branch.io/pages/advance/push-notifications/";
     this.page.identifier =
-      "/pages/push/generic-push/";
+      "/pages/advance/push-notifications/";
   };
   (function() {
     var d = document, s = d.createElement("script");
@@ -2079,10 +2062,6 @@
       </main>
       
         
-          <div class="branch-floater branch-beta">Beta Release</div>
-        
-        
-          <a class="branch-floater branch-old-docs" href="http://dev.branch.io/" title="old docs">&#8678; Old docs</a>
         
       
       

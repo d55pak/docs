@@ -386,6 +386,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enable-a-deepview" title="Enable a Deepview" class="md-nav__link">
+    Enable a Deepview
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1509,36 +1516,10 @@
         
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
-      Links in push notifications
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        Links in push notifications
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-            
-            
-            
-
-
   <li class="md-nav__item">
-    <a href="../../push/generic-push/" title="Generic push support" class="md-nav__link">
-      Generic push support
+    <a href="../../advance/push-notifications/" title="Links in push notifications" class="md-nav__link">
+      Links in push notifications
     </a>
-  </li>
-
-          
-        
-      </ul>
-    </nav>
   </li>
 
       
@@ -2202,6 +2183,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enable-a-deepview" title="Enable a Deepview" class="md-nav__link">
+    Enable a Deepview
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2428,17 +2416,13 @@
 <li>
 <p>The <code>link domain</code> is not a deep link</p>
 <ul>
-<li>Deep links will have an <code>alias</code> behind them to uniquely identify them<ul>
-<li><a href="https://example.app.link/VZsTctoINF">https://example.app.link/VZsTctoINF</a></li>
-<li><a href="https://example.app.link/custom-alias">https://example.app.link/custom-alias</a>
-<img alt="image" src="../../../img/pages/dashboard/link-domain.png" /></li>
+<li>Deep links have an <code>alias</code> behind them to uniquely identify the link data inside them<ul>
+<li>e.g. <a href="https://example.app.link/VZsTctoINF">https://example.app.link/VZsTctoINF</a></li>
+<li>e.g. <a href="https://example.app.link/custom-alias">https://example.app.link/custom-alias</a></li>
 </ul>
 </li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Alias must be unique and cannot include '/'</p>
-<p>If an alias is already taken, creating the link will result in a 409 conflict error. Also, including a '/' will modify the structure and invalidate the Branch link.</p>
-</div>
+<p><img alt="image" src="../../../img/pages/dashboard/link-domain.png" /></p>
 </li>
 </ul>
 </li>
@@ -2460,6 +2444,18 @@
 <p><img alt="image" src="../../../img/pages/dashboard/save.png" /></p>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="enable-a-deepview">Enable a Deepview<a class="headerlink" href="#enable-a-deepview" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Go to <a href="https://dashboard.branch.io/web/deepviews">Deepview Previews</a> on the Branch Dashboard</li>
+<li>Toggle <code>Enabled</code> for <code>branch_default</code> for <code>iOS</code> and <code>Android</code></li>
+<li>This will make your deep links perform optimally on all <a href="../../../pages/links/integrate/#expected-redirect-behavior">Supported platforms</a></li>
+<li>
+<p>Additional details about <a href="../../../pages/web/deep-views/">Deepviews</a></p>
+<p><img alt="image" src="../../../img/pages/dashboard/deepview.png" /></p>
 </li>
 </ul>
 </li>
@@ -2545,7 +2541,7 @@
 <li>
 <h4 id="enable-facebook-app-invites">Enable Facebook App Invites<a class="headerlink" href="#enable-facebook-app-invites" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Go to <a href="https://dashboard.branch.io/link-settings">Link Settings</a> on the Branch Dashboard    </li>
+<li>Go to <a href="https://dashboard.branch.io/link-settings">Link Settings</a> on the Branch Dashboard</li>
 <li>Add your Facebook credentials to allow us to link your Facebook dashboard to the Branch dashboard</li>
 <li>This configuration allows us to send and receive attribution data from Facebook</li>
 </ul>
@@ -2559,7 +2555,7 @@
 <li>
 <h5 id="use-applink-domain">Use app.link domain<a class="headerlink" href="#use-applink-domain" title="Permanent link">&para;</a></h5>
 <ul>
-<li>Understand <a href="#domain-change-warning">Domain change warning</a> </li>
+<li>Understand <a href="#domain-change-warning">Domain change warning</a></li>
 <li>Make changes to <a href="https://dashboard.branch.io/link-settings">Link settings</a> or contact support</li>
 </ul>
 </li>
@@ -2574,7 +2570,7 @@
 <li><code>CNAME</code> = <code>custom.bnc.lt</code></li>
 </ul>
 </li>
-<li>Click <code>Confirm</code> on <a href="https://dashboard.branch.io/link-settings">Link settings</a> </li>
+<li>Click <code>Confirm</code> on <a href="https://dashboard.branch.io/link-settings">Link settings</a></li>
 </ul>
 </li>
 <li>
@@ -2681,10 +2677,6 @@
       </main>
       
         
-          <div class="branch-floater branch-beta">Beta Release</div>
-        
-        
-          <a class="branch-floater branch-old-docs" href="http://dev.branch.io/" title="old docs">&#8678; Old docs</a>
         
       
       
