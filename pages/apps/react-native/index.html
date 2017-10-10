@@ -480,6 +480,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#update-from-200" title="Update from &lt; 2.0.0" class="md-nav__link">
+    Update from &lt; 2.0.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-app" title="Configure app" class="md-nav__link">
     Configure app
   </a>
@@ -614,6 +621,13 @@
           <li class="md-nav__item">
   <a href="#track-apple-search-ads" title="Track Apple Search Ads" class="md-nav__link">
     Track Apple Search Ads
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enable-100-matching" title="Enable 100% matching" class="md-nav__link">
+    Enable 100% matching
   </a>
   
 </li>
@@ -2144,6 +2158,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#update-from-200" title="Update from &lt; 2.0.0" class="md-nav__link">
+    Update from &lt; 2.0.0
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#configure-app" title="Configure app" class="md-nav__link">
     Configure app
   </a>
@@ -2282,6 +2303,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#enable-100-matching" title="Enable 100% matching" class="md-nav__link">
+    Enable 100% matching
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2414,6 +2442,94 @@ described in the <a href="https://facebook.github.io/react-native/docs/integrati
 </pre></div></p>
 <p>Then run <code>pod install</code> to regenerate the <code>Pods</code> project with the new dependencies.
 Note that the location of <code>node_modules</code> relative to your <code>Podfile</code> may vary.</p>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="update-from-200">Update from &lt; 2.0.0<a class="headerlink" href="#update-from-200" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>If also upgrading React Native, use <code>react-native-git-upgrade</code> to upgrade
+    your React Native app to the latest version of React Native, if possible.</p>
+<div class="codehilite"><pre><span></span>npm install -g react-native-git-upgrade
+<span class="nb">cd</span> /path/to/myapp
+react-native-git-upgrade
+</pre></div>
+
+</li>
+<li>
+<p>Version 2.x includes the native SDKs in the NPM module. Please remove any installation
+    of the native Branch SDK from Maven, CocoaPods, Carthage or by manually adding the framework (iOS).</p>
+</li>
+<li>
+<p>Android:</p>
+<ul>
+<li>
+<p>In <code>android/app/build.gradle</code>:</p>
+</li>
+<li>
+<p>Remove</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>compile &#39;io.branch.sdk.android:library:2.+&#39;
+</pre></div>
+
+</li>
+<li>
+<p>iOS</p>
+<ul>
+<li>
+<p>Remove the Branch SDK depending on how you originally installed it.</p>
+</li>
+<li>
+<p>Originally installed using CocoaPods:</p>
+<ul>
+<li>
+<p>Remove <code>pod "Branch"</code> from your <code>Podfile</code>.</p>
+</li>
+<li>
+<p>If using the <code>React</code> pod from <code>node_modules</code>, add <code>pod "Branch-SDK", path: "../node_modules/react-native-branch/ios"</code>. (Note the different pod name.)</p>
+<div class="codehilite"><pre><span></span><span class="n">pod</span> <span class="s2">&quot;react-native-branch&quot;</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;../node_modules/react-native-branch&quot;</span>
+<span class="hll"><span class="n">pod</span> <span class="s2">&quot;Branch-SDK&quot;</span><span class="p">,</span> <span class="ss">path</span><span class="p">:</span> <span class="s2">&quot;../node_modules/react-native-branch/ios&quot;</span>
+</span></pre></div>
+
+</li>
+<li>
+<p><code>pod install</code></p>
+</li>
+<li>
+<p>To remove CocoaPods entirely from your project, in case you were only using it for Branch:</p>
+<div class="codehilite"><pre><span></span>pod deintegrate
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>Originally installed using Carthage:</p>
+<ul>
+<li>
+<p>Remove the <code>Branch.framework</code> from your project's dependencies.</p>
+</li>
+<li>
+<p>Remove <code>Branch.framework</code> from the input and output paths of your <code>carthage copy-frameworks</code> build phase.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Originally installed manually:</p>
+<ul>
+<li>Remove the <code>Branch.framework</code> from your project's dependencies.</li>
+</ul>
+</li>
+<li>
+<p>If also updating from react-native &lt; 0.40 (react-native-branch 0.9), replace <code>#import "RNBranch.h"</code> with:</p>
+<div class="codehilite"><pre><span></span><span class="cp">#import &lt;React/RCTRootView.h&gt;</span>
+<span class="hll"><span class="cp">#import &lt;react-native-branch/RNBranch.h&gt;</span>
+</span></pre></div>
+
+</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -3137,6 +3253,72 @@ only the symbols you are using.</p>
 </ul>
 </li>
 </ol>
+</li>
+</ul>
+</li>
+<li>
+<h4 id="enable-100-matching">Enable 100% matching<a class="headerlink" href="#enable-100-matching" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Android</p>
+<ul>
+<li>
+<p>Uses <code>Chrome Tabs</code> to increase attribute matching success</p>
+</li>
+<li>
+<p>Add <code>compile 'com.android.support:customtabs:23.3.0'</code> to your <code>build.gradle</code></p>
+</li>
+<li>
+<p>Add to your application class before <code>getAutoInstance</code> (<a href="#load-branch">Load Branch</a>)</p>
+</li>
+<li>
+<p><em>Java</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">enableCookieBasedMatching</span><span class="o">(</span><span class="s">&quot;your.linkdomain.com&quot;</span><span class="o">);</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Kotlin</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">enableCookieBasedMatching</span><span class="o">(</span><span class="s">&quot;your.linkdomain.com&quot;</span><span class="o">)</span>
+</pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>iOS</p>
+<ul>
+<li>
+<p>Use the <code>SFSafariViewController</code> to increase the attribution matching success</p>
+</li>
+<li>
+<p>The 100% match is a bit of a misnomer, as it is only 100% match from when a user clicks from the Safari browser. According to our analysis, clicking through Safari happens about 50-75% of the time depending on the use case. For example, clicking from Facebook, Gmail or Chrome won’t trigger a 100% match here. However, it’s still beneficial to the matching accuracy, so we recommend employing it.</p>
+</li>
+<li>
+<p>When using a custom domain, add a <code>branch_app_domain</code> string key in your Info.plist with your custom domain
+to enable 100% matching.</p>
+</li>
+<li>
+<p>By default, cookie-based matching is enabled on iOS 9 and 10 if the <code>SafariServices.framework</code>
+is included in an app's dependencies, and the app uses an app.link subdomain or sets the <code>branch_app_domain</code>
+in the Info.plist. It can be disabled with a call to the SDK.</p>
+</li>
+<li>
+<p>Add before <code>initSession</code> <a href="#initialize-branch">Initialize Branch</a></p>
+</li>
+<li>
+<p><em>Swift 3 &amp; 4</em></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">disableCookieBasedMatching</span><span class="p">()</span>
+</pre></div>
+
+</li>
+<li>
+<p><em>Objective C</em></p>
+<div class="codehilite"><pre><span></span><span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="n">disableCookieBasedMatching</span><span class="p">];</span>
+</pre></div>
+
+</li>
+</ul>
 </li>
 </ul>
 </li>
