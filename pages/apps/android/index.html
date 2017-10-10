@@ -566,12 +566,18 @@
     Using bnc.lt or a custom link domain
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#branch-with-fabric-answers" title="Branch with Fabric Answers" class="md-nav__link">
     Branch with Fabric Answers
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2391,12 +2397,18 @@
     Using bnc.lt or a custom link domain
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#branch-with-fabric-answers" title="Branch with Fabric Answers" class="md-nav__link">
     Branch with Fabric Answers
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2517,7 +2529,7 @@
                 <h2 id="integrate-branch">Integrate Branch<a class="headerlink" href="#integrate-branch" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<h3 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Complete the <code>Basic integration</code> within <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a></p>
@@ -2529,7 +2541,7 @@
 </ul>
 </li>
 <li>
-<h4 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h4>
+<h3 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Import the Branch SDK to your <code>build.gradle</code></p>
@@ -2565,7 +2577,7 @@
 <span class="hll">    <span class="c1">// required</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">io</span><span class="o">.</span><span class="na">branch</span><span class="o">.</span><span class="na">sdk</span><span class="o">.</span><span class="na">android</span><span class="o">:</span><span class="n">library</span><span class="o">:</span><span class="mf">2.</span><span class="o">+</span><span class="err">&#39;</span>
 </span>
-<span class="hll">    <span class="c1">// optional </span>
+<span class="hll">    <span class="c1">// optional</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">support</span><span class="o">:</span><span class="n">customtabs</span><span class="o">:</span><span class="mf">23.3.0</span><span class="err">&#39;</span> <span class="c1">// Chrome Tab matching</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">ads</span><span class="o">:</span><span class="mi">9</span><span class="o">+</span><span class="err">&#39;</span> <span class="c1">// GAID matching</span>
 </span><span class="hll">    <span class="n">compile</span> <span class="err">&#39;</span><span class="n">com</span><span class="o">.</span><span class="na">google</span><span class="o">.</span><span class="na">android</span><span class="o">.</span><span class="na">gms</span><span class="o">:</span><span class="n">play</span><span class="o">-</span><span class="n">services</span><span class="o">-</span><span class="n">appindexing</span><span class="o">:</span><span class="mf">9.</span><span class="o">+</span><span class="err">&#39;</span> <span class="c1">// App indexing</span>
@@ -2578,7 +2590,7 @@
 </ul>
 </li>
 <li>
-<h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<h3 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Add Branch to your <code>AndroidManifest.xml</code></p>
@@ -2655,7 +2667,7 @@
 </ul>
 </li>
 <li>
-<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<h3 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Add Branch to your <code>MainActivity.java</code></p>
@@ -2765,7 +2777,7 @@
 </ul>
 </li>
 <li>
-<h4 id="load-branch">Load Branch<a class="headerlink" href="#load-branch" title="Permanent link">&para;</a></h4>
+<h3 id="load-branch">Load Branch<a class="headerlink" href="#load-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Add Branch to your <code>CustomApplicationClass.java</code></p>
@@ -2816,7 +2828,7 @@
 </ul>
 </li>
 <li>
-<h4 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="test-deep-link">Test deep link<a class="headerlink" href="#test-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Dashboard</a></p>
@@ -2839,7 +2851,7 @@
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
+<h3 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>The <code>Branch Universal Object</code> encapsulates the thing you want to share (content or user)</p>
@@ -2876,7 +2888,7 @@
 </ul>
 </li>
 <li>
-<h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Creates a deep link URL with encapsulated data</p>
@@ -2934,7 +2946,7 @@
 </ul>
 </li>
 <li>
-<h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Will generate a Branch deep link and tag it with the channel the user selects</p>
@@ -3016,7 +3028,7 @@
 </ul>
 </li>
 <li>
-<h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Retrieve Branch data from a deep link</p>
@@ -3073,7 +3085,7 @@
 </ul>
 </li>
 <li>
-<h4 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h4>
+<h3 id="navigate-to-content">Navigate to content<a class="headerlink" href="#navigate-to-content" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Do stuff with the Branch deep link data</p>
@@ -3142,7 +3154,7 @@
 </ul>
 </li>
 <li>
-<h4 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h4>
+<h3 id="display-content">Display content<a class="headerlink" href="#display-content" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>List content on <code>Google Search</code> with <code>App Indexing</code></p>
@@ -3177,7 +3189,7 @@
 </ul>
 </li>
 <li>
-<h4 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h4>
+<h3 id="track-content">Track content<a class="headerlink" href="#track-content" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Track how many times a piece of content is viewed</p>
@@ -3206,7 +3218,7 @@
 </ul>
 </li>
 <li>
-<h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<h3 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
@@ -3215,7 +3227,7 @@
 <p><code>127</code> character max for user id</p>
 </li>
 <li>
-<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a>  </p>
+<p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a></p>
 </li>
 <li>
 <p><em>Java</em></p>
@@ -3240,7 +3252,7 @@
 </ul>
 </li>
 <li>
-<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<h3 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Registers a custom event</p>
@@ -3287,19 +3299,19 @@
 </ul>
 </li>
 <li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<h3 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Registers a custom commerce event</p>
 </li>
 <li>
-<p>Uses <a href="#commerce-properties">Track commerce properties</a> for <code>Currency</code> and <code>Category</code> </p>
+<p>Uses <a href="#commerce-properties">Track commerce properties</a> for <code>Currency</code> and <code>Category</code></p>
 </li>
 <li>
 <p>Validate with the <a href="https://dashboard.branch.io/liveview/commerce">Branch Dashboard</a></p>
 </li>
 <li>
-<p>Ensure to add <code>revenue</code> field to track purchase. All other fields are optional </p>
+<p>Ensure to add <code>revenue</code> field to track purchase. All other fields are optional</p>
 </li>
 <li>
 <p><em>Java</em></p>
@@ -3413,7 +3425,7 @@
 </ul>
 </li>
 <li>
-<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<h3 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Referral points are obtained from referral rules on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
@@ -3477,7 +3489,7 @@
 <p>Load history</p>
 <ul>
 <li>
-<p><em>Java</em> </p>
+<p><em>Java</em></p>
 <div class="codehilite"><pre><span></span><span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">().</span><span class="na">getCreditHistory</span><span class="o">(</span><span class="k">new</span> <span class="n">BranchListResponseListener</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceivingResponse</span><span class="o">(</span><span class="n">JSONArray</span> <span class="n">list</span><span class="o">,</span> <span class="n">Branch</span><span class="o">.</span><span class="na">BranchError</span> <span class="n">error</span><span class="o">)</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">error</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
@@ -3511,7 +3523,7 @@
 </ul>
 </li>
 <li>
-<h4 id="handle-push-notification">Handle push notification<a class="headerlink" href="#handle-push-notification" title="Permanent link">&para;</a></h4>
+<h3 id="handle-push-notification">Handle push notification<a class="headerlink" href="#handle-push-notification" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Deep link to content from GCM push notifications just by adding a Branch link to your result intent</p>
@@ -3537,7 +3549,7 @@
 </ul>
 </li>
 <li>
-<h4 id="enable-100-matching">Enable 100% matching<a class="headerlink" href="#enable-100-matching" title="Permanent link">&para;</a></h4>
+<h3 id="enable-100-matching">Enable 100% matching<a class="headerlink" href="#enable-100-matching" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Uses <code>Chrome Tabs</code> to increase attribute matching success</p>
@@ -3566,7 +3578,7 @@
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="sample-testing-apps">Sample testing apps<a class="headerlink" href="#sample-testing-apps" title="Permanent link">&para;</a></h4>
+<h3 id="sample-testing-apps">Sample testing apps<a class="headerlink" href="#sample-testing-apps" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><a href="https://github.com/BranchMetrics/Branch-Example-Deep-Linking-Branchster-Android">Branchsters</a></p>
@@ -3577,7 +3589,7 @@
 </ul>
 </li>
 <li>
-<h4 id="simulate-an-install">Simulate an install<a class="headerlink" href="#simulate-an-install" title="Permanent link">&para;</a></h4>
+<h3 id="simulate-an-install">Simulate an install<a class="headerlink" href="#simulate-an-install" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Need to bypass the device's hardware_id</p>
@@ -3608,7 +3620,7 @@
 </ul>
 </li>
 <li>
-<h4 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h4>
+<h3 id="track-content-properties">Track content properties<a class="headerlink" href="#track-content-properties" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Used for <a href="#track-content">Track content</a></p>
@@ -3654,7 +3666,7 @@
 </ul>
 </li>
 <li>
-<h4 id="using-bnclt-or-a-custom-link-domain">Using bnc.lt or a custom link domain<a class="headerlink" href="#using-bnclt-or-a-custom-link-domain" title="Permanent link">&para;</a></h4>
+<h3 id="using-bnclt-or-a-custom-link-domain">Using bnc.lt or a custom link domain<a class="headerlink" href="#using-bnclt-or-a-custom-link-domain" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><em>bnc.lt link domain</em></p>
@@ -3664,8 +3676,8 @@
         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
-         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span> 
-         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span> 
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;bnc.lt&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/intent-filter&gt;</span>
 <span class="nt">&lt;/activity&gt;</span>
 </pre></div>
@@ -3679,8 +3691,8 @@
         <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
-         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span> 
-         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span> 
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/LVeu&quot;</span> <span class="nt">/&gt;</span>
+         <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;your.app.com&quot;</span> <span class="na">android:pathPrefix=</span><span class="s">&quot;/eVeu&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/intent-filter&gt;</span>
 <span class="nt">&lt;/activity&gt;</span>
 </pre></div>
@@ -3703,14 +3715,14 @@
 <p>If you do not want to import <code>answers-shim</code></p>
 <div class="codehilite"><pre><span></span>compile (&#39;io.branch.sdk.android:library:2.+&#39;) {
   exclude module: &#39;answers-shim&#39;
-}   
+}
 </pre></div>
 
 </li>
 </ul>
 </li>
 <li>
-<h4 id="deep-link-routing">Deep link routing<a class="headerlink" href="#deep-link-routing" title="Permanent link">&para;</a></h4>
+<h3 id="deep-link-routing">Deep link routing<a class="headerlink" href="#deep-link-routing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Loads a specific URI Scheme path, for example</p>
@@ -3728,7 +3740,7 @@
 </ul>
 </li>
 <li>
-<h4 id="deep-link-routing-in-app">Deep link routing in app<a class="headerlink" href="#deep-link-routing-in-app" title="Permanent link">&para;</a></h4>
+<h3 id="deep-link-routing-in-app">Deep link routing in app<a class="headerlink" href="#deep-link-routing-in-app" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Used for <code>WebView</code> and <code>ChromeTab</code> within the app to render HTML normally</p>
@@ -3847,7 +3859,7 @@
 </ul>
 </li>
 <li>
-<h4 id="deep-link-activity-finishes">Deep link activity finishes<a class="headerlink" href="#deep-link-activity-finishes" title="Permanent link">&para;</a></h4>
+<h3 id="deep-link-activity-finishes">Deep link activity finishes<a class="headerlink" href="#deep-link-activity-finishes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Be notified when the deep link Activity finishes</p>
@@ -3891,7 +3903,7 @@
 </ul>
 </li>
 <li>
-<h4 id="pre-android-15-support">Pre Android 15 support<a class="headerlink" href="#pre-android-15-support" title="Permanent link">&para;</a></h4>
+<h3 id="pre-android-15-support">Pre Android 15 support<a class="headerlink" href="#pre-android-15-support" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Use <code>Branch SDK 1.14.5</code></p>
@@ -3932,7 +3944,7 @@
 </ul>
 </li>
 <li>
-<h4 id="using-the-default-application-class">Using the default application class<a class="headerlink" href="#using-the-default-application-class" title="Permanent link">&para;</a></h4>
+<h3 id="using-the-default-application-class">Using the default application class<a class="headerlink" href="#using-the-default-application-class" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>If your app does not have an application class</p>
@@ -3943,7 +3955,7 @@
 </ul>
 </li>
 <li>
-<h4 id="custom-install-referrer-class">Custom install referrer class<a class="headerlink" href="#custom-install-referrer-class" title="Permanent link">&para;</a></h4>
+<h3 id="custom-install-referrer-class">Custom install referrer class<a class="headerlink" href="#custom-install-referrer-class" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Google only allows one <code>BroadcastReceiver</code> per application</p>
@@ -3978,7 +3990,7 @@
 </ul>
 </li>
 <li>
-<h4 id="generate-signing-certificate">Generate signing certificate<a class="headerlink" href="#generate-signing-certificate" title="Permanent link">&para;</a></h4>
+<h3 id="generate-signing-certificate">Generate signing certificate<a class="headerlink" href="#generate-signing-certificate" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Used for Android <code>App Link</code> deep linking</p>
@@ -3998,10 +4010,10 @@
 </ul>
 </li>
 <li>
-<h4 id="matching-through-the-install-listener">Matching through the install listener<a class="headerlink" href="#matching-through-the-install-listener" title="Permanent link">&para;</a></h4>
+<h3 id="matching-through-the-install-listener">Matching through the install listener<a class="headerlink" href="#matching-through-the-install-listener" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Enable the ability to pass <code>link_click_id</code> from Google Play to Branch </p>
+<p>Enable the ability to pass <code>link_click_id</code> from Google Play to Branch</p>
 </li>
 <li>
 <p>This will increase attribution and deferred deep linking accuracy</p>
@@ -4036,7 +4048,7 @@
 </ul>
 </li>
 <li>
-<h4 id="enable-multidexing">Enable multidexing<a class="headerlink" href="#enable-multidexing" title="Permanent link">&para;</a></h4>
+<h3 id="enable-multidexing">Enable multidexing<a class="headerlink" href="#enable-multidexing" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Adding additional dependencies may overrun the dex limit and lead to <code>NoClassDefFoundError</code> or <code>ClassNotFoundException</code></p>
@@ -4074,19 +4086,19 @@
 </ul>
 </li>
 <li>
-<h4 id="invalidclassexception-classloadingerror-or-verificationerror">InvalidClassException, ClassLoadingError or VerificationError<a class="headerlink" href="#invalidclassexception-classloadingerror-or-verificationerror" title="Permanent link">&para;</a></h4>
+<h3 id="invalidclassexception-classloadingerror-or-verificationerror">InvalidClassException, ClassLoadingError or VerificationError<a class="headerlink" href="#invalidclassexception-classloadingerror-or-verificationerror" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Often caused by a <code>Proguard</code> bug. Try the latest Proguard version or disable Proguard optimization by setting <code>-dontoptimize</code></li>
 </ul>
 </li>
 <li>
-<h4 id="proguard-warning-or-errors-with-answers-shim-module">Proguard warning or errors with answers-shim module<a class="headerlink" href="#proguard-warning-or-errors-with-answers-shim-module" title="Permanent link">&para;</a></h4>
+<h3 id="proguard-warning-or-errors-with-answers-shim-module">Proguard warning or errors with answers-shim module<a class="headerlink" href="#proguard-warning-or-errors-with-answers-shim-module" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Often caused when you exclude the <code>answers-shim</code>. Try adding -dontwarn com.crashlytics.android.answers.shim<code>to your</code>Proguard` file</li>
 </ul>
 </li>
 <li>
-<h4 id="unable-to-open-this-link-error">Unable to open this link error<a class="headerlink" href="#unable-to-open-this-link-error" title="Permanent link">&para;</a></h4>
+<h3 id="unable-to-open-this-link-error">Unable to open this link error<a class="headerlink" href="#unable-to-open-this-link-error" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Happens whenever URI Scheme redirection fails.</li>
 <li>Make sure you do not have <code>$deeplink_path</code> or you have a <code>$deeplink_path</code> which your <code>AndroidManfiest.xml</code> can accept</li>

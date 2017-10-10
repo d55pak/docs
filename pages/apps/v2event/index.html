@@ -2554,7 +2554,7 @@
                 
                 <h1 id="v2-event">V2 Event<a class="headerlink" href="#v2-event" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>It's always been possible to track events with the Branch SDK, including installs, opens, purchases, and more. Now we're introducing a new way to track events that make reporting and analytics a whole lot better and easier. </p>
+<p>It's always been possible to track events with the Branch SDK, including installs, opens, purchases, and more. Now we're introducing a new way to track events that make reporting and analytics a whole lot better and easier.</p>
 <p>The new v2 events have better tracking and analytics options in the Branch dashboard, and the new event structure makes integration with third party analytics providers quicker and tighter.</p>
 <p>We're standardizing the way you track "classes" of events. For example: all events related to a customer purchasing are bucketed into a "purchase" class of data items, and all events related to users interacting with your in-app content are linked to a "content" class of data items.</p>
 <p>Below are examples of the kinds of events you'll likely be interested in tracking, and we'll show you the way to track through our SDKs.</p>
@@ -2610,7 +2610,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">purchase</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>
@@ -2630,7 +2630,7 @@
 </pre></div>
 
 <h4 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h4>
-<div class="codehilite"><pre><span></span><span class="n">BranchUniversalObject</span> <span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BranchUniversalObject</span><span class="o">();</span> 
+<div class="codehilite"><pre><span></span><span class="n">BranchUniversalObject</span> <span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BranchUniversalObject</span><span class="o">();</span>
 <span class="c1">// ...continue adding data to the BUO...</span>
 
 <span class="k">new</span> <span class="n">BranchEvent</span><span class="o">(</span><span class="n">BRANCH_STANDARD_EVENT</span><span class="o">.</span><span class="na">ADD_TO_CART</span><span class="o">)</span>
@@ -2695,7 +2695,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">addToWishlist</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>
@@ -2774,7 +2774,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">viewCart</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>
@@ -2855,7 +2855,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">initiatePurchase</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>
@@ -2963,7 +2963,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">purchase</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>
@@ -3048,7 +3048,7 @@
 <span class="kd">let</span> <span class="nv">event</span> <span class="p">=</span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">standardEvent</span><span class="p">(.</span><span class="n">spendCredits</span><span class="p">)</span>
 
 <span class="c1">// Add the BranchUniversalObjects with the content:</span>
-<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span> 
+<span class="n">event</span><span class="p">.</span><span class="n">contentItems</span>     <span class="p">=</span> <span class="p">[</span> <span class="n">branchUniversalObject</span> <span class="p">]</span>
 
 <span class="c1">// Add relevant event data:</span>
 <span class="n">event</span><span class="p">.</span><span class="n">transactionID</span>    <span class="p">=</span> <span class="s">&quot;12344555&quot;</span>

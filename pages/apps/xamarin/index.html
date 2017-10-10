@@ -2279,7 +2279,7 @@
                 <h2 id="integrate-branch">Integrate Branch<a class="headerlink" href="#integrate-branch" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h4>
+<h3 id="configure-branch">Configure Branch<a class="headerlink" href="#configure-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Complete your <a href="https://dashboard.branch.io/settings/link">Branch Dashboard</a></p>
@@ -2289,16 +2289,16 @@
 </ul>
 </li>
 <li>
-<h4 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h4>
+<h3 id="install-branch">Install Branch<a class="headerlink" href="#install-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>Nuget</strong></p>
-<p>The Branch Xamarin SDK is available as a NuGet package. The <a href="https://www.nuget.org/packages/Branch-Xamarin-Linking-SDK">Branch NuGet package</a> must be added to each of the Xamarin projects that will use Branch methods.  </p>
-<p>To add the Branch NuGet package to a project:  </p>
+<p>The Branch Xamarin SDK is available as a NuGet package. The <a href="https://www.nuget.org/packages/Branch-Xamarin-Linking-SDK">Branch NuGet package</a> must be added to each of the Xamarin projects that will use Branch methods.</p>
+<p>To add the Branch NuGet package to a project:</p>
 <ol>
-<li>Right-click on each project and select <code>Add</code> &gt; <code>Add NuGet Packages</code>  </li>
-<li>If not already present, find the <em>Microsoft BCL Build Components</em> package version 1.0.21 and add it to the project  </li>
-<li>Find the <em>Branch Xamarin SDK</em> package version 3.0 and add it to the project  </li>
+<li>Right-click on each project and select <code>Add</code> &gt; <code>Add NuGet Packages</code></li>
+<li>If not already present, find the <em>Microsoft BCL Build Components</em> package version 1.0.21 and add it to the project</li>
+<li>Find the <em>Branch Xamarin SDK</em> package version 3.0 and add it to the project</li>
 </ol>
 </li>
 <li>
@@ -2314,7 +2314,7 @@
 </ul>
 </li>
 <li>
-<h4 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h4>
+<h3 id="configure-app">Configure app<a class="headerlink" href="#configure-app" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>iOS</strong></p>
@@ -2325,15 +2325,15 @@
 <li>Open Xcode and create a new project with the same name as your Xamarin iOS project</li>
 <li>On the Xcode project's <strong>General</strong> tab, verify the app's case-sensitive Bundle Identifier is correct and select the appropriate Team (be sure to resolve any errors here)</li>
 <li>Select the <strong>Capabilities</strong> tab and enable the <strong>Associated Domains</strong> entitlement</li>
-<li>Create 'applinks:' entries for the Branch link domain and the alternate link domain (the link domain can be found at the bottom of the Branch dashboard's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page). For example, the entries for an app with the default link domain 'testiosapp.app.link' would be:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp.app.link</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp-alternate.app.link</code>  </li>
+<li>Create 'applinks:' entries for the Branch link domain and the alternate link domain (the link domain can be found at the bottom of the Branch dashboard's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page). For example, the entries for an app with the default link domain 'testiosapp.app.link' would be:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp.app.link</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp-alternate.app.link</code></li>
 <li>Use Xcode to run this newly-created app on an iOS device. This will create and install a Provisioning Profile with the proper entitlements on that device.</li>
 <li>Close Xcode</li>
 </ol>
 </li>
 <li>
-<p><strong>Enter the app's settings on the Branch dashboard</strong>  </p>
+<p><strong>Enter the app's settings on the Branch dashboard</strong></p>
 <ol>
 <li>On the <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page, check the <strong>I have an iOS App</strong> checkbox</li>
 <li>Enter the app's URI Scheme in the <strong>iOS URI Scheme</strong> field (for an app with the URI Scheme <em>testbed-xamarin</em>, for example, the entry would be: <code>testbed-xamarin://</code>)</li>
@@ -2343,33 +2343,33 @@
 </ol>
 </li>
 <li>
-<p><strong>Configure the Xamarin project's Info.plist file</strong>  </p>
+<p><strong>Configure the Xamarin project's Info.plist file</strong></p>
 <ol>
 <li>Open the <strong>Info.plist</strong> file</li>
-<li>Enter the app's <strong>Bundle Identifier</strong> from the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> in the <strong>Bundle Identifier</strong> field. <strong>IMPORTANT:</strong> this field will automatically be populated with an all-lowercase value by Xamarin. The value is in fact case sensitive and must match the value in the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> precisely.  </li>
-<li>Click on the <strong>Advanced</strong> tab   </li>
-<li>In the <strong>URL Types</strong> section, click the <strong>Add URL Type</strong> button <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Identifier:</strong> Branch Scheme<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>URL Schemes:</strong> {the app's URI Scheme - 'testiosapp', for example}<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Role:</strong> Editor  </li>
+<li>Enter the app's <strong>Bundle Identifier</strong> from the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> in the <strong>Bundle Identifier</strong> field. <strong>IMPORTANT:</strong> this field will automatically be populated with an all-lowercase value by Xamarin. The value is in fact case sensitive and must match the value in the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> precisely.</li>
+<li>Click on the <strong>Advanced</strong> tab</li>
+<li>In the <strong>URL Types</strong> section, click the <strong>Add URL Type</strong> button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Identifier:</strong> Branch Scheme
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>URL Schemes:</strong> {the app's URI Scheme - 'testiosapp', for example}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Role:</strong> Editor</li>
 </ol>
 <p><img alt="image" src="../../../img/pages/apps/xamarin/ios_uri_scheme.png" /></p>
 </li>
 <li>
-<p><strong>Configure the Xamarin project's Associated Domains entitlement</strong>  </p>
+<p><strong>Configure the Xamarin project's Associated Domains entitlement</strong></p>
 <ol>
 <li>Open the <strong>Entitlements.plist</strong> file and browse to <strong>Associated Domains</strong></li>
-<li>Create entries for both the app's link domain and its alternate link domain. The entries for the TestBed-Xamarin app would be:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp.app.link</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp-alternate.app.link</code>  </li>
+<li>Create entries for both the app's link domain and its alternate link domain. The entries for the TestBed-Xamarin app would be:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp.app.link</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testiosapp-alternate.app.link</code></li>
 </ol>
 <p><img alt="image" src="../../../img/pages/apps/xamarin/ios_associated_domains.png" /></p>
 </li>
 <li>
-<p><strong>Update the project's Signing Identity and Provisioning Profile</strong>  </p>
+<p><strong>Update the project's Signing Identity and Provisioning Profile</strong></p>
 <ol>
 <li>Right-click on the iOS project and select <strong>Options</strong></li>
-<li>Select <strong>iOS Bundle Signing</strong> </li>
+<li>Select <strong>iOS Bundle Signing</strong></li>
 <li>Set the <strong>Signing Identity</strong> and <strong>Provisioning Profile values</strong> to the values used when deploying the Provisioning Profile to the device above</li>
 </ol>
 </li>
@@ -2415,7 +2415,7 @@
 </ul>
 </li>
 <li>
-<h4 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h4>
+<h3 id="initialize-branch">Initialize Branch<a class="headerlink" href="#initialize-branch" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>iOS</strong></p>
@@ -2443,7 +2443,7 @@
         <span class="k">public</span> <span class="k">override</span> <span class="kt">bool</span> <span class="nf">FinishedLaunching</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSDictionary</span> <span class="n">launchOptions</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="c1">// Debug mode - set to &#39;false&#39; before releasing to production</span>
-            <span class="n">BranchIOS</span><span class="p">.</span><span class="n">Debug</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span> 
+            <span class="n">BranchIOS</span><span class="p">.</span><span class="n">Debug</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
             <span class="n">BranchIOS</span><span class="p">.</span><span class="n">Init</span><span class="p">(</span><span class="s">&quot;key_live_cgEguO4UiDJSL4HIyTu85dkkDAdz38ER&quot;</span><span class="p">,</span> <span class="n">launchOptions</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 
             <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
@@ -2744,33 +2744,33 @@
 </ul>
 </li>
 <li>
-<h4 id="configure-branch-with-xamarin-forms">Configure Branch with Xamarin Forms<a class="headerlink" href="#configure-branch-with-xamarin-forms" title="Permanent link">&para;</a></h4>
+<h3 id="configure-branch-with-xamarin-forms">Configure Branch with Xamarin Forms<a class="headerlink" href="#configure-branch-with-xamarin-forms" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p><strong>Change the C# project's profile to PCL 4.5 - Profile78</strong></p>
 <ol>
-<li>Right-click on the project name and select: <strong>Options</strong>  </li>
-<li>Browse the menu to <strong>Build &gt; General</strong>  </li>
-<li>Change the <strong>Current Profile</strong> to: <strong>PCL 4.5 - Profile78</strong>  </li>
+<li>Right-click on the project name and select: <strong>Options</strong></li>
+<li>Browse the menu to <strong>Build &gt; General</strong></li>
+<li>Change the <strong>Current Profile</strong> to: <strong>PCL 4.5 - Profile78</strong></li>
 </ol>
 </li>
 <li>
 <p><strong>Add the Branch SDK with NuGet</strong></p>
-<p>The Branch Xamarin SDK is available as a NuGet package. The <a href="https://www.nuget.org/packages/Branch-Xamarin-Linking-SDK">Branch NuGet package</a> must be added to each of the Xamarin projects that will use Branch methods.  </p>
+<p>The Branch Xamarin SDK is available as a NuGet package. The <a href="https://www.nuget.org/packages/Branch-Xamarin-Linking-SDK">Branch NuGet package</a> must be added to each of the Xamarin projects that will use Branch methods.</p>
 <ol>
-<li>Right-click on each project and select <strong>Add &gt; Add NuGet Packages</strong>  </li>
-<li>If not already present, find the <em>Microsoft BCL Build Components</em> package version 1.0.21 and add it to the project  </li>
-<li>Find the <em>Branch Xamarin SDK</em> package version 3.0 and add it to the project  </li>
+<li>Right-click on each project and select <strong>Add &gt; Add NuGet Packages</strong></li>
+<li>If not already present, find the <em>Microsoft BCL Build Components</em> package version 1.0.21 and add it to the project</li>
+<li>Find the <em>Branch Xamarin SDK</em> package version 3.0 and add it to the project</li>
 </ol>
 </li>
 <li>
 <p><strong>Create a class for Branch session handling</strong></p>
 <p>Branch initializes asynchronously, with Branch link parameters being returned following a network call to Branch. If initialization is successful, the InitSessionComplete method will be invoked. If initialization is unsuccessful, the SessionRequestError method will be invoked. Deep link routing logic should be located in the InitSessionComplete method.</p>
 <ol>
-<li>Right-click on the C# project and select <strong>Add &gt; New File...</strong>  </li>
-<li>Select: <strong>General &gt; Empty Class</strong>  </li>
-<li>Rename the file: <strong>TestXamarinFormsApp.cs</strong>  </li>
-<li>Enter the following code (replacing 'TestXamarinFormsApp' with the actual name of the app):  </li>
+<li>Right-click on the C# project and select <strong>Add &gt; New File...</strong></li>
+<li>Select: <strong>General &gt; Empty Class</strong></li>
+<li>Rename the file: <strong>TestXamarinFormsApp.cs</strong></li>
+<li>Enter the following code (replacing 'TestXamarinFormsApp' with the actual name of the app):</li>
 </ol>
 <div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">BranchXamarinSDK</span><span class="p">;</span>
 <span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
@@ -2810,9 +2810,9 @@
 <p><strong>Create a class for handling link data</strong></p>
 <p>Branch stores link data in an object referred to as the <strong>Branch Universal Object</strong>, or <strong>BUO</strong>.</p>
 <ol>
-<li>Right-click on the C# project and select <strong>Add &gt; New File...</strong>  </li>
-<li>Select: <strong>General &gt; Empty Class</strong>  </li>
-<li>Rename the file: <strong>TestXamarinFormsAppBUO.cs</strong>  </li>
+<li>Right-click on the C# project and select <strong>Add &gt; New File...</strong></li>
+<li>Select: <strong>General &gt; Empty Class</strong></li>
+<li>Rename the file: <strong>TestXamarinFormsAppBUO.cs</strong></li>
 <li>Enter the following code (replace 'TestXamarinFormsApp' with the actual name of the app):</li>
 </ol>
 <div class="codehilite"><pre><span></span><span class="k">using</span> <span class="nn">BranchXamarinSDK</span><span class="p">;</span>
@@ -2851,36 +2851,36 @@
 <li>
 <p><strong>Create an Apple device Provisioning Profile for the app</strong></p>
 <ol>
-<li>Open Xcode and create a new project with the same name as your Xamarin iOS project  </li>
-<li>On the Xcode project's <strong>General</strong> tab, enter the app's Bundle Identifier and select the appropriate Team (be sure to resolve any errors here)  </li>
-<li>Select the <strong>Capabilities</strong> tab and enable the <strong>Associated Domains</strong> entitlement  </li>
-<li>Create 'applinks:' entries for the Branch link domain assigned to the app (the link domain can be found at the bottom of the Branch dashboard's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page). For example, the entries for the app <em>TestXamarinFormsApp</em> would be:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp.app.link</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp-alternate.app.link</code>  </li>
-<li>Use Xcode to run this newly-created app on an iOS device. This will create and install a Provisioning Profile with the proper entitlements on that device.  </li>
-<li>Close Xcode  </li>
+<li>Open Xcode and create a new project with the same name as your Xamarin iOS project</li>
+<li>On the Xcode project's <strong>General</strong> tab, enter the app's Bundle Identifier and select the appropriate Team (be sure to resolve any errors here)</li>
+<li>Select the <strong>Capabilities</strong> tab and enable the <strong>Associated Domains</strong> entitlement</li>
+<li>Create 'applinks:' entries for the Branch link domain assigned to the app (the link domain can be found at the bottom of the Branch dashboard's <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page). For example, the entries for the app <em>TestXamarinFormsApp</em> would be:
+&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp.app.link</code>
+&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp-alternate.app.link</code></li>
+<li>Use Xcode to run this newly-created app on an iOS device. This will create and install a Provisioning Profile with the proper entitlements on that device.</li>
+<li>Close Xcode</li>
 </ol>
 </li>
 <li>
 <p><strong>Enter the app's settings on the Branch dashboard</strong></p>
 <ol>
-<li>On the <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page, check the <strong>I have an iOS App</strong> checkbox  </li>
-<li>Enter the app's URI Scheme in the <strong>iOS URI Scheme</strong> field (for an app with the URI Scheme <em>testxamarinformsapp</em>, for example, the entry would be: <code>testxamarinformsapp://</code>)  </li>
-<li>Enter the app's Apple Store name in the <strong>Apple Store Search</strong> field (if the app is not yet available on the App Store select <strong>Custom URL</strong> and enter as a placeholder the URL of an appropriate web site - the exact site does not matter)  </li>
-<li>Check the <strong>Enable Universal Links</strong> checkbox  </li>
-<li>Enter the app's Bundle Identifier and Apple App Prefix as shown on the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a>  </li>
+<li>On the <a href="https://dashboard.branch.io/#/settings/link">Link Settings</a> page, check the <strong>I have an iOS App</strong> checkbox</li>
+<li>Enter the app's URI Scheme in the <strong>iOS URI Scheme</strong> field (for an app with the URI Scheme <em>testxamarinformsapp</em>, for example, the entry would be: <code>testxamarinformsapp://</code>)</li>
+<li>Enter the app's Apple Store name in the <strong>Apple Store Search</strong> field (if the app is not yet available on the App Store select <strong>Custom URL</strong> and enter as a placeholder the URL of an appropriate web site - the exact site does not matter)</li>
+<li>Check the <strong>Enable Universal Links</strong> checkbox</li>
+<li>Enter the app's Bundle Identifier and Apple App Prefix as shown on the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a></li>
 </ol>
 </li>
 <li>
 <p><strong>Configure the Xamarin project's Info.plist file</strong></p>
 <ol>
 <li>Open the <strong>Info.plist</strong> file</li>
-<li>Enter the app's <strong>Bundle Identifier</strong> from the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> in the <strong>Bundle Identifier</strong> field. <strong>IMPORTANT:</strong> this field will automatically be populated with an all-lowercase value by Xamarin. The value is in fact case sensitive and must match the value in the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> precisely.  </li>
-<li>Click on the <strong>Advanced</strong> tab   </li>
-<li>In the <strong>URL Types</strong> section, click the <strong>Add URL Type</strong> button <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Identifier:</strong> Branch Scheme<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>URL Schemes:</strong> {the app's URI Scheme - 'testxamarinformsapp', for example}<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Role:</strong> Editor  </li>
+<li>Enter the app's <strong>Bundle Identifier</strong> from the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> in the <strong>Bundle Identifier</strong> field. <strong>IMPORTANT:</strong> this field will automatically be populated with an all-lowercase value by Xamarin. The value is in fact case sensitive and must match the value in the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> precisely.</li>
+<li>Click on the <strong>Advanced</strong> tab</li>
+<li>In the <strong>URL Types</strong> section, click the <strong>Add URL Type</strong> button
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Identifier:</strong> Branch Scheme
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>URL Schemes:</strong> {the app's URI Scheme - 'testxamarinformsapp', for example}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Role:</strong> Editor</li>
 </ol>
 <p><img alt="image" src="../../../img/pages/apps/xamarin/ios_uri_scheme.png" /></p>
 </li>
@@ -2888,9 +2888,9 @@
 <p><strong>Configure the Xamarin project's Associated Domains entitlement</strong></p>
 <ol>
 <li>Open the <strong>Entitlements.plist</strong> file and browse to <strong>Associated Domains</strong> (if this file does not already exist, create it)</li>
-<li>Create entries for both the app's link domain and its alternate link domain. The entries for the TestBed-Xamarin app would be:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp.app.link</code><br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp-alternate.app.link</code>  </li>
+<li>Create entries for both the app's link domain and its alternate link domain. The entries for the TestBed-Xamarin app would be:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp.app.link</code>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>applinks:testxamarinformsapp-alternate.app.link</code></li>
 </ol>
 <p><img alt="image" src="../../../img/pages/apps/xamarin/ios_associated_domains.png" /></p>
 </li>
@@ -2931,7 +2931,7 @@
             <span class="k">return</span> <span class="n">BranchIOS</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">OpenUrl</span><span class="p">(</span><span class="n">url</span><span class="p">);</span>
         <span class="p">}</span>
 
-        <span class="c1">// Called when the app is opened from a Universal Link </span>
+        <span class="c1">// Called when the app is opened from a Universal Link</span>
         <span class="k">public</span> <span class="k">override</span> <span class="kt">bool</span> <span class="nf">ContinueUserActivity</span><span class="p">(</span><span class="n">UIApplication</span> <span class="n">application</span><span class="p">,</span> <span class="n">NSUserActivity</span> <span class="n">userActivity</span><span class="p">,</span> <span class="n">UIApplicationRestorationHandler</span> <span class="n">completionHandler</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="k">return</span> <span class="n">BranchIOS</span><span class="p">.</span><span class="n">getInstance</span><span class="p">().</span><span class="n">ContinueUserActivity</span><span class="p">(</span><span class="n">userActivity</span><span class="p">);</span>
@@ -2955,9 +2955,9 @@
 <li>
 <p><strong>Ensure that the Android project is not using the Shared Mono Runtime</strong></p>
 <ol>
-<li>Right-click on the Android project and select: <strong>Options</strong>  </li>
-<li>Select: <strong>Android Build</strong>  </li>
-<li>On the <strong>General</strong> tab, un-check: <strong>Use Shared Mono Runtime</strong>  </li>
+<li>Right-click on the Android project and select: <strong>Options</strong></li>
+<li>Select: <strong>Android Build</strong></li>
+<li>On the <strong>General</strong> tab, un-check: <strong>Use Shared Mono Runtime</strong></li>
 </ol>
 </li>
 <li>
@@ -2995,8 +2995,8 @@
 <p><strong>Configure the .Droid project's Application class</strong></p>
 <p>Within the .Droid project's Application class:</p>
 <ul>
-<li>Set the Branch SDK's initialization parameters  </li>
-<li>Override the <code>OnCreate()</code> method to call <code>BranchAndroid.GetAutoInstance</code>  </li>
+<li>Set the Branch SDK's initialization parameters</li>
+<li>Override the <code>OnCreate()</code> method to call <code>BranchAndroid.GetAutoInstance</code></li>
 </ul>
 <p>If an Appplication class does not already exist for the project, create one:</p>
 <ol>
@@ -3117,7 +3117,7 @@
 </ul>
 </li>
 <li>
-<h4 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h4>
+<h3 id="test-deep-link-ios">Test deep link iOS<a class="headerlink" href="#test-deep-link-ios" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
@@ -3140,7 +3140,7 @@
 </ul>
 </li>
 <li>
-<h4 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h4>
+<h3 id="test-deep-link-android">Test deep link Android<a class="headerlink" href="#test-deep-link-android" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Create a deep link from the <a href="https://dashboard.branch.io/marketing">Branch Marketing Dashboard</a></p>
@@ -3163,7 +3163,7 @@
 <h2 id="implement-features">Implement features<a class="headerlink" href="#implement-features" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h4>
+<h3 id="create-content-reference">Create content reference<a class="headerlink" href="#create-content-reference" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>The <code>Branch Universal Object</code> encapsulates the thing you want to share</p>
@@ -3182,7 +3182,7 @@
 
 </li>
 <li>
-<h4 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="create-deep-link">Create deep link<a class="headerlink" href="#create-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Generates a deep link within your app</p>
@@ -3211,7 +3211,7 @@
 
 </li>
 <li>
-<h4 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="share-deep-link">Share deep link<a class="headerlink" href="#share-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Will generate a Branch deep link and tag it with the channel the user selects</p>
@@ -3234,7 +3234,7 @@
 
 </li>
 <li>
-<h4 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h4>
+<h3 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Retrieve Branch data from a deep link</p>
@@ -3255,7 +3255,7 @@
 
 </li>
 <li>
-<h4 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h4>
+<h3 id="track-users">Track users<a class="headerlink" href="#track-users" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Sets the identity of a user (email, ID, UUID, etc) for events, deep links, and referrals</p>
@@ -3264,14 +3264,14 @@
 <p>Validate with the <a href="https://dashboard.branch.io/liveview/identities">Branch Dashboard</a></p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">GetInstance</span> <span class="p">();</span> 
+<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">GetInstance</span> <span class="p">();</span>
 <span class="n">branch</span><span class="p">.</span><span class="n">SetIdentity</span><span class="p">(</span><span class="s">&quot;the user id&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>  <span class="c1">// Where this implements IBranchIdentityInterface</span>
 <span class="n">branch</span><span class="p">.</span><span class="n">Logout</span><span class="p">(</span><span class="k">this</span><span class="p">);</span> <span class="c1">// Where this implements IBranchIdentityInterface</span>
 </pre></div>
 
 </li>
 <li>
-<h4 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h4>
+<h3 id="track-events">Track events<a class="headerlink" href="#track-events" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Registers a custom event</p>
@@ -3292,7 +3292,7 @@
 
 </li>
 <li>
-<h4 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h4>
+<h3 id="track-commerce">Track commerce<a class="headerlink" href="#track-commerce" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Registers a custom commerce event</p>
@@ -3312,7 +3312,7 @@
 
 </li>
 <li>
-<h4 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h4>
+<h3 id="handle-referrals">Handle referrals<a class="headerlink" href="#handle-referrals" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Referral points are obtained from referral rules on the <a href="https://dashboard.branch.io/referrals/rules">Branch Dashboard</a></p>
@@ -3401,30 +3401,30 @@
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="unable-to-add-branch-required-nuget-packages-to-the-c-project">Unable to add Branch-required NuGet packages to the C# project<a class="headerlink" href="#unable-to-add-branch-required-nuget-packages-to-the-c-project" title="Permanent link">&para;</a></h4>
+<h3 id="unable-to-add-branch-required-nuget-packages-to-the-c-project">Unable to add Branch-required NuGet packages to the C# project<a class="headerlink" href="#unable-to-add-branch-required-nuget-packages-to-the-c-project" title="Permanent link">&para;</a></h3>
 <p>Adding required NuGet packages to the C# project may fail if the project has not been configured to use <strong>PCL 4.5 - Profile78</strong></p>
 <ol>
-<li>Right-click on the project name and select: <strong>Options</strong>  </li>
-<li>Browse the menu to <strong>Build &gt; General</strong>  </li>
-<li>Change the <strong>Current Profile</strong> to: <strong>PCL 4.5 - Profile78</strong>  </li>
+<li>Right-click on the project name and select: <strong>Options</strong></li>
+<li>Browse the menu to <strong>Build &gt; General</strong></li>
+<li>Change the <strong>Current Profile</strong> to: <strong>PCL 4.5 - Profile78</strong></li>
 </ol>
 </li>
 <li>
-<h4 id="android-app-fails-to-build-with-linking-errors">Android app fails to build with linking errors<a class="headerlink" href="#android-app-fails-to-build-with-linking-errors" title="Permanent link">&para;</a></h4>
+<h3 id="android-app-fails-to-build-with-linking-errors">Android app fails to build with linking errors<a class="headerlink" href="#android-app-fails-to-build-with-linking-errors" title="Permanent link">&para;</a></h3>
 <p>The Newtonsoft JSON NuGet package is automatically added to a project when the Branch Xamarin SDK NuGet package is added. There is a known issue with this package that results in linking errors when building a project.</p>
 <p>error XA0009: Error while loading assembly: /Users/david/Projects/TestXamarinFormsApp/Droid/obj/Debug/android/assets/mscorlib.dll</p>
 <p>To resolve this issue with the Newtonsoft JSON NuGet package:</p>
 <ol>
-<li>Right-click on the project and select Options  </li>
-<li>Go to <strong>Android Build</strong> and select the <strong>Linker</strong> tab  </li>
-<li>Select: <strong>Release</strong>  </li>
-<li>Go to the <strong>Ignore assemblies</strong> box  </li>
-<li>Add: <strong>System.Core</strong>  </li>
-<li>Rebuild the app  </li>
+<li>Right-click on the project and select Options</li>
+<li>Go to <strong>Android Build</strong> and select the <strong>Linker</strong> tab</li>
+<li>Select: <strong>Release</strong></li>
+<li>Go to the <strong>Ignore assemblies</strong> box</li>
+<li>Add: <strong>System.Core</strong></li>
+<li>Rebuild the app</li>
 </ol>
 </li>
 <li>
-<h4 id="deploying-ios-app-to-device-fails-with-provisioning-profile-erros-after-changing-entitlements">Deploying iOS app to device fails with Provisioning Profile erros after changing entitlements<a class="headerlink" href="#deploying-ios-app-to-device-fails-with-provisioning-profile-erros-after-changing-entitlements" title="Permanent link">&para;</a></h4>
+<h3 id="deploying-ios-app-to-device-fails-with-provisioning-profile-erros-after-changing-entitlements">Deploying iOS app to device fails with Provisioning Profile erros after changing entitlements<a class="headerlink" href="#deploying-ios-app-to-device-fails-with-provisioning-profile-erros-after-changing-entitlements" title="Permanent link">&para;</a></h3>
 <p>Xamarin automatically populates the <strong>Bundle Identifier</strong> field in the <strong>Info.plist</strong> file with an all-lowercase value derived from the app's name. This value is in fact case sensitive and must match the value in the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a> precisely. The default Xamarin configuration may work when there are no entitlements configured and then suddenly begin failing after entitlements have been added.</p>
 <p>This issue can be resolved by ensuring that the <strong>Bundle Identifier</strong> in the <strong>Info.plist</strong> matches the <strong>Bundle Identifier</strong> shown on the <a href="https://developer.apple.com/account/ios/identifier/bundle">Apple Developer Portal</a>.</p>
 <ol>
@@ -3433,21 +3433,21 @@
 </ol>
 </li>
 <li>
-<h4 id="sample-apps">Sample apps<a class="headerlink" href="#sample-apps" title="Permanent link">&para;</a></h4>
+<h3 id="sample-apps">Sample apps<a class="headerlink" href="#sample-apps" title="Permanent link">&para;</a></h3>
 <p>There are four fully-functional demo apps included in this repository: a Xamarin Native and Xamarin Forms apps for both iOS and Android platforms. Use these apps as reference models for integrating the Branch SDK.</p>
 <ul>
 <li>
 <p><strong>Testbed-Xamarin (Native apps)</strong></p>
 <ul>
-<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Examples/droid_example">iOS</a>  </li>
-<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Examples/ios_example">Android</a>  </li>
+<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Examples/droid_example">iOS</a></li>
+<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Examples/ios_example">Android</a></li>
 </ul>
 </li>
 <li>
 <p><strong>Testbed-XamarinForms (Forms apps)</strong></p>
 <ul>
-<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Branch-Xamarin-Testbed.iOS">iOS</a>  </li>
-<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Branch-Xamarin-Testbed.Droid">Android</a>  </li>
+<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Branch-Xamarin-Testbed.iOS">iOS</a></li>
+<li><a href="https://github.com/BranchMetrics/xamarin-branch-deep-linking/tree/master/Branch-Xamarin-Testbed.Droid">Android</a></li>
 </ul>
 </li>
 </ul>

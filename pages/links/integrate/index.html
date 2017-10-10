@@ -710,12 +710,18 @@
     Default link behavior
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#expected-redirect-behavior" title="Expected redirect behavior" class="md-nav__link">
     Expected redirect behavior
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2153,12 +2159,18 @@
     Default link behavior
   </a>
   
-</li>
+    <nav class="md-nav">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#expected-redirect-behavior" title="Expected redirect behavior" class="md-nav__link">
     Expected redirect behavior
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -2407,19 +2419,37 @@
                 <h2 id="understand-deep-linking">Understand deep linking<a class="headerlink" href="#understand-deep-linking" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="default-link-behavior">Default link behavior<a class="headerlink" href="#default-link-behavior" title="Permanent link">&para;</a></h4>
+<h3 id="default-link-behavior">Default link behavior<a class="headerlink" href="#default-link-behavior" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Your app is not installed<ul>
-<li>User <code>clicks</code> on a Branch deep link</li>
-<li>Device <code>navigates</code> to the <a href="#fallback-to-a-specific-url">fallback</a> (e.g. an app store or website)</li>
-<li>User <code>installs</code> and <code>opens</code> app</li>
-<li>Branch passes deep link <code>data</code> into app</li>
+<li>
+<p>Your app is not installed</p>
+<ul>
+<li>
+<p>User <code>clicks</code> on a Branch deep link</p>
+</li>
+<li>
+<p>Device <code>navigates</code> to the <a href="#fallback-to-a-specific-url">fallback</a> (e.g. an app store or website)</p>
+</li>
+<li>
+<p>User <code>installs</code> and <code>opens</code> app</p>
+</li>
+<li>
+<p>Branch passes deep link <code>data</code> into app</p>
+</li>
 </ul>
 </li>
-<li>Your app is installed<ul>
-<li>User <code>clicks</code> on a Branch deep link</li>
-<li>Device <code>opens</code> app</li>
-<li>Branch passes deep link <code>data</code> into app</li>
+<li>
+<p>Your app is installed</p>
+<ul>
+<li>
+<p>User <code>clicks</code> on a Branch deep link</p>
+</li>
+<li>
+<p>Device <code>opens</code> app</p>
+</li>
+<li>
+<p>Branch passes deep link <code>data</code> into app</p>
+</li>
 </ul>
 </li>
 </ul>
@@ -2621,7 +2651,7 @@
 </ul>
 </li>
 <li>
-<h4 id="custom-link-behavior">Custom link behavior<a class="headerlink" href="#custom-link-behavior" title="Permanent link">&para;</a></h4>
+<h3 id="custom-link-behavior">Custom link behavior<a class="headerlink" href="#custom-link-behavior" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <h5 id="pass-data-from-link-to-app">Pass data from link to app<a class="headerlink" href="#pass-data-from-link-to-app" title="Permanent link">&para;</a></h5>
@@ -2696,7 +2726,7 @@
 </ul>
 </li>
 <li>
-<h4 id="social-link-behavior">Social link behavior<a class="headerlink" href="#social-link-behavior" title="Permanent link">&para;</a></h4>
+<h3 id="social-link-behavior">Social link behavior<a class="headerlink" href="#social-link-behavior" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Use <a href="#open-graph">OG Tags</a> to display content as a preview card in Facebook, Twitter, Pinterest, iMessage, etc.<ul>
 <li>Basics are <code>$og_title</code>, <code>$og_description</code>, and <code>$og_image_url</code></li>
@@ -2713,7 +2743,7 @@
 <h2 id="create-deep-links">Create deep links<a class="headerlink" href="#create-deep-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="short-links">Short links<a class="headerlink" href="#short-links" title="Permanent link">&para;</a></h4>
+<h3 id="short-links">Short links<a class="headerlink" href="#short-links" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Short links are the most common deep link</li>
 <li>Short links encapsulate <a href="#configure-deep-links">link data</a> inside them on link creation<ul>
@@ -2734,7 +2764,7 @@
 </ul>
 </li>
 <li>
-<h4 id="long-links">Long links<a class="headerlink" href="#long-links" title="Permanent link">&para;</a></h4>
+<h3 id="long-links">Long links<a class="headerlink" href="#long-links" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Long links can be created without a network call to Branch</li>
 <li>Long links need <a href="#configure-deep-links">link data</a> to be URI encoded as a query string<ul>
@@ -2758,7 +2788,7 @@
 <h2 id="configure-deep-links">Configure deep links<a class="headerlink" href="#configure-deep-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h4>
+<h3 id="analytical-labels">Analytical labels<a class="headerlink" href="#analytical-labels" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>These labels allow you to filter and organize your deep links</p>
@@ -2812,7 +2842,7 @@
 </ul>
 </li>
 <li>
-<h4 id="custom-data">Custom data<a class="headerlink" href="#custom-data" title="Permanent link">&para;</a></h4>
+<h3 id="custom-data">Custom data<a class="headerlink" href="#custom-data" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Pass any custom data to be read inside your app</p>
@@ -2856,7 +2886,7 @@
 </ul>
 </li>
 <li>
-<h4 id="redirections">Redirections<a class="headerlink" href="#redirections" title="Permanent link">&para;</a></h4>
+<h3 id="redirections">Redirections<a class="headerlink" href="#redirections" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Navigate to different locations based on device information</li>
 <li>
@@ -2936,7 +2966,7 @@
 </ul>
 </li>
 <li>
-<h4 id="forced-redirections">Forced redirections<a class="headerlink" href="#forced-redirections" title="Permanent link">&para;</a></h4>
+<h3 id="forced-redirections">Forced redirections<a class="headerlink" href="#forced-redirections" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Override</p>
@@ -2983,7 +3013,7 @@
 </ul>
 </li>
 <li>
-<h4 id="deep-linking">Deep linking<a class="headerlink" href="#deep-linking" title="Permanent link">&para;</a></h4>
+<h3 id="deep-linking">Deep linking<a class="headerlink" href="#deep-linking" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Navigate to different locations based on device information</p>
@@ -3047,7 +3077,7 @@
 </ul>
 </li>
 <li>
-<h4 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h4>
+<h3 id="content">Content<a class="headerlink" href="#content" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Handle content properties</p>
@@ -3091,7 +3121,7 @@
 </ul>
 </li>
 <li>
-<h4 id="deepview">Deepview<a class="headerlink" href="#deepview" title="Permanent link">&para;</a></h4>
+<h3 id="deepview">Deepview<a class="headerlink" href="#deepview" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Enable / control <a href="../../../pages/web/deep-views/#active-deepviews">active deepview</a> properties</p>
@@ -3149,7 +3179,7 @@
 </ul>
 </li>
 <li>
-<h4 id="open-graph">Open Graph<a class="headerlink" href="#open-graph" title="Permanent link">&para;</a></h4>
+<h3 id="open-graph">Open Graph<a class="headerlink" href="#open-graph" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Handle Facebook properties</p>
@@ -3218,7 +3248,7 @@
 </ul>
 </li>
 <li>
-<h4 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h4>
+<h3 id="twitter">Twitter<a class="headerlink" href="#twitter" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Handle Twitter properties</p>
@@ -3282,7 +3312,7 @@
 </ul>
 </li>
 <li>
-<h4 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h4>
+<h3 id="universal-object">Universal Object<a class="headerlink" href="#universal-object" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Properties for the Branch Universal Object within your <a href="#dialog-code?ios=create-content-reference&amp;android=create-content-reference&amp;adobe=create-deep-link&amp;cordova=create-content-reference&amp;mparticleAndroid=create-content-reference&amp;mparticleIos=create-content-reference&amp;titanium=create-content-reference&amp;reactNative=create-content-reference&amp;unity=create-content-reference&amp;xamarin=create-content-reference">app</a> integration</p>
@@ -3382,7 +3412,7 @@
 <p>Deep link data gets sent from your link to your <a href="#dialog-code?ios=read-deep-link&amp;android=read-deep-link&amp;adobe=read-deep-link&amp;cordova=read-deep-link&amp;mparticleAndroid=read-deep-link&amp;mparticleIos=read-deep-link&amp;titanium=read-deep-link&amp;reactNative=read-deep-link&amp;unity=read-deep-link&amp;xamarin=read-deep-link">app</a> or <a href="../../../pages/web/integrate/">website</a> integration</p>
 </li>
 <li>
-<h4 id="data-structure">Data structure<a class="headerlink" href="#data-structure" title="Permanent link">&para;</a></h4>
+<h3 id="data-structure">Data structure<a class="headerlink" href="#data-structure" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Example deep link data structure</p>
@@ -3425,7 +3455,7 @@
 </ul>
 </li>
 <li>
-<h4 id="reserved-prefixes">Reserved prefixes<a class="headerlink" href="#reserved-prefixes" title="Permanent link">&para;</a></h4>
+<h3 id="reserved-prefixes">Reserved prefixes<a class="headerlink" href="#reserved-prefixes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Branch adds additional properties to your deep link data to explain the link</p>
@@ -3455,7 +3485,7 @@
 </ul>
 </li>
 <li>
-<h4 id="callback-values">Callback values<a class="headerlink" href="#callback-values" title="Permanent link">&para;</a></h4>
+<h3 id="callback-values">Callback values<a class="headerlink" href="#callback-values" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
 <p>Additional properties read from the <code>initSession</code> within your <a href="#dialog-code?ios=initialize-branch&amp;android=initialize-branch&amp;adobe=initialize-branch&amp;cordova=initialize-branch&amp;mparticleAndroid=initialize-branch&amp;mparticleIos=initialize-branch&amp;titanium=initialize-branch&amp;reactNative=initialize-branch&amp;unity=initialize-branch&amp;xamarin=initialize-branch">app</a> and <a href="../../../pages/web/integrate/">website</a> integrations</p>
@@ -3522,7 +3552,7 @@
 <h2 id="troubleshoot-issues">Troubleshoot issues<a class="headerlink" href="#troubleshoot-issues" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<h4 id="deep-links-do-not-open-app">Deep links do not open app<a class="headerlink" href="#deep-links-do-not-open-app" title="Permanent link">&para;</a></h4>
+<h3 id="deep-links-do-not-open-app">Deep links do not open app<a class="headerlink" href="#deep-links-do-not-open-app" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Make sure you have completed <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a> and <a href="#dialog-code">Configure your app</a></li>
 <li>Make sure the <code>Branch key</code> in your app (<a href="#dialog-code">Configure your app</a>) matches the <code>Branch key</code> in your deep link (<a href="#view-deep-link-data">View deep link data</a>)</li>
@@ -3532,7 +3562,7 @@
 </ul>
 </li>
 <li>
-<h4 id="view-deep-link-data">View deep link data<a class="headerlink" href="#view-deep-link-data" title="Permanent link">&para;</a></h4>
+<h3 id="view-deep-link-data">View deep link data<a class="headerlink" href="#view-deep-link-data" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Add <code>?debug=1</code> to the end of your deep link</li>
 <li>For example: <a href="https://example.app.link/aQXXDHaxKF?debug=1">https://example.app.link/aQXXDHaxKF?debug=1</a></li>
