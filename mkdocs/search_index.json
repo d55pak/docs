@@ -2,13 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Branch Mobile Linking and Attribution Platform\n\n\nBranch offers hosted, branded short links packed with 3 key value props:\n\n\n\n\nBest in class deep linking that supports all major standards (Universal Links, Android App Links, URI schemes and more) that are fully customizable with every configuration you might want.\n\n\nCross platform attribution (desktop web, mobile web \n app) of custom events back to the original source for complete insight into the performance of your campaigns.\n\n\nSeamless integrations into your existing workflow, from integrations into email providers, ad networks or data analytics solutions.", 
+            "text": "Getting started with Branch\n\n\nMobile Linking and Attribution Platform\n\n\nBranch offers hosted, branded short links packed with 3 key value props:\n\n\n\n\nBest in class deep linking that supports all major standards (Universal Links, Android App Links, URI schemes and more) that are fully customizable with every configuration you might want.\n\n\nCross platform attribution (desktop web, mobile web \n app) of custom events back to the original source for complete insight into the performance of your campaigns.\n\n\nSeamless integrations into your existing workflow, from integrations into email providers, ad networks or data analytics solutions.", 
             "title": "Getting started"
         }, 
         {
-            "location": "/#branch-mobile-linking-and-attribution-platform", 
+            "location": "/#getting-started-with-branch", 
+            "text": "", 
+            "title": "Getting started with Branch"
+        }, 
+        {
+            "location": "/#mobile-linking-and-attribution-platform", 
             "text": "Branch offers hosted, branded short links packed with 3 key value props:   Best in class deep linking that supports all major standards (Universal Links, Android App Links, URI schemes and more) that are fully customizable with every configuration you might want.  Cross platform attribution (desktop web, mobile web   app) of custom events back to the original source for complete insight into the performance of your campaigns.  Seamless integrations into your existing workflow, from integrations into email providers, ad networks or data analytics solutions.", 
-            "title": "Branch Mobile Linking and Attribution Platform"
+            "title": "Mobile Linking and Attribution Platform"
         }, 
         {
             "location": "/pages/dashboard/integrate/", 
