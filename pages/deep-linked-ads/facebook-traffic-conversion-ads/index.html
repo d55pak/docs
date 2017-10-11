@@ -2137,9 +2137,9 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Facebook Ads you should <a href="../TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> To use Branch links in Facebook App Install Ads ensure you have Universal Links set up on iOS or App Links enabled on Android to ensure correct routing behavior. For setup, checkout <a href="../{{base.url}}/getting-started/universal-app-links TODO">Universal and App Links</a>.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Facebook Ads you should <a href="../../../pages/apps/ios/#integrate-branch">integrate the Branch SDK</a> into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To use Branch links in Facebook App Install Ads ensure you have Universal Links set up on iOS or App Links enabled on Android to ensure correct routing behavior. For setup, checkout <a href="../../../pages/deep-linking/universal-links/">Universal</a> and <a href="../../../pages/deep-linking/android-app-links/">App Links</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../../../pages/deep-linking/routing/">configure deep link routing</a>.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
 </div>
@@ -2194,11 +2194,11 @@
 <img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/facebook-analytics-tags.png" /></li>
 </ol>
 <div class="admonition warning">
-<p>In order for your campaign to run effectively, be sure to disable Deepviews. You can either <a href="https://dev.branch.io/features/deepviews/guide/ios/ TODO">disable Deepviews</a> for your entire account or <a href="../{{base.url}}/features/deepviews/advanced/ios/#disabling-deepviews-for-one-link TODO">disable Deepviews for one link</a>.</p>
+<p>In order for your campaign to run effectively, be sure to disable Deepviews. You can either <a href="../../../pages/web/deep-views/#setup">disable Deepviews</a> for your entire account or <a href="../../../pages/web/deep-views/#disable-per-link-deepviews">disable Deepviews for one link</a>.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
+<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../../../pages/deep-linking/routing/">Deep Link Routing</a> page to learn more.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Setting Attribution Windows</p>
@@ -2215,15 +2215,23 @@
 <li>Select either to drive traffic to your <code>Website</code> or your <code>App</code></li>
 <li>Continue with campaign creation selecting the app to advertise, audience, placement, and budget. Then press continue to enter the Advert creation step.</li>
 <li>Now select an advertisement format and customize your ad</li>
-<li>Add your Branch Ad Link to your advertisement<ul>
-<li>If you chose to drive traffic to an App, locate the <strong>Deep Link</strong> field and copy and paste your Branch link there.
-<img alt="Campaign Selection" src="../../../img/pages/deep-linked-feeds/facebook-traffic-conversion-ads/traffic/link-setup-app.png" /></li>
-<li>If you chose to drive traffic to a Website, paste your Branch Ad link into the <strong>Website URL</strong> field.
-<img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/traffic/link-setup-web.png" /></li>
-<li>If you chose to drive traffic to a Website and are using a full-screen Canvas, add your Branch Ad link as the <strong>Destination URL</strong> for your canvas advertisement components.</li>
-</ul>
+<li>
+<p>Add your Branch Ad Link to your advertisement</p>
+<ul>
+<li>
+<p>If you chose to drive traffic to an App, locate the <strong>Deep Link</strong> field and copy and paste your Branch link there.</p>
+<p><img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/traffic/link-setup-app.png" /></p>
+</li>
+<li>
+<p>If you chose to drive traffic to a Website, paste your Branch Ad link into the <strong>Website URL</strong> field.</p>
+<p><img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/traffic/link-setup-web.png" /></p>
+</li>
+<li>
+<p>If you chose to drive traffic to a Website and are using a full-screen Canvas, add your Branch Ad link as the <strong>Destination URL</strong> for your canvas advertisement components.</p>
 </li>
 <li>Complete the rest of the ad campaign setup.</li>
+</ul>
+</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Optional: Ad formats with Multiple Links</p>
@@ -2248,15 +2256,23 @@
 <li>Select either to have the goal of having conversions on a <code>Website</code> or in an <code>App</code></li>
 <li>Continue with campaign creation selecting audience, placement, and budget. Then press continue to enter the Advert creation step.</li>
 <li>Now select an advertisement format and customize your ad</li>
-<li>Add your Branch Ad Link to your advertisement<ul>
-<li>If you chose app conversions App, locate the <strong>Deep Link</strong> field and copy and paste your Branch link there.
-<img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/conversions/link-setup-app.png" /></li>
-<li>If you chose Website conversions, paste your Branch Ad link into the <strong>Website URL</strong> field.
-<img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/conversions/link-setup-web.png" /></li>
-<li>If you chose Website conversions and are using a full-screen Canvas, add your Branch Ad link as the <strong>Destination URL</strong> for your canvas advertisement components.</li>
-</ul>
+<li>
+<p>Add your Branch Ad Link to your advertisement</p>
+<ul>
+<li>
+<p>If you chose app conversions App, locate the <strong>Deep Link</strong> field and copy and paste your Branch link there.</p>
+<p><img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/conversions/link-setup-app.png" /></p>
+</li>
+<li>
+<p>If you chose Website conversions, paste your Branch Ad link into the <strong>Website URL</strong> field.</p>
+<p><img alt="Campaign Selection" src="../../../img/pages/deep-linked-ads/facebook-traffic-conversion-ads/conversions/link-setup-web.png" /></p>
+</li>
+<li>
+<p>If you chose Website conversions and are using a full-screen Canvas, add your Branch Ad link as the <strong>Destination URL</strong> for your canvas advertisement components.</p>
 </li>
 <li>Complete the rest of the ad campaign setup.</li>
+</ul>
+</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Optional: Ad formats with Multiple Links</p>
@@ -2300,9 +2316,9 @@
 <p><img alt="Installs and Opens" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/installs_plus_opens.png" /></p>
 <p>If it's close, you know that this is the root cause.</p>
 <p><strong>Don't Use setDebug</strong></p>
-<p>Facebook ads are incompatible with <a href="../{{base.url}}/getting-started/integration-testing/guide/ios/#use-debug-mode-to-simulate-fresh-installs TODO">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
+<p>Facebook ads are incompatible with <a href="../../../pages/apps/ios/#simulate-an-install">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
 <p><strong>Conflicts with Facebook SDK (iOS)</strong></p>
-<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/ TODO"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
+<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
 <h4 id="testing-deep-linked-ads">Testing Deep Linked Ads<a class="headerlink" href="#testing-deep-linked-ads" title="Permanent link">&para;</a></h4>
 <p>Unfortunately, the demo/preview ads used during the ads creation flow on Facebook use a different mechanism than live Facebook ads. <strong>This prevents you from testing deep linking from your Facebook ads</strong>. Do not waste time trying to get this to work. We've confirmed with Facebook representatives that this is broken.</p>
 <p>The only way to test the deep linking functionality is outside of the actual ads system is a helper tool from Facebook. Follow these instructions to test the deep linking functionality:</p>
@@ -2363,8 +2379,8 @@
 <li>Social Discovery is set to <strong>Yes</strong></li>
 <li>Country Restricted is set to <strong>No</strong></li>
 </ul>
-<p>It has to look like this <strong>exactly</strong>:
-<img alt="App Restrictions Troubleshooting" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/app_restrictions.png" /></p>
+<p>It has to look like this <strong>exactly</strong>:</p>
+<p><img alt="App Restrictions Troubleshooting" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/app_restrictions.png" /></p>
 <p><strong>No IP Whitelists</strong></p>
 <p>Because Branch has a large distribution of API servers that will be making requests to Facebook on behalf of your app, you cannot have an IP whitelist in your <a href="https://developers.facebook.com/apps/390736167768543/settings/advanced/">Facebook advanced settings</a> and still have this integration work. Please remove any IPs from this setting if they are present.</p>
 <h4 id="common-issues-with-facebook-authentication">Common issues with Facebook Authentication<a class="headerlink" href="#common-issues-with-facebook-authentication" title="Permanent link">&para;</a></h4>

@@ -2146,8 +2146,8 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../../../pages/apps/ios/#integrate-branch">integrate the Branch SDK</a> into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../../../pages/deep-linking/routing/">configure deep link routing</a>.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
 </div>
@@ -2182,19 +2182,29 @@
 <h3 id="video-app-install-ads">Video App Install Ads<a class="headerlink" href="#video-app-install-ads" title="Permanent link">&para;</a></h3>
 <h4 id="create-an-ad-link">Create an Ad Link<a class="headerlink" href="#create-an-ad-link" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>Create Display Link</code>
-<img src="/img/pages/deep-linked-ads/reusable-images/create-display-search.png" alt="Link Creation" class="three-quarters center"></li>
-<li>Under the Define Section, pick a Link Name for later reference</li>
-<li>Configure the link with the Ad Format set to <strong>Display</strong> and the Ad Partner set to <strong>Google Adwords</strong>.
-<img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-video/link-setup.png" /></li>
-<li>Under the Configure Options tab, navigate to the Redirects sub section and ensure that the iOS/Android redirect is set to the desired app being promoted by the ad campaign.
-<img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/reusable-images/example-link-redirect.png" /></li>
-<li>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.
-<img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></li>
+<li>
+<p>Create a Branch Ad link from the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management page</a>'s <code>Create Google Adwords Link</code> button under the Google Adwords Partner and select <code>Create Display Link</code></p>
+<p><img alt="Create Display Link" src="../../../img/pages/deep-linked-ads/reusable-images/create-display-search.png" /></p>
+</li>
+<li>
+<p>Under the Define Section, pick a Link Name for later reference</p>
+</li>
+<li>
+<p>Configure the link with the Ad Format set to <strong>Display</strong> and the Ad Partner set to <strong>Google Adwords</strong>.</p>
+<p><img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/google-video/link-setup.png" /></p>
+</li>
+<li>
+<p>Under the Configure Options tab, navigate to the Redirects sub section and ensure that the iOS/Android redirect is set to the desired app being promoted by the ad campaign.</p>
+<p><img alt="Create Ad Link" src="../../../img/pages/deep-linked-ads/reusable-images/example-link-redirect.png" /></p>
+</li>
+<li>
+<p>Under the Analytics Tags sub section additional tags can be set. It is recommended to fill in these fields as they can be used as filters in Branch's Ads Analytics view. To best connect your ad link with your Adwords Campaign, set the channel field to Google Adwords and set the campaign field to the same ad campaign name used in Adwords.</p>
+</li>
 </ol>
+<p><img alt="Analytics Tags" src="../../../img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png" /></p>
 <div class="admonition note">
 <p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
+<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../../../pages/deep-linking/routing/">Deep Link Routing</a> page to learn more.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Setting Attribution Windows</p>
@@ -2204,11 +2214,17 @@
 <p>To set up a Video Campaign, you will need to first create your campaign and then setup a tracking template on the ad. Additional Adwords information on Video campaigns can be found <strong><a href="https://support.google.com/adwords/answer/6340491?hl=en" target="_blank">here</a></strong>. To set up a Video App Install campaign, you must first complete the entire creation flow for the campaign and ad on Google Adwords.</p>
 <h4 id="create-your-campaign">Create Your Campaign<a class="headerlink" href="#create-your-campaign" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Select <code>Video</code> on Adwords
-<img src="/img/pages/deep-linked-ads/reusable-images/adwords-video-network.png" alt="Adwords Network" class="half center"></li>
-<li>Select the 'Mobile app installs' campaign type
-<img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-video/install/video-install.png" /></li>
-<li>Complete the rest of the ad campaign setup</li>
+<li>
+<p>Select <code>Video</code> on Adwords</p>
+<p><img src="/img/pages/deep-linked-ads/reusable-images/adwords-video-network.png" alt="Adwords Network" class="half center"></p>
+</li>
+<li>
+<p>Select the 'Mobile app installs' campaign type</p>
+<p><img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-video/install/video-install.png" /></p>
+</li>
+<li>
+<p>Complete the rest of the ad campaign setup</p>
+</li>
 </ol>
 <h4 id="ad-creation">Ad Creation<a class="headerlink" href="#ad-creation" title="Permanent link">&para;</a></h4>
 <div class="admonition warning">
@@ -2240,7 +2256,7 @@
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Optional: Deep Link Data</p>
-<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../TODO">Deep Link Routing</a> page to learn more.</p>
+<p>You can use this configuration section to specify custom link parameters that will be deep linked into the app after install. These could include a coupon code or a page identifier to route the user. Visit the <a href="../../../pages/deep-linking/routing/">Deep Link Routing</a> page to learn more.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Setting Attribution Windows</p>
@@ -2250,11 +2266,17 @@
 <p>To set up a Video Campaign, you will need to first create your campaign and then setup a tracking template on the ad. Additional Adwords information on Video campaigns can be found <strong><a href="https://support.google.com/adwords/answer/6340491?hl=en" target="_blank">here</a></strong>.</p>
 <h4 id="create-your-campaign_1">Create Your Campaign<a class="headerlink" href="#create-your-campaign_1" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Select <code>Video</code> on Adwords
-<img src="/img/pages/deep-linked-ads/reusable-images/adwords-video-network.png" alt="Adwords Network" class="half center"></li>
-<li>Select the 'Standard' campaign type
-<img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-video/standard/video-standard.png" /></li>
-<li>Complete the rest of the campaign and ad group setup</li>
+<li>
+<p>Select <code>Video</code> on Adwords</p>
+<p><img src="/img/pages/deep-linked-ads/reusable-images/adwords-video-network.png" alt="Adwords Network" class="half center"></p>
+</li>
+<li>
+<p>Select the 'Standard' campaign type</p>
+<p><img alt="Adwords Setup" src="../../../img/pages/deep-linked-ads/google-video/standard/video-standard.png" /></p>
+</li>
+<li>
+<p>Complete the rest of the campaign and ad group setup</p>
+</li>
 </ol>
 <h4 id="ad-creation_1">Ad Creation<a class="headerlink" href="#ad-creation_1" title="Permanent link">&para;</a></h4>
 <div class="admonition warning">
@@ -2263,9 +2285,11 @@
 </div>
 <ol>
 <li>On the ad creation section, select your desired Video ad format and fill in the <strong>Final URL</strong> field with the final website URL of your ad</li>
-<li>Locate the <code>Ad URL options (advanced)</code> section and expand it. Now copy your Branch Ad link from the previous step into the <strong>Tracking Template</strong> field.</li>
-</ol>
+<li>
+<p>Locate the <code>Ad URL options (advanced)</code> section and expand it. Now copy your Branch Ad link from the previous step into the <strong>Tracking Template</strong> field.</p>
 <p><img alt="Example Link" src="../../../img/pages/deep-linked-ads/google-video/full-branch-link.png" /></p>
+</li>
+</ol>
 <h4 id="instream-video-setup">Instream Video Setup<a class="headerlink" href="#instream-video-setup" title="Permanent link">&para;</a></h4>
 <p><img alt="Example Adwords Config" src="../../../img/pages/deep-linked-ads/google-video/standard/configuration-instream.png" /></p>
 <h4 id="bumper-video-setup">Bumper Video Setup<a class="headerlink" href="#bumper-video-setup" title="Permanent link">&para;</a></h4>

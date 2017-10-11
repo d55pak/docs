@@ -1972,46 +1972,72 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Google Ads you should <a href="../../../pages/apps/ios/#integrate-branch">integrate the Branch SDK</a> into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../../../pages/deep-linking/routing/">configure deep link routing</a>.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
 </div>
 <h4 id="conversions-setup">Conversions Setup<a class="headerlink" href="#conversions-setup" title="Permanent link">&para;</a></h4>
 <p>Set up Google as an Ad Partner and conversion tracking from Adwords on the Branch dashboard. If you already have Google enabled as an ad partner, continue with the <em>Enable Adwords Conversions</em> instructions.</p>
 <ol>
-<li>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.
-<img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></li>
-<li>Search for <strong>Google AdWords</strong>.
-<img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></li>
-<li>We will now fill in the conversion ID and Label fields.</li>
+<li>
+<p>Navigate to the <a href="https://dashboard.branch.io/ads/partner-management" target="_blank">Partner Management tab</a>.</p>
+<p><img alt="Ads Partner Management" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/ads-partner-management.png" /></p>
+</li>
+<li>
+<p>Search for <strong>Google AdWords</strong>.</p>
+<p><img alt="Find Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/find-google-partner.png" /></p>
+</li>
+<li>
+<p>We will now fill in the conversion ID and Label fields.</p>
+</li>
 </ol>
 <h4 id="enable-adwords-conversions">Enable Adwords Conversions<a class="headerlink" href="#enable-adwords-conversions" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Go to your <a href="https://adwords.google.com/cm/CampaignMgmt" target="_blank">Adwords dashboard</a>.</li>
-<li>In the top nav bar, click into <code>Tools</code> &gt; <code>Conversions</code>.
-<img src="/img/pages/deep-linked-ads/google-conversions/adwords-tools-conversion.png" alt="Conversion Menu" class="center half"></li>
-<li>Click <code>+ Add a Conversion</code> button.</li>
-<li>Select <code>App</code> from the cards.
-<img alt="Conversion App Install" src="../../../img/pages/deep-linked-ads/google-conversions/adwords-conversion-install.png" /></li>
-<li>Select <code>First opens and in-app actions</code>.</li>
+<li>
+<p>In the top nav bar, click into <code>Tools</code> &gt; <code>Conversions</code>.</p>
+<p><img src="/img/pages/deep-linked-ads/google-conversions/adwords-tools-conversion.png" alt="Conversion Menu" class="center half"></p>
+</li>
+<li>
+<p>Click <code>+ Add a Conversion</code> button.</p>
+</li>
+<li>
+<p>Select <code>App</code> from the cards.</p>
+<p><img src="/img/pages/deep-linked-ads/google-conversions/adwords-conversion-install.png" alt="Conversion Menu" class="center half"></p>
+</li>
+<li>
+<p>Select <code>First opens and in-app actions</code>.</p>
+</li>
 <li>Select the appropriate platform (iOS or Android).</li>
-<li>Select <code>App installs (first-open)</code>.
-<img src="/img/pages/deep-linked-ads/google-conversions/adwords-app-conversion-card.png" alt="Conversion IDs" class="center three-quarters"></li>
-<li>Now fill out the conversion action page:</li>
+<li>
+<p>Select <code>App installs (first-open)</code>.</p>
+<p><img src="/img/pages/deep-linked-ads/google-conversions/adwords-app-conversion-card.png" alt="Conversion IDs" class="center three-quarters"></p>
+</li>
+<li>
+<p>Now fill out the conversion action page:</p>
+</li>
 <li>Give it a name like <code>Branch Android/iOS Conversion</code></li>
 <li>Under <code>Value</code> assign a value (or select “Don’t assign a value to this install”)</li>
 <li>Under <code>Mobile app</code> input your application details</li>
 <li>Select <code>Include in "Conversions"</code> to have the conversion events appear in your Adwords columns</li>
 <li>Click <code>Save and continue</code>.</li>
 <li>Select the option to have a server report conversions: <code>Set up a server-to-server conversion feed...</code>.</li>
-<li>Note your <code>Conversion ID</code> &amp; <code>Conversion label</code> as shown in the screenshot below.
-<img alt="Conversion IDs" src="../../../img/pages/deep-linked-ads/google-conversions/adwords-conversions.png" /></li>
-<li>Head to the <a href="https://dashboard.branch.io/ads/partner-management/a_google_adwords?tab=settings" target="_blank">Branch Dashboard Adwords Settings</a>.</li>
+<li>
+<p>Note your <code>Conversion ID</code> &amp; <code>Conversion label</code> as shown in the screenshot below.</p>
+<p><img alt="Conversion IDs" src="../../../img/pages/deep-linked-ads/google-conversions/adwords-conversions.png" /></p>
+</li>
+<li>
+<p>Head to the <a href="https://dashboard.branch.io/ads/partner-management/a_google_adwords?tab=settings" target="_blank">Branch Dashboard Adwords Settings</a>.</p>
+</li>
 <li>Paste in the <code>Conversion ID</code> and <code>Conversion label</code> from your Adwords dashboard into the appropriate fields for either iOS or Android</li>
-<li>Click the <code>Save and Enable</code> button in the lower right hand corner.
-<img alt="Save and Enable Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/save-and-enable-google.png" /></li>
-<li>Google AdWords is now enabled as an ad partner.</li>
+<li>
+<p>Click the <code>Save and Enable</code> button in the lower right hand corner.</p>
+<p><img alt="Save and Enable Google Adwords in Partner Manager" src="../../../img/ingredients/deep-linked-ads/enable-google-ad-partner/save-and-enable-google.png" /></p>
+</li>
+<li>
+<p>Google AdWords is now enabled as an ad partner.</p>
+</li>
 <li>Click <code>Done</code> in your Adwords dashboard.</li>
 </ol>
 <p>You're all setup to confirm app install conversions between Branch and Adwords!</p>

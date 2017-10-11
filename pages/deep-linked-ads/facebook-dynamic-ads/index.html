@@ -2090,9 +2090,9 @@
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Facebook Ads you should <a href="../{{base.url}}/getting-started/sdk-integration-guide TODO">integrate the Branch SDK</a> into your app.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> To use Branch links in Facebook App Install Ads ensure you have Universal Links set up on iOS or App Links enabled on Android to ensure correct routing behavior. For setup, checkout <a href="../{{base.url}}/getting-started/universal-app-links TODO">Universal and App Links</a>.</li>
-<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../{{base.url}}/getting-started/deep-link-routing TODO">configure deep link routing</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To track installs from Facebook Ads you should <a href="../../../pages/apps/ios/#integrate-branch">integrate the Branch SDK</a> into your app.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> To use Branch links in Facebook App Install Ads ensure you have Universal Links set up on iOS or App Links enabled on Android to ensure correct routing behavior. For setup, checkout <a href="../../../pages/deep-linking/universal-links/">Universal</a> and <a href="../../../pages/deep-linking/android-app-links/">App Links</a>.</li>
+<li class="task-list-item"><input type="checkbox" disabled checked> If you want to deep link from your ads directly to content, you should <a href="../../../pages/deep-linking/routing/">configure deep link routing</a>.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Use <a href="../../../pages/deep-linked-ads/dynamic-product-feeds/">Branch Deep Linked Feeds</a> to create your Facebook Dynamic Ad compatible deep links.</li>
 <li class="task-list-item"><input type="checkbox" disabled checked> Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.</li>
 </ul>
@@ -2224,9 +2224,9 @@
 <p><img alt="Installs and Opens" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/installs_plus_opens.png" /></p>
 <p>If it's close, you know that this is the root cause.</p>
 <p><strong>Don't Use setDebug</strong></p>
-<p>Facebook ads are incompatible with <a href="../{{base.url}}/getting-started/integration-testing/guide/ios/#use-debug-mode-to-simulate-fresh-installs TODO">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
+<p>Facebook ads are incompatible with <a href="../../../pages/apps/ios/#simulate-an-install">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
 <p><strong>Conflicts with Facebook SDK (iOS)</strong></p>
-<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/ TODO"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
+<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
 <h4 id="testing-deep-linked-ads">Testing Deep Linked Ads<a class="headerlink" href="#testing-deep-linked-ads" title="Permanent link">&para;</a></h4>
 <p>Unfortunately, the demo/preview ads used during the ads creation flow on Facebook use a different mechanism than live Facebook ads. <strong>This prevents you from testing deep linking from your Facebook ads</strong>. Do not waste time trying to get this to work. We've confirmed with Facebook representatives that this is broken.</p>
 <p>The only way to test the deep linking functionality is outside of the actual ads system is a helper tool from Facebook. Follow these instructions to test the deep linking functionality:</p>
@@ -2287,8 +2287,8 @@
 <li>Social Discovery is set to <strong>Yes</strong></li>
 <li>Country Restricted is set to <strong>No</strong></li>
 </ul>
-<p>It has to look like this <strong>exactly</strong>:
-<img alt="App Restrictions Troubleshooting" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/app_restrictions.png" /></p>
+<p>It has to look like this <strong>exactly</strong>:</p>
+<p><img alt="App Restrictions Troubleshooting" src="../../../img/ingredients/deep-linked-ads/fb-ads-support/app_restrictions.png" /></p>
 <p><strong>No IP Whitelists</strong></p>
 <p>Because Branch has a large distribution of API servers that will be making requests to Facebook on behalf of your app, you cannot have an IP whitelist in your <a href="https://developers.facebook.com/apps/390736167768543/settings/advanced/">Facebook advanced settings</a> and still have this integration work. Please remove any IPs from this setting if they are present.</p>
 <h4 id="common-issues-with-facebook-authentication">Common issues with Facebook Authentication<a class="headerlink" href="#common-issues-with-facebook-authentication" title="Permanent link">&para;</a></h4>
