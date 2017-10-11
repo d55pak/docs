@@ -659,6 +659,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proguard-warning-or-errors-with-appindexing-module" title="Proguard warning or errors with AppIndexing module" class="md-nav__link">
+    Proguard warning or errors with AppIndexing module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
     Unable to open this link error
   </a>
@@ -2490,6 +2497,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#proguard-warning-or-errors-with-appindexing-module" title="Proguard warning or errors with AppIndexing module" class="md-nav__link">
+    Proguard warning or errors with AppIndexing module
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#unable-to-open-this-link-error" title="Unable to open this link error" class="md-nav__link">
     Unable to open this link error
   </a>
@@ -4094,14 +4108,22 @@
 <li>
 <h3 id="proguard-warning-or-errors-with-answers-shim-module">Proguard warning or errors with answers-shim module<a class="headerlink" href="#proguard-warning-or-errors-with-answers-shim-module" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Often caused when you exclude the <code>answers-shim</code>. Try adding -dontwarn com.crashlytics.android.answers.shim<code>to your</code>Proguard` file</li>
+<li>Often caused when you exclude the <code>answers-shim</code>. Try adding <code>-dontwarn com.crashlytics.android.answers.shim.**</code> to your <code>Proguard</code> file</li>
+</ul>
+</li>
+<li>
+<h3 id="proguard-warning-or-errors-with-appindexing-module">Proguard warning or errors with AppIndexing module<a class="headerlink" href="#proguard-warning-or-errors-with-appindexing-module" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The Branch SDK has an optional dependency on Firebase app indexing classes to provide new Firebase content listing
+    features. This may cause a proguard warning depending on your proguard settings. Please add the following to your
+    proguard file to solve this issue <code>-dontwarn com.google.firebase.appindexing.**</code>.</li>
 </ul>
 </li>
 <li>
 <h3 id="unable-to-open-this-link-error">Unable to open this link error<a class="headerlink" href="#unable-to-open-this-link-error" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Happens whenever URI Scheme redirection fails.</li>
-<li>Make sure you do not have <code>$deeplink_path</code> or you have a <code>$deeplink_path</code> which your <code>AndroidManfiest.xml</code> can accept</li>
+<li>Make sure you do not have <code>$deeplink_path</code> or you have a <code>$deeplink_path</code> which your <code>AndroidManifest.xml</code> can accept</li>
 </ul>
 </li>
 </ul>

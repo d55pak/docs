@@ -667,6 +667,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#common-build-problems" title="Common build problems" class="md-nav__link">
+    Common build problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#general-troubleshooting" title="General troubleshooting" class="md-nav__link">
     General troubleshooting
   </a>
@@ -2345,6 +2352,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#common-build-problems" title="Common build problems" class="md-nav__link">
+    Common build problems
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#general-troubleshooting" title="General troubleshooting" class="md-nav__link">
     General troubleshooting
   </a>
@@ -3441,6 +3455,42 @@ to notify the app when a link has been opened.</p>
 <code>branch.subscribe</code>. The callback to this method will return any initial link that launched the
 app and all subsequent link opens. There is no need to call <code>getLatestReferringParams</code> at app
 launch to check for an initial link. Use <code>branch.subscribe</code> to handle all link opens.</p>
+</li>
+<li>
+<h3 id="common-build-problems">Common build problems<a class="headerlink" href="#common-build-problems" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Be sure to follow the instructions to <a href="#update-from-200">Update from &lt; 2.0.0</a> if your
+    app used an earlier version of react-native-branch. In version 2.x, the native SDKs are embedded
+    in the NPM module and must not also be added from elsewhere (Gradle, CocoaPods, etc.).</p>
+</li>
+<li>
+<p>Note that when using the <code>React</code> pod in a native app, the name of the native SDK pod is <code>Branch-SDK</code>,
+    not <code>Branch</code>, and it comes from <code>node_modules</code>, not the CocoaPods repo.</p>
+</li>
+<li>
+<p>Starting with React Native 0.40, all external iOS headers in Objective-C must be imported as
+    <code>#import &lt;PackageName/Header.h&gt;</code>.
+    This applies to React Native headers as well as the <code>&lt;react-native-branch/RNBranch.h&gt;</code> header
+    from this SDK.</p>
+</li>
+<li>
+<p>If you upgraded from RN &lt; 0.40 manually, without adjusting your Xcode project settings, you may
+    still be importing headers with double quotes. This probably indicates a problem with your settings.</p>
+</li>
+<li>
+<p>The <code>react-native-git-upgrade</code> tool from NPM may be used to update dependencies as well as project
+    settings.</p>
+</li>
+<li>
+<p>On Android, when using Proguard in release builds, depending on your build settings, it may be
+    necessary to add one or both of these lines to your <code>android/app/proguard-rules.pro</code> file:</p>
+<div class="codehilite"><pre><span></span>-dontwarn com.crashlytics.android.answers.shim.**
+-dontwarn com.google.firebase.appindexing.**
+</pre></div>
+
+</li>
+</ul>
 </li>
 <li>
 <h3 id="general-troubleshooting">General troubleshooting<a class="headerlink" href="#general-troubleshooting" title="Permanent link">&para;</a></h3>
