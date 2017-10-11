@@ -629,6 +629,33 @@
     Cordova errors
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-only" title="Device only" class="md-nav__link">
+    Device only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-profile-missing" title="Provisioning Profile missing" class="md-nav__link">
+    Provisioning Profile missing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-bundle-id" title="Invalid bundle id" class="md-nav__link">
+    Invalid bundle id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -2370,6 +2397,33 @@
     Cordova errors
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#device-only" title="Device only" class="md-nav__link">
+    Device only
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-profile-missing" title="Provisioning Profile missing" class="md-nav__link">
+    Provisioning Profile missing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalid-bundle-id" title="Invalid bundle id" class="md-nav__link">
+    Invalid bundle id
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -4028,7 +4082,7 @@ cordova plugin remove branch-cordova-sdk
 <h3 id="cordova-errors">Cordova errors<a class="headerlink" href="#cordova-errors" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Branch opens and installs your app, so you cannot simulate Branch in the desktop browser</p>
+<h5 id="device-only">Device only<a class="headerlink" href="#device-only" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
 <p>Error</p>
@@ -4041,6 +4095,9 @@ cordova plugin remove branch-cordova-sdk
 </li>
 <li>
 <p>Solution</p>
+<ul>
+<li>Branch opens and installs your app, so you cannot simulate Branch in the desktop browser or simulator</li>
+</ul>
 <div class="codehilite"><pre><span></span><span class="c1">// Ionic 2/3 - running on browser instead of device</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">platform</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;cordova&#39;</span><span class="p">))</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 <span class="nx">Branch</span><span class="p">.</span><span class="nx">userCompletedAction</span><span class="p">(</span><span class="s1">&#39;did_this&#39;</span><span class="p">)</span>
@@ -4054,7 +4111,7 @@ cordova plugin remove branch-cordova-sdk
 </ul>
 </li>
 <li>
-<p>Provisioning Profile missing</p>
+<h5 id="provisioning-profile-missing">Provisioning Profile missing<a class="headerlink" href="#provisioning-profile-missing" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
 <p>Error</p>
@@ -4079,7 +4136,7 @@ Error: Error code <span class="m">65</span> <span class="k">for</span> command: 
 </ul>
 </li>
 <li>
-<p>Invalid bundle id</p>
+<h5 id="invalid-bundle-id">Invalid bundle id<a class="headerlink" href="#invalid-bundle-id" title="Permanent link">&para;</a></h5>
 <ul>
 <li>
 <p>Error</p>
