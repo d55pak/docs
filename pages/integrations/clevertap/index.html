@@ -7,10 +7,10 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="How to set up SAML with the Branch dashboard and your identity provider.">
+        <meta name="description" content="Branch documentation for mobile deep linking">
       
       
-        <link rel="canonical" href="https://docs.branch.io/pages/dashboard/sso/">
+        <link rel="canonical" href="https://docs.branch.io/pages/integrations/clevertap/">
       
       
         <meta name="author" content="Branch">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Single Sign-on for the Branch dashboard</title>
+        <title>CleverTap - Branch documentation</title>
       
     
     
@@ -128,8 +128,12 @@
             
               
                 
+                  <span class="md-header-nav__parent">
+                    Send data to other tools
+                  </span>
+                
               
-              Enable Single Sign On
+              CleverTap
             
           </span>
         </div>
@@ -287,7 +291,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../integrate/" title="Configure your dashboard" class="md-nav__link">
+    <a href="../../dashboard/integrate/" title="Configure your dashboard" class="md-nav__link">
       Configure your dashboard
     </a>
   </li>
@@ -699,7 +703,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../analytics/" title="Track analytics" class="md-nav__link">
+    <a href="../../dashboard/analytics/" title="Track analytics" class="md-nav__link">
       Track analytics
     </a>
   </li>
@@ -1573,10 +1577,12 @@
       
         
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17" checked>
     
     <label class="md-nav__link" for="nav-17">
       Send data to other tools
@@ -1595,7 +1601,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/adobe-analytics/" title="Adobe Analytics" class="md-nav__link">
+    <a href="../adobe-analytics/" title="Adobe Analytics" class="md-nav__link">
       Adobe Analytics
     </a>
   </li>
@@ -1609,7 +1615,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/adjust/" title="Adjust" class="md-nav__link">
+    <a href="../adjust/" title="Adjust" class="md-nav__link">
       Adjust
     </a>
   </li>
@@ -1623,7 +1629,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/amplitude/" title="Amplitude" class="md-nav__link">
+    <a href="../amplitude/" title="Amplitude" class="md-nav__link">
       Amplitude
     </a>
   </li>
@@ -1637,7 +1643,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/appmetrica/" title="AppMetrica" class="md-nav__link">
+    <a href="../appmetrica/" title="AppMetrica" class="md-nav__link">
       AppMetrica
     </a>
   </li>
@@ -1651,7 +1657,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/appboy/" title="Appboy" class="md-nav__link">
+    <a href="../appboy/" title="Appboy" class="md-nav__link">
       Appboy
     </a>
   </li>
@@ -1665,7 +1671,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/appsflyer/" title="Appsflyer" class="md-nav__link">
+    <a href="../appsflyer/" title="Appsflyer" class="md-nav__link">
       Appsflyer
     </a>
   </li>
@@ -1677,11 +1683,164 @@
             
             
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../integrations/clevertap/" title="CleverTap" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CleverTap
+      </label>
+    
+    <a href="./" title="CleverTap" class="md-nav__link md-nav__link--active">
       CleverTap
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How does it work?" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-events-does-branch-send" title="What events does Branch send?" class="md-nav__link">
+    What events does Branch send?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#retrieve-your-clevertap-credentials" title="Retrieve your CleverTap Credentials" class="md-nav__link">
+    Retrieve your CleverTap Credentials
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-branch-dashboard" title="Configure the Branch Dashboard" class="md-nav__link">
+    Configure the Branch Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-idfagaid" title="Capture IDFA/GAID" class="md-nav__link">
+    Capture IDFA/GAID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clevertap-identity-support" title="CleverTap identity support" class="md-nav__link">
+    CleverTap identity support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ios" title="iOS" class="md-nav__link">
+    iOS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrade-to-the-latest-sdks-if-necessary" title="Upgrade to the latest SDKs [if necessary]" class="md-nav__link">
+    Upgrade to the latest SDKs [if necessary]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#testing-your-clevertap-integration" title="Testing your CleverTap integration" class="md-nav__link">
+    Testing your CleverTap integration
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+        <li class="md-nav__item">
+          <a href="#__comments" title="Comments" class="md-nav__link md-nav__link--active">
+            Comments
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
           
@@ -1693,7 +1852,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/fabric-answers/" title="Fabric Answers" class="md-nav__link">
+    <a href="../fabric-answers/" title="Fabric Answers" class="md-nav__link">
       Fabric Answers
     </a>
   </li>
@@ -1707,7 +1866,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/google-analytics/" title="Google Analytics" class="md-nav__link">
+    <a href="../google-analytics/" title="Google Analytics" class="md-nav__link">
       Google Analytics
     </a>
   </li>
@@ -1721,7 +1880,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/kochava/" title="Kochava" class="md-nav__link">
+    <a href="../kochava/" title="Kochava" class="md-nav__link">
       Kochava
     </a>
   </li>
@@ -1735,7 +1894,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/localytics/" title="Localytics" class="md-nav__link">
+    <a href="../localytics/" title="Localytics" class="md-nav__link">
       Localytics
     </a>
   </li>
@@ -1749,7 +1908,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/mixpanel/" title="Mixpanel" class="md-nav__link">
+    <a href="../mixpanel/" title="Mixpanel" class="md-nav__link">
       Mixpanel
     </a>
   </li>
@@ -1763,7 +1922,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../integrations/tune/" title="Tune" class="md-nav__link">
+    <a href="../tune/" title="Tune" class="md-nav__link">
       Tune
     </a>
   </li>
@@ -1880,8 +2039,6 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
-  
   
     <label class="md-nav__title" for="toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -1895,56 +2052,90 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#how-does-it-work" title="How does it work?" class="md-nav__link">
+    How does it work?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-events-does-branch-send" title="What events does Branch send?" class="md-nav__link">
+    What events does Branch send?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" title="Setup" class="md-nav__link">
+    Setup
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
     Prerequisites
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#retrieve-your-clevertap-credentials" title="Retrieve your CleverTap Credentials" class="md-nav__link">
+    Retrieve your CleverTap Credentials
+  </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#guide" title="Guide" class="md-nav__link">
-    Guide
+        
+          <li class="md-nav__item">
+  <a href="#configure-the-branch-dashboard" title="Configure the Branch Dashboard" class="md-nav__link">
+    Configure the Branch Dashboard
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capture-idfagaid" title="Capture IDFA/GAID" class="md-nav__link">
+    Capture IDFA/GAID
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clevertap-identity-support" title="CleverTap identity support" class="md-nav__link">
+    CleverTap identity support
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#contact-branch" title="Contact Branch" class="md-nav__link">
-    Contact Branch
+  <a href="#ios" title="iOS" class="md-nav__link">
+    iOS
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-branch-to-your-identity-provider" title="Add Branch to your identity provider" class="md-nav__link">
-    Add Branch to your identity provider
+  <a href="#android" title="Android" class="md-nav__link">
+    Android
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#copy-your-details-back-to-branch" title="Copy your details back to Branch" class="md-nav__link">
-    Copy your details back to Branch
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-users-to-branch-in-your-idp" title="Add users to Branch in your IdP" class="md-nav__link">
-    Add users to Branch in your IdP
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enable-sso" title="Enable SSO" class="md-nav__link">
-    Enable SSO
+  <a href="#upgrade-to-the-latest-sdks-if-necessary" title="Upgrade to the latest SDKs [if necessary]" class="md-nav__link">
+    Upgrade to the latest SDKs [if necessary]
   </a>
   
 </li>
@@ -1955,30 +2146,16 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" title="FAQ" class="md-nav__link">
-    FAQ
+  <a href="#support" title="Support" class="md-nav__link">
+    Support
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#is-there-a-fallback-option-to-sign-in-to-the-dashboard-when-sso-is-enabled" title="Is there a fallback option to sign in to the dashboard when SSO is enabled?" class="md-nav__link">
-    Is there a fallback option to sign in to the dashboard when SSO is enabled?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#does-branch-support-just-in-time-or-scim-account-provisioning" title="Does Branch support just-in-time or SCIM account provisioning?" class="md-nav__link">
-    Does Branch support just-in-time or SCIM account provisioning?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-much-does-sso-cost" title="How much does SSO cost?" class="md-nav__link">
-    How much does SSO cost?
+  <a href="#testing-your-clevertap-integration" title="Testing your CleverTap integration" class="md-nav__link">
+    Testing your CleverTap integration
   </a>
   
 </li>
@@ -1988,12 +2165,6 @@
   
 </li>
       
-      
-        <li class="md-nav__item">
-          <a href="#__source" title="Source" class="md-nav__link md-nav__link--active">
-            Source
-          </a>
-        </li>
       
       
         <li class="md-nav__item">
@@ -2014,108 +2185,97 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/dashboard/sso.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/branchmetrics/docs/edit/master/src/pages/integrations/clevertap.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="single-sign-on">Single Sign-on<a class="headerlink" href="#single-sign-on" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Branch offers Security Assertion Markup Language (SAML) / Single Sign-on (SSO) support for the dashboard. This allows you to use your identity provider (IdP) to centralize access to various services for your team and leverage existing directory systems and security groups.</p>
+                  <h1>CleverTap</h1>
+                
+                <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>With a push of a button you can send your Branch data to your CleverTap dashboard, helping you understand the power of Branch as an acquisition pathway.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The CleverTap Data Integration is in private beta. Please contact your Account manager or <a href="mailto:integrations@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> to enable the CleverTap Data Integration.</p>
+</div>
+<h3 id="how-does-it-work">How does it work?<a class="headerlink" href="#how-does-it-work" title="Permanent link">&para;</a></h3>
+<p>Once the Branch SDK is integrated into an app, Branch can detect which links are leading to installs, re-opens, and users' actions. Enabling this integration will result in Branch automatically forwarding referred events to CleverTap, in the exact format CleverTap expects.</p>
+<h3 id="what-events-does-branch-send">What events does Branch send?<a class="headerlink" href="#what-events-does-branch-send" title="Permanent link">&para;</a></h3>
+<p>Branch will send <em>referred</em> <strong>installs</strong> and <strong>opens</strong>, as well as any <strong>custom events and commerce events</strong> you track with Branch. Non-referred events, clicks, web session starts, and pageviews will be excluded. Branch also sends all the data that is attached to the link that drove the referred event. This will allow you to analyze which campaigns, channels, etc. are helping you acquire and engage users. You can see the list of fields that we send to CleverTap <a href="../../../third-party-integrations/clevertap/advanced/#what-branch-sends-to-clevertap">here</a>.</p>
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Single Sign-on support for the Branch dashboard is a Premium feature. <a href="#how-much-does-sso-cost">Learn more</a>.</li>
+<li>This guide requires you to have integrated the Branch SDK in your mobile apps.</li>
+<li>You also need to be an CleverTap customer and have the <a href="https://support.clevertap.com/docs.html">CleverTap SDK installed</a> in your app.</li>
 </ul>
-<h2 id="guide">Guide<a class="headerlink" href="#guide" title="Permanent link">&para;</a></h2>
-<h3 id="contact-branch">Contact Branch<a class="headerlink" href="#contact-branch" title="Permanent link">&para;</a></h3>
-<p>SSO for the Branch dashboard restricts access for designated email domains to a specific dashboard subdomain. Contact your account manager or <a href="https://support.branch.io/support/tickets/new" target="_blank">support</a> when you are ready to get started. Please provide:</p>
+<h3 id="retrieve-your-clevertap-credentials">Retrieve your CleverTap Credentials<a class="headerlink" href="#retrieve-your-clevertap-credentials" title="Permanent link">&para;</a></h3>
+<p>Find your CleverTap Account Credentials. Later, you'll enter them into the Branch Dashboard.</p>
 <ol>
-<li><strong>The email domain(s)</strong> that you and your team use and will be required to sign in via SSO.</li>
-<li><strong>The Branch dashboard subdomain</strong> you would like your team to use to log in. For example, if you chose <code>company</code>, then your dashboard subdomain would be <code>https://company.dashboard.branch.io</code>. </li>
-<li><strong>The email addresses of any SSO admins</strong> that will be allowed to configure SAML for your team. These SSO admins will also be allowed to log in both via SSO and via regular dashboard login after SSO is enabled, so that you have a fallback option to gain access to your account if the configuration goes wrong in some way.</li>
+<li>
+<p>Log in to your <a href="https://dashboard.clevertap.com/" target="_blank">CleverTap account</a>  and navigate to Settings by clicking the cog at the top of the screen, then <code>Settings Dashboard</code>.</p>
+<p><img alt="image" src="../../../img/pages/integrations/clevertap/clevertap-settings.png" /></p>
+</li>
+<li>
+<p>Ensure you're looking at the correct app for your integration, then click the eye icon to show your account credentials.</p>
+<p><img alt="image" src="../../../img/pages/integrations/clevertap/clevertap-account-credentials.png" /></p>
+</li>
+<li>
+<p>Copy these account credentials into the Branch dashboard as instructed below.</p>
+</li>
 </ol>
-<h3 id="add-branch-to-your-identity-provider">Add Branch to your identity provider<a class="headerlink" href="#add-branch-to-your-identity-provider" title="Permanent link">&para;</a></h3>
-<p>If you want the dashboard to provide SSO for your team, You will need to add Branch to your IdP. Once this is complete, your IdP will provide you with details that you'll need to add to the Branch dashboard in order to enable SSO.</p>
-<p>Branch currently works with Okta and OneLogin, and should also be compatible with any identity provider that supports SAML. </p>
-<p>When you add Branch to your identity provider, add the following SAML attribute mappings:</p>
-<table>
-<thead>
-<tr>
-<th>SAML attribute</th>
-<th>Field it should map to in your IdP</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>email</td>
-<td>User's first name</td>
-</tr>
-<tr>
-<td>firstName</td>
-<td>User's first name</td>
-</tr>
-<tr>
-<td>lastName</td>
-<td>User's last name</td>
-</tr>
-</tbody>
-</table>
-<p>Here is some initial information that your IdP might ask for:</p>
-<table>
-<thead>
-<tr>
-<th>IdP Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Platform</td>
-<td>Web</td>
-</tr>
-<tr>
-<td>Sign-on method</td>
-<td>SAML 2.0</td>
-</tr>
-<tr>
-<td>Application name</td>
-<td>Branch</td>
-</tr>
-<tr>
-<td>Logo</td>
-<td><a href="https://branch.io/press/#kit" target="_blank">Download here</a></td>
-</tr>
-</tbody>
-</table>
-<p>Ask your account manager or <a href="https://support.branch.io/support/tickets/new" target="_blank">support</a> for the additional configuration information that you need.</p>
-<h3 id="copy-your-details-back-to-branch">Copy your details back to Branch<a class="headerlink" href="#copy-your-details-back-to-branch" title="Permanent link">&para;</a></h3>
-<p>When you have added Branch, your IdP should provide you with an <strong>Identity provider Entity ID</strong>, an <strong>Identity provider SSO URL</strong>, and a <strong>Public x509 certificate</strong>. Go to <a href="https://dashboard.branch.io/account-settings/sso" target="_blank">Account Settings &gt; SSO</a> and paste in the information:</p>
-<p><img alt="image" src="../../../img/pages/dashboard/sso/configure-saml.png" /></p>
-<p>Click <strong>Save</strong> to save your information. SSO will not be enabled for your team yet.</p>
-<p>If you do not see the above fields, likely Branch has not finished enabling your account yet. Please contact your account manager or <a href="https://support.branch.io/support/tickets/new" target="_blank">support</a>.</p>
-<h3 id="add-users-to-branch-in-your-idp">Add users to Branch in your IdP<a class="headerlink" href="#add-users-to-branch-in-your-idp" title="Permanent link">&para;</a></h3>
-<p>Give the appropriate users access to Branch in your identity provider. If users are on your Branch team in the dashboard but are not given access in your IdP, then they will no longer be able to log in to the Branch dashboard when SSO is enabled.</p>
-<p>When you add users to Branch via your IdP in future, you will also have to add them to the team for the appropriate apps in the Branch dashboard. You can do this on the <a href="https://dashboard.branch.io/account-settings/team" target="_blank">Account Settings &gt; Team</a> page for each app that you want the user to have access to.</p>
-<p>Branch does not currently support just-in-time or SCIM provisioning. <a href="#does-branch-support-just-in-time-or-scim-account-provisioning">Learn More</a>.</p>
-<h3 id="enable-sso">Enable SSO<a class="headerlink" href="#enable-sso" title="Permanent link">&para;</a></h3>
-<p>Return to the <a href="https://dashboard.branch.io/account-settings/sso" target="_blank">Account Settings &gt; SSO</a> page and toggle SAML/SSO to <strong>On</strong>. When you click <strong>Save</strong> at the bottom, SSO will be enabled and users will have to login via your branded subdomain:</p>
-<p><img alt="image" src="../../../img/pages/dashboard/sso/enable-saml.png" /></p>
-<p>Users on your claimed email domain(s) trying to log in, reset password, or sign up the regular way via <code>https://dashboard.branch.io</code>, will be redirected to your branded subdomain and your IdP login page.</p>
-<h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
-<h3 id="is-there-a-fallback-option-to-sign-in-to-the-dashboard-when-sso-is-enabled">Is there a fallback option to sign in to the dashboard when SSO is enabled?<a class="headerlink" href="#is-there-a-fallback-option-to-sign-in-to-the-dashboard-when-sso-is-enabled" title="Permanent link">&para;</a></h3>
-<p>Yes! You can designate SSO admins that will be able to log in via your branded subdomain or <a href="https://dashboard.branch.io">https://dashboard.branch.io</a> when SSO is enabled. These admins will be able to sign in with a password and turn SSO off if necessary. Designate SSO admins when you <a href="#contact-branch">contact Branch</a>.</p>
-<p>In addition, users on your team that are not on your claimed email domain(s) will still be able to log in without SSO and access your Branch app. If this is not desired, be sure to remove these users from your team or add them to the list of claimed email domains.</p>
-<h3 id="does-branch-support-just-in-time-or-scim-account-provisioning">Does Branch support just-in-time or SCIM account provisioning?<a class="headerlink" href="#does-branch-support-just-in-time-or-scim-account-provisioning" title="Permanent link">&para;</a></h3>
-<p>Not currently. One user can belong to multiple Branch apps, so admins must decide which users on their claimed email domain should have access to which apps in Branch at this time. Please let us know if you're interested in this via your account manager or <a href="https://support.branch.io/support/tickets/new" target="_blank">support</a>.</p>
-<h3 id="how-much-does-sso-cost">How much does SSO cost?<a class="headerlink" href="#how-much-does-sso-cost" title="Permanent link">&para;</a></h3>
-<p>Single Sign-on support for the Branch dashboard is a Premium feature. If you are already paying for any Branch product, SSO is free for you and your team. Please <a href="https://support.branch.io/support/tickets/new" target="_blank">contact support</a> or your account manager for more information.</p>
+<h3 id="configure-the-branch-dashboard">Configure the Branch Dashboard<a class="headerlink" href="#configure-the-branch-dashboard" title="Permanent link">&para;</a></h3>
+<ol>
+<li>On the Branch Dashboard (dashboard.branch.io), navigate to the <a href="https://branch.dashboard.branch.io/data-import-export/integrations">Integrations page</a>.</li>
+<li>
+<p>Search for CleverTap. If you don't see CleverTap, please contact your Branch Account Manager or <a href="mailto:integrations@branch.io"><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;">&#105;&#110;&#116;&#101;&#103;&#114;&#97;&#116;&#105;&#111;&#110;&#115;&#64;&#98;&#114;&#97;&#110;&#99;&#104;&#46;&#105;&#111;</a></a> to enable the CleverTap Data Integration.</p>
+<p><img alt="image" src="../../../img/pages/integrations/clevertap/search-clevertap.png" /></p>
+</li>
+<li>
+<p>Enter your CleverTap credentials into the corresponding boxes in the Branch Dashboard as shown below and hit <strong>Save</strong>.</p>
+<p><img alt="image" src="../../../img/pages/integrations/clevertap/enter-clevertap-credentials.png" /></p>
+</li>
+</ol>
+<h3 id="capture-idfagaid">Capture IDFA/GAID<a class="headerlink" href="#capture-idfagaid" title="Permanent link">&para;</a></h3>
+<p>Ensure that you are capturing both the Google Advertising Identifier (GAID) on Android, and the IDFA on iOS.</p>
+<div class="admonition warning">
+<p class="admonition-title">Google Advertising ID is required</p>
+<p>CleverTap requires the Google Advertising ID to be sent. Android ID (the hardware ID) alone is not enough.</p>
+</div>
+<h3 id="clevertap-identity-support">CleverTap identity support<a class="headerlink" href="#clevertap-identity-support" title="Permanent link">&para;</a></h3>
+<p>You must use the following code to send your CleverTap identity to Branch so that user identities are correctly assigned in CleverTap. </p>
+<h4 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h4>
+<p><strong>Objective-C</strong>
+Inside <code>didFinishLaunchingWithOptions</code></p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="o">*</span><span class="n">branch</span> <span class="o">=</span> <span class="p">[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">];</span>
+<span class="p">[</span><span class="n">CleverTap</span> <span class="n">autoIntegrate</span><span class="p">];</span>
+<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">setRequestMetadataKey</span><span class="p">:</span><span class="s">@&quot;$clevertap_attribution_id&quot;</span>
+<span class="nl">value</span><span class="p">:[[</span><span class="n">CleverTap</span> <span class="n">sharedInstance</span><span class="p">]</span> <span class="n">profileGetCleverTapAttributionIdentifier</span><span class="p">]];</span>
+</pre></div>
+
+<p><strong>Swift</strong>
+Inside <code>didFinishLaunchingWithOptions</code>:</p>
+<div class="codehilite"><pre><span></span><span class="n">CleverTap</span><span class="p">.</span><span class="n">autoIntegrate</span><span class="p">()</span>
+<span class="k">if</span> <span class="kd">let</span> <span class="nv">branch</span> <span class="p">=</span> <span class="n">Branch</span><span class="p">.</span><span class="n">getInstance</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">branch</span><span class="p">.</span><span class="n">setRequestMetadataKey</span><span class="p">(</span><span class="s">&quot;$clevertap_attribution_id&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">:</span><span class="n">CleverTap</span><span class="p">.</span><span class="n">sharedInstance</span><span class="p">()?</span><span class="n">profileGetCleverTapAttributionIdentifier</span><span class="p">()</span> <span class="k">as</span> <span class="bp">NSObject</span><span class="p">!);</span>
+<span class="p">}</span>
+</pre></div>
+
+<h4 id="android">Android<a class="headerlink" href="#android" title="Permanent link">&para;</a></h4>
+<p>Before you initialize in your Application <code>#onCreate</code> or Deep Link Activity’s <code>#onCreate</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">Branch</span> <span class="n">branch</span> <span class="o">=</span> <span class="n">Branch</span><span class="o">.</span><span class="na">getInstance</span><span class="o">();</span>
+<span class="n">branch</span><span class="o">.</span><span class="na">setRequestMetadata</span><span class="o">(</span><span class="s">&quot;$clevertap_attribution_id&quot;</span><span class="o">,</span>
+<span class="n">cleverTapInstance</span><span class="o">.</span><span class="na">getCleverTapAttributionIdentifier</span><span class="o">());</span>
+</pre></div>
+
+<h3 id="upgrade-to-the-latest-sdks-if-necessary">Upgrade to the latest SDKs [if necessary]<a class="headerlink" href="#upgrade-to-the-latest-sdks-if-necessary" title="Permanent link">&para;</a></h3>
+<p>Please ensure you're using the Branch iOS SDK 0.19.5 or greater, and Android SDK v2.12.1 or greater. If you implemented Branch after October 11th 2017, you are likely already on this version or later.</p>
+<h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<h3 id="testing-your-clevertap-integration">Testing your CleverTap integration<a class="headerlink" href="#testing-your-clevertap-integration" title="Permanent link">&para;</a></h3>
+<p>The simplest way to test your integration is working end to end is to open your app <strong>from a Branch link</strong> then verify the data appears in CleverTap. After doing this, you will know how you to test more advanced scenarios.</p>
+<ol>
+<li>Create a Branch Quick Link at <a href="https://dashboard.branch.io/quick-links" target="_blank"><a href="https://dashboard.branch.io/quick-links">https://dashboard.branch.io/quick-links</a></a>.</li>
+<li>Click that Branch link to open your app.</li>
+<li>In your Branch dashboard, verify you see the open event show as a "referred session" with a "session referring link URL" in your Branch dashboard under "Liveview &gt; Events"</li>
+</ol>
                 
-                  
-                    <h2 id="__source">Source</h2>
-                    
-                    
-                      <a href="https://github.com/branchmetrics/docs/tree/master/src/pages/dashboard/sso.md" title="sso.md" class="md-source-file">
-                        sso.md
-                      </a>
-                    
                   
                 
               
@@ -2125,9 +2285,9 @@
                   <div id="disqus_thread"></div>
 <script>
   var disqus_config = function () {
-    this.page.url = "https://docs.branch.io/pages/dashboard/sso/";
+    this.page.url = "https://docs.branch.io/pages/integrations/clevertap/";
     this.page.identifier =
-      "/pages/dashboard/sso/";
+      "/pages/integrations/clevertap/";
   };
   (function() {
     var d = document, s = d.createElement("script");
