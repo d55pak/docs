@@ -2144,21 +2144,23 @@
 </div>
 <h2 id="data-mapping">Data Mapping<a class="headerlink" href="#data-mapping" title="Permanent link">&para;</a></h2>
 <p>Previously, when you integrated the Branch SDK, and started clicking links, we automatically tracked clicks, installs, opens, and web session starts and pageviews (if you installed the web SDK). Ultimately, if you enabled Deepviews or Journeys, we counted clicks when a click didn't actually occur, such as when a Deepview displayed, a Journey automatically opened the app without any physical click. This caused confusion on our dashboard, as people would notice clicks occurring without anyone ever clicking a link! Fortunately, we've cleaned up our pre-defined events, and have introduced a new way to think of events.  </p>
-<p>We now have classifications of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. The full mapping of events is below. What this means is that</p>
-<p>impression
-click
-Branch CTA view
-web to app auto redirect
-SMS sent
-install
-open
-reinstall
-pageview
-web session start
-commerce event
-content event
-user lifecycle event
-custom event</p>
+<p>We now have classifications of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. The full mapping of events is below.</p>
+<ul>
+<li>impression</li>
+<li>click</li>
+<li>Branch CTA view</li>
+<li>web to app auto redirect</li>
+<li>SMS sent</li>
+<li>install</li>
+<li>open</li>
+<li>reinstall</li>
+<li>pageview</li>
+<li>web session start</li>
+<li>commerce event</li>
+<li>content event</li>
+<li>user lifecycle event</li>
+<li>custom event</li>
+</ul>
 <h2 id="whats-changed">What's changed?<a class="headerlink" href="#whats-changed" title="Permanent link">&para;</a></h2>
 <h3 id="deep-linking">Deep Linking<a class="headerlink" href="#deep-linking" title="Permanent link">&para;</a></h3>
 <p>The biggest change is the analytics associated with deep linking. Previously, when a user clicked your Branch links, and installed within a two hour window, they were deep linked <em>and</em> attributed. This means that their first time experience included your deep linked data, and we counted an install. If they installed four hours after clicking instead of two, they would not receive deep link data, and we would <em>not</em> attribute this user's install.</p>
