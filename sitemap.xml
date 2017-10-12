@@ -322,6 +322,12 @@
     
         
     <url>
+     <loc>https://docs.branch.io/pages/emails/get-started/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>https://docs.branch.io/pages/emails/appboy/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
@@ -419,6 +425,12 @@
         
     <url>
      <loc>https://docs.branch.io/pages/emails/zeta/</loc>
+     <lastmod>2017-10-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://docs.branch.io/pages/emails/support/</loc>
      <lastmod>2017-10-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
