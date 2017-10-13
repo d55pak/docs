@@ -216,5 +216,6 @@ pages:
     - Tune: pages/integrations/tune.md
   - Enable Single Sign On: pages/dashboard/sso.md
   - Branch Matching Overview: pages/resources/matching.md
+  - Event reference: pages/dashboard/event-names.md
   - Validation Tools: pages/resources/validation-tools.md
   - Case Studies and Infographics: pages/resources/case-studies.md
