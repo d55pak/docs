@@ -2339,24 +2339,39 @@
 <p>Facebook has example CSVs that Branch accepts as Feed Sources on the <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-catalog">Facebook Developer Portal</a>. Scroll down to "Supported Formats" to find the feed examples.</p>
 </div>
 <h3 id="upload-a-feed-source">Upload a Feed Source<a class="headerlink" href="#upload-a-feed-source" title="Permanent link">&para;</a></h3>
-<p>Go directly to <a href="https://dashboard.branch.io/ads/analytics?modal=ad-link">Ads section</a> in the Branch dashboard to get started.</p>
+<p>Go directly to <a href="https://dashboard.branch.io/ads/links/feed-sources">Ads &gt; Links &gt; Feed Sources section</a> in the Branch dashboard to get started.</p>
 <ol>
-<li>Click on the "Create Product Link" tab.</li>
-<li>Click the <strong>Feed Sources</strong> button. <img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/add-new-feed-source.png" /></li>
-<li>Name your Feed Source. You can supply a URL (recommended) or upload a file. <img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/name-and-upload-feed-source.png" /></li>
+<li>
+<p>Click the <strong>Feed Sources</strong> tab if needed, then click "Add New Feed Source."</p>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/add-new-feed-source.png" /></p>
+</li>
+<li>
+<p>Name your Feed Source. You can supply a URL (recommended) or upload a file. </p>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/name-and-upload-feed-source.png" /></p>
+</li>
 </ol>
 <p>You can see all of the <strong>Feed Sources</strong> you've uploaded by going to the <a href="http://dashboard.branch.io/ads/feedsources">Feed Sources</a> tab.</p>
 <h3 id="create-a-new-deep-linked-feed">Create a New Deep Linked Feed<a class="headerlink" href="#create-a-new-deep-linked-feed" title="Permanent link">&para;</a></h3>
 <ol>
-<li>Click the <strong>Add Deep Linked Feed</strong> button from either tab. <img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/add-deep-linked-feed.png" /></li>
+<li>
+<p>Click the <strong>Create Ad Link</strong> button from either tab. </p>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/add-deep-linked-feed.png" /></p>
+</li>
+<li>
+<p>Select <strong>Create Product Link</strong> from the choices on the modal.</p>
+<p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/select-product-from-modal.png" /></p>
+</li>
 </ol>
 <h3 id="deep-linked-feed-creation-flow">Deep Linked Feed Creation Flow<a class="headerlink" href="#deep-linked-feed-creation-flow" title="Permanent link">&para;</a></h3>
 <ol>
-<li>In "Deep Linked Feed Information" you'll name your Deep Linked Feed for reference, and specify which Feed Source you'd like to turn into a Deep Linked Feed. You'll also input the Ad Platform on which you'd like to run your campaigns. This information will be used to modify the feed and insert well-structured Branch attribution data into the links.</li>
-</ol>
+<li>
+<p>In "Deep Linked Feed Information" you'll name your Deep Linked Feed for reference, and specify which Feed Source you'd like to turn into a Deep Linked Feed. You'll also input the Ad Platform on which you'd like to run your campaigns. This information will be used to modify the feed and insert well-structured Branch attribution data into the links.</p>
 <p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/dlf-step-1.png" /></p>
-<ol>
-<li>In "Create Deep Links" you'll be presented with two optional elements. The first is a list of column names from your feed source. To add deep link data to each link, select the column that contains the relevant data.</li>
+<p>Select "CSV" for Facebook Ads, and "TSV" for Google Product Listing Ads.</p>
+</li>
+<li>
+<p>In "Create Deep Links" you'll be presented with two optional elements. The first is a list of column names from your feed source. To add deep link data to each link, select the column that contains the relevant data.</p>
+</li>
 </ol>
 <p>Let's say you have a column in your product feed titled <code>id</code>. That column contains the product id for each piece of content in your Feed Source file, and your app needs that id to deep link correctly. To create deep links with that id for each product, select the column by checking the box on the left hand side. If you'd like to change the name of the key (for example, from <code>id</code> to <code>product_id</code>) you can write the new name for the key in the text box on the right hand side. This will add the correct <code>product_id</code> to each link for every single product in your feed (e.g. the first item will have <code>"product_id":1392</code>, the second item will have <code>"product_id":5284</code>).</p>
 <p><img alt="image" src="../../../img/pages/deep-linked-ads/dynamic-product-ads/customize-columns.png" /></p>
