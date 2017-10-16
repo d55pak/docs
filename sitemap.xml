@@ -519,6 +519,12 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://docs.branch.io/pages/exports/api-v3/</loc>
+     <lastmod>2017-10-16</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
