@@ -2146,7 +2146,8 @@
 </div>
 <h2 id="data-mapping">Data Mapping<a class="headerlink" href="#data-mapping" title="Permanent link">&para;</a></h2>
 <p>Previously, when you integrated the Branch SDK, and started clicking links, we automatically tracked clicks, installs, opens, and web session starts and pageviews (if you installed the web SDK). Ultimately, if you enabled Deepviews or Journeys, we counted clicks when a click didn't actually occur, such as when a Deepview displayed, a Journey automatically opened the app without any physical click. This caused confusion on our dashboard, as people would notice clicks occurring without anyone ever clicking a link! Fortunately, we've cleaned up our pre-defined events, and have introduced a new way to think of events.  </p>
-<p>We now have classifications of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. The full mapping of events is below.</p>
+<p>We now have classifications of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. Similarly, we now have <em>content</em> events and <em>user lifecycle</em> events. </p>
+<p>The full mapping of events is below.</p>
 <ul>
 <li>impression</li>
 <li>click</li>
@@ -2167,7 +2168,7 @@
 <h3 id="deep-linking">Deep Linking<a class="headerlink" href="#deep-linking" title="Permanent link">&para;</a></h3>
 <p>The biggest change is the analytics associated with deep linking. Previously, when a user clicked your Branch links, and installed within a two hour window, they were deep linked <em>and</em> attributed. This means that their first time experience included your deep linked data, and we counted an install. If they installed four hours after clicking instead of two, they would not receive deep link data, and we would <em>not</em> attribute this user's install.</p>
 <p>Now, we've separated this concept. Deep linking windows remain two hours, but attribution windows are adjustable. Going with the previous example, if someone clicks your link, and installs the app after 4 hours, they will <em>not</em> receive deep link data, but will be counted as an install.</p>
-<p>Note: no code changes are needed, and if you want to expand the deep linking window, you can do so. Read the <a href="#attribution-windows">attribution window</a> section for more information.</p>
+<p>Note: no code changes are needed, and if you want to change the deep linking window, you can do so. Read the <a href="#attribution-windows">attribution window</a> section for more information.</p>
 <h3 id="attribution-windows">Attribution Windows<a class="headerlink" href="#attribution-windows" title="Permanent link">&para;</a></h3>
 <p>Now that deep linking and attribution analytics are separate, we have attribution windows for analytics. As a reminder, an attribution window simply defines the window of time for  when an eligible attribution or deep link can occur. In order to make changes, navigate to the <a href="https://dashboard.branch.io/link-settings">link settings</a> page, and scroll down to "Attribution Window".</p>
 <p><img alt="image" src="../../../img/pages/dashboard/unified-analytics/attribution-windows.png" /></p>
@@ -2176,10 +2177,10 @@
 <p><code>Deep Linking Duration</code> refers to the duration of time someone is eligible to receive deep link data. This includes anyone clicking a Branch link, or being automatically redirected to the app through a Branch Web SDK call. Measured in minutes.</p>
 </li>
 <li>
-<p><code>Click to x</code> refers to events that occur after someone clicks a Branch link. If someone clicks and installs from a link, and comes back 10 days later to purchase, we would count that as a conversion, and it would surface in our dashboard.</p>
+<p><code>Click to x</code> refers to events that occur after someone clicks a Branch link. If someone clicks and installs from a link, and comes back 10 days later to purchase, we would count that as a conversion, and it would surface in our dashboard. Measured in days.</p>
 </li>
 <li>
-<p><code>Impression to x</code> refers to events that occur after someone views a Branch impression link.</p>
+<p><code>Impression to x</code> refers to events that occur after someone views a Branch impression link. Measured in days.</p>
 </li>
 </ul>
 <p>Using the default value of 2 hours for deep linking and attribution under the old system, and 2 hours for deep linking with 7 days for install attribution, here's what you can expect.</p>
@@ -2190,7 +2191,8 @@ Behavior | Old Analytics | New Analytics
 -->
 
 <h3 id="unique-behavior">Unique behavior<a class="headerlink" href="#unique-behavior" title="Permanent link">&para;</a></h3>
-<p>We now default every visualization in the dashboard to be unique. This means that if you are testing Branch links, and click a link 5 times, we will display that as one click. If you'd like to see <em>all</em> clicks, export our data. This applies to all events, as well.</p>
+<p>We now default every visualization in the dashboard to be unique. This means that if you are testing Branch links, and click a link 5 times, we will display that as one click. This applies to events as well. This applies to all events, as well.</p>
+<p>Select visualizations also allow you to see total (i.e. non-unique) numbers as well. If you'd like to see total numbers on a visualization that does not support it, you can also export raw data.</p>
 <h3 id="cutoff-date">Cutoff date<a class="headerlink" href="#cutoff-date" title="Permanent link">&para;</a></h3>
 <p>We have a cut off date -- September 16th -- which represents the data where you can't mix and match data. As we've introduced this new analytics platform, we've kept systems running in parallel. However, there is the above date which represents dates where you can't mix old data with new. You can query data from any time before September 16th up until September 16th. You can query data from September 16th onwards. If you wanted to do, say, September 15th to September 17th, you would need two separate queries.</p>
 <h4 id="differences-from-cutoff-date">Differences From Cutoff Date<a class="headerlink" href="#differences-from-cutoff-date" title="Permanent link">&para;</a></h4>
@@ -2202,21 +2204,22 @@ Behavior | Old Analytics | New Analytics
 <p>This is the first chart found on the main page. This chart surfaces install counts for your app using the new analytics platform.</p>
 <p><img alt="image" src="../../../img/pages/dashboard/unified-analytics/installs-summary-old.png" /></p>
 <p><em>old</em></p>
-<p><img alt="image" src="../../../img/pages/dashboard/unified-analytics/installs-summary-old.png" /></p>
+<p><img alt="image" src="../../../img/pages/dashboard/unified-analytics/installs-summary-new.png" /></p>
 <p><em>new</em></p>
 <p><strong>Changes</strong></p>
-<p>We've removed the pie chart from the old visualizations; this is simply removing a chart, not removing any data. This new install summary chart by default shows Branch only installs, that are powered by the new attribution <a href="#attribution-windows">windows</a>. If you want to see all installs, and not just Branch driven installs, simply click <code>Show All Installs</code>. You will likely notice a higher number of installs driven by Branch--this is because we have a bigger window to count an install.</p>
+<p>We've removed the pie chart from the old visualizations; this is simply removing a chart, not removing any data. You can see the same breakdowns by campaign, channel, etc on the new install summary chart, making the pie chart redundant. (See also this article on why <a href="http://www.businessinsider.com/pie-charts-are-the-worst-2013-6">pie charts</a> are misleading.)</p>
+<p>This new install summary chart by default shows Branch only installs, that are powered by the new attribution <a href="#attribution-windows">windows</a>. If you want to see all installs, and not just Branch driven installs, simply click <code>Show All Installs</code>. You will likely notice a higher number of installs driven by Branch--this is because we have a bigger window to count an install.</p>
 <p>Filtering is improved on this chart, as you can add additional query logic by clicking <code>Add Compare</code> and <code>Add Filter</code>. Previously, you could only filter by one dimension, and now you can filter with more dimensions, with more comparisons.</p>
 <h4 id="click-flow-section">Click Flow Section<a class="headerlink" href="#click-flow-section" title="Permanent link">&para;</a></h4>
 <p>This section is visually the same, but different in terms of <em>how</em> clicks are tracked. First, we only track unique person clicks, so if you click the same link on your device 5 times, this chart will only reflect one click. Mobile deepview views or SMS sents do not count as clicks in this chart.</p>
 <h3 id="quick-link-analytics">Quick Link Analytics<a class="headerlink" href="#quick-link-analytics" title="Permanent link">&para;</a></h3>
-<p>Just like clow flow analytics, this section is visually the same, but clicks are tracked differently. These clicks are tracked by unique counts, and follow the model where only a click is counted when someone physically taps a link. Mobile deepview views or SMS sents do not count as clicks in this chart.</p>
+<p>Just like clow flow analytics, this section is visually the same, but clicks are tracked differently. These clicks are tracked by unique counts, and follow the model where only a click is counted when someone physically taps a link. Mobile deepview views or SMS sents do not count as clicks in this chart. The data can be exported.</p>
 <h3 id="source-analytics">Source Analytics<a class="headerlink" href="#source-analytics" title="Permanent link">&para;</a></h3>
 <p>Visually, you will see the query selector that is present on Install Summary. This is the same component, and it will let you drill down and add filtering logic across all events, not just installs. This data is unique as well, and can be exported.</p>
 <h3 id="journeys">Journeys<a class="headerlink" href="#journeys" title="Permanent link">&para;</a></h3>
-<p>Journeys data will line up to what's viewed on Source Analytics.</p>
+<p>Journeys data has also changed substantially. Previously, Journeys only included paid Journeys. Now it includes all of our Web SDK's web-to-app offerings. So it also includes analytics from the .banner() and .deepview() functions.</p>
 <h3 id="universal-ads">Universal Ads<a class="headerlink" href="#universal-ads" title="Permanent link">&para;</a></h3>
-<p>Universal Ads were introduced using the new Analytics platform, so there is no expected change.</p>
+<p>Universal Ads were introduced using the new Analytics platform, so there is no expected change. The data is unique as well, and can be exported.</p>
 <h2 id="changes-to-exported-data">Changes to exported data<a class="headerlink" href="#changes-to-exported-data" title="Permanent link">&para;</a></h2>
 <h3 id="liveview">Liveview<a class="headerlink" href="#liveview" title="Permanent link">&para;</a></h3>
 <p>Liveview hasn't changed much, but we've introduced an improved CSV export that reflects these new data models.</p>
