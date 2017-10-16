@@ -2237,9 +2237,10 @@
 </div>
 <h4 id="create-a-custom-click-tracking-domain">Create a custom click tracking domain<a class="headerlink" href="#create-a-custom-click-tracking-domain" title="Permanent link">&para;</a></h4>
 <ol>
-<li>Add and verify a custom click tracking domain in the <strong><a href="https://app.sparkpost.com/account/tracking-domains" target="_blank">Tracking Domains</a></strong> section of your SparkPost account:
-   <br>
-   <img alt="image" src="../../../img/pages/email/sparkpost-create-domain.png" /></li>
+<li>Add and verify a custom click tracking domain in the <strong><a href="https://app.sparkpost.com/account/tracking-domains" target="_blank">Tracking Domains</a></strong> section of your SparkPost account:</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/email/sparkpost-create-domain.png" /></p>
+<ol>
 <li>Create a new CNAME record in your DNS zone file and set the host of your domain to the value <code>spgo.io</code></li>
 </ol>
 <p>For more information on how to set up your domain, please visit SparkPost's <a href="https://www.sparkpost.com/docs/tech-resources/enabling-multiple-custom-tracking-domains/" target="_blank">documentation</a>.</p>
@@ -2253,14 +2254,14 @@
 <p>To enable Universal Links on your click tracking domain, you'll need to add the click tracking domain to your Associated Domains entitlement.</p>
 <ol>
 <li>In Xcode, go to the <code>Capabilities</code> tab of your project file.</li>
-<li>Scroll down and enable <code>Associated Domains</code> if it is not already enabled.
-   <br>
-   <img alt="image" src="../../../img/pages/email/enable-associated-domains.png" /></li>
-<li>Copy your click tracking domain from the <a href="#configure-your-app-for-your-click-tracking-domain">email you received from Branch</a>, or retrieve it from your ESP's settings.</li>
-<li>In the <code>Domains</code> section, click the <code>+</code> icon and add your click tracking domain. For example, if your click tracking domain is <code>email.example.com</code>, add an entry for <code>applinks:email.example.com</code>.
-   <br>
-   <img alt="image" src="../../../img/pages/email/add-domain.png" /></li>
+<li>Scroll down and enable <code>Associated Domains</code> if it is not already enabled.</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/email/enable-associated-domains.png" /></p>
+<ol>
+<li>Copy your click tracking domain from the <a href="#configure-your-app-for-your-click-tracking-domain">email you received from Branch</a>, or retrieve it from your ESP's settings.</li>
+<li>In the <code>Domains</code> section, click the <code>+</code> icon and add your click tracking domain. For example, if your click tracking domain is <code>email.example.com</code>, add an entry for <code>applinks:email.example.com</code>.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/email/add-domain.png" /></p>
 <div class="admonition protip">
 <p class="admonition-title">Having trouble or new to Universal Links?</p>
 <p>Follow <a href="../../../getting-started/universal-app-links/guide/ios/">these instructions</a> for more details on enabling Universal Links in the Branch dashboard and in Xcode.</p>

@@ -2253,16 +2253,15 @@
 <ol>
 <li>Log in to your SendGrid account.</li>
 <li>Go to Settings &gt; Whitelabels &gt; Email Links.</li>
-<li>Find your email link whitelabeled domain, click on the gear icon and click "View" (or create a new whitelabel).
-   <br>
-   <img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-view-domain.png" /></li>
-<li>Note the "Host" email click tracking domain (e.g. email.mydomain.com) and the SendGrid domain under "Data".
-   <br>
-   <img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-whitelabel.png" /></li>
-<li>Enter both the click tracking domain and the SendGrid domain in item 1 of this step:
-   <br>
-   <img alt="image" src="../../../img/pages/email/sendgrid/configure-sendgrid-1.png" /></li>
+<li>Find your email link whitelabeled domain, click on the gear icon and click "View" (or create a new whitelabel).</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-view-domain.png" /></p>
+<ol>
+<li>Note the "Host" email click tracking domain (e.g. email.mydomain.com) and the SendGrid domain under "Data".</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/email/sendgrid/sendgrid-whitelabel.png" />
+1. Enter both the click tracking domain and the SendGrid domain in item 1 of this step:</p>
+<p><img alt="image" src="../../../img/pages/email/sendgrid/configure-sendgrid-1.png" /></p>
 <p>On <strong>Done</strong> click, an AASA file - required for Universal Links - specific to that domain will be generated.</p>
 <h4 id="configure-your-app-for-your-click-tracking-domain">Configure your app for your click tracking domain<a class="headerlink" href="#configure-your-app-for-your-click-tracking-domain" title="Permanent link">&para;</a></h4>
 <p><img alt="image" src="../../../img/pages/email/responsys/configure-responsys-3.png" /></p>
@@ -2284,14 +2283,14 @@
 <p>To enable Universal Links on your click tracking domain, you'll need to add the click tracking domain to your Associated Domains entitlement.</p>
 <ol>
 <li>In Xcode, go to the <code>Capabilities</code> tab of your project file.</li>
-<li>Scroll down and enable <code>Associated Domains</code> if it is not already enabled.
-   <br>
-   <img alt="image" src="../../../img/pages/email/enable-associated-domains.png" /></li>
-<li>Copy your click tracking domain from the <a href="#configure-your-app-for-your-click-tracking-domain">email you received from Branch</a>, or retrieve it from your ESP's settings.</li>
-<li>In the <code>Domains</code> section, click the <code>+</code> icon and add your click tracking domain. For example, if your click tracking domain is <code>email.example.com</code>, add an entry for <code>applinks:email.example.com</code>.
-   <br>
-   <img alt="image" src="../../../img/pages/email/add-domain.png" /></li>
+<li>Scroll down and enable <code>Associated Domains</code> if it is not already enabled.</li>
 </ol>
+<p><img alt="image" src="../../../img/pages/email/enable-associated-domains.png" /></p>
+<ol>
+<li>Copy your click tracking domain from the <a href="#configure-your-app-for-your-click-tracking-domain">email you received from Branch</a>, or retrieve it from your ESP's settings.</li>
+<li>In the <code>Domains</code> section, click the <code>+</code> icon and add your click tracking domain. For example, if your click tracking domain is <code>email.example.com</code>, add an entry for <code>applinks:email.example.com</code>.</li>
+</ol>
+<p><img alt="image" src="../../../img/pages/email/add-domain.png" /></p>
 <div class="admonition protip">
 <p class="admonition-title">Having trouble or new to Universal Links?</p>
 <p>Follow <a href="../../../getting-started/universal-app-links/guide/ios/">these instructions</a> for more details on enabling Universal Links in the Branch dashboard and in Xcode.</p>
