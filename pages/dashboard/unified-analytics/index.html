@@ -2125,17 +2125,20 @@
                 
                 <h1 id="unified-analytics">Unified analytics<a class="headerlink" href="#unified-analytics" title="Permanent link">&para;</a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>Branch has introduced a brand new way of counting analytics. The simplest way to describe the change is by saying that deep linking is no longer tied together with attribution, meaning that you will see different numbers on your Branch dashboard. Everything from unique counts to clicks and attributions are modified.</p>
-<p>While we were at it, we decided to unify our events. Now, anytime you analyze data in the Branch dashboard, or export it out, you will receive consistent column names. The definitions for each column is found in the <a href="#data-mapping">data mapping</a> section.</p>
-<p>This document also covers every section where you can expect a difference when interacting with your data on the Branch dashboard, or exporting.</p>
+<p>Branch is introducing a new and improved analytics platform for you to preview.</p>
+<p>While the most visible impact of this change is our new and visually improved Summary Graph, it is important to understand that we have fundamentally changed the underlying model we use for counting events. This is the result of consistent feedback from Branch partners who have requested we provide deeper insights and clarity around campaigns powered by Branch links. As you want to understand the events associated with clicks on Branch links beyond the course of one user session and across all types of Branch links, we developed a new attribution engine to accurately attribute user events across interaction platforms and across channels.</p>
+<p>The biggest change is that we decoupled deep linking and attribution. Now you can measure the impact of events that are not directly associated with the user session in which the click occurred and this means you will now see different numbers on your Branch dashboard.</p>
+<p>In some cases, a user may click a link and only open the app several hours or days later. With this new analytics platform, we are still able to attribute both the open and any subsequent events, even though we did not deep link the user.
+Also and from now on, anytime you analyze data in the Branch dashboard, or export it out, you will see consistency in naming across all our reports and products, for all events.</p>
+<p>This document highlights each of the section where you can expect to see differences between our old and new analytics.</p>
 <div class="admonition protip">
 <p class="admonition-title">No changes required</p>
 <p>We've changed the entire back-end of analytics without requiring any code or implementation changes on your end.</p>
 </div>
 <h2 id="data-mapping">Data Mapping<a class="headerlink" href="#data-mapping" title="Permanent link">&para;</a></h2>
-<p>Previously, when you integrated the Branch SDK, and started clicking links, we automatically tracked clicks, installs, opens, and web session starts and pageviews (if you installed the web SDK). Ultimately, if you enabled Deepviews or Journeys, we counted clicks when a click didn't actually occur, such as when a Deepview displayed, a Journey automatically opened the app without any physical click. This caused confusion on our dashboard, as people would notice clicks occurring without anyone ever clicking a link! Fortunately, we've cleaned up our pre-defined events, and have introduced a new way to think of events.  </p>
-<p>We now have classifications of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. Similarly, we now have <em>content</em> events and <em>user lifecycle</em> events. </p>
-<p>The full mapping of events is below.</p>
+<p>From now, Branch provides you a well defined standard to keep track of and categorize events.</p>
+<p>This is different than previous behavior from when you integrated the Branch SDK. Once you created and clicked links, we automatically tracked clicks, installs, opens, and web session starts and pageviews (if you installed the web SDK). If you enabled Deepviews or Journeys, we counted clicks when a click didn't actually occur, such as when a Deepview displayed, a Journey automatically opened the app without any physical click. This caused confusion on our dashboard, as users would noticed clicks occurring without anyone ever clicking a link! Fortunately, thanks to a weel defined standard and categorization of events, this will no longer be the case.</p>
+<p>Below is the new classification of events. Think of when you track when a user adds payment info, and initiates a purchase, and finally completes a purchase: those are all <em>commerce</em> events. Similarly, we now have <em>content</em> events and <em>user lifecycle</em> events.</p>
 <ul>
 <li>impression</li>
 <li>click</li>
@@ -2182,9 +2185,9 @@ Behavior | Old Analytics | New Analytics
 <p>We now default every visualization in the dashboard to be unique. This means that if you are testing Branch links, and click a link 5 times, we will display that as one click. This applies to events as well. This applies to all events, as well.</p>
 <p>Select visualizations also allow you to see total (i.e. non-unique) numbers as well. If you'd like to see total numbers on a visualization that does not support it, you can also export raw data.</p>
 <h3 id="cutoff-date">Cutoff date<a class="headerlink" href="#cutoff-date" title="Permanent link">&para;</a></h3>
-<p>We have a cut off date -- September 16th -- which represents the data where you can't mix and match data. As we've introduced this new analytics platform, we've kept systems running in parallel. However, there is the above date which represents dates where you can't mix old data with new. You can query data from any time before September 16th up until September 16th. You can query data from September 16th onwards. If you wanted to do, say, September 15th to September 17th, you would need two separate queries.</p>
+<p>As far as the deployment of our new analytics platform, we created our cut off date on September 16th 2017 and we kept the old and new analytical systems running in parallel since then and will continue to do this for a short while. This mean you can query data from any time before September 16th up until September 16th with the old analytics. You can query data from September 16th onwards with both analytics. But if you wanted to do report across this line, say, September 15th to September 17th, you would need two separate queries.</p>
 <h4 id="differences-from-cutoff-date">Differences From Cutoff Date<a class="headerlink" href="#differences-from-cutoff-date" title="Permanent link">&para;</a></h4>
-<p>If you are tracking Purchase events, and want to see unique values for Purchases before the cut off date of September 16th, those values will display as 0. This is because the Purchase event hasn't stored unique counts before September 16th. However, moving forward, it does.</p>
+<p>If you are tracking Purchase events, and want to see unique values for Purchases before the cut off date of September 16th 2017, those values will display as 0. This is because the Purchase event hasn't stored unique counts before September 16th. However, we are now storing this information since then.</p>
 <h2 id="changes-to-the-branch-dashboard">Changes to the Branch Dashboard<a class="headerlink" href="#changes-to-the-branch-dashboard" title="Permanent link">&para;</a></h2>
 <h3 id="branch-summary-analytics">Branch Summary Analytics<a class="headerlink" href="#branch-summary-analytics" title="Permanent link">&para;</a></h3>
 <p>This section covers the changes found on the main page of the Branch <a href="https://dashboard.branch.io">dashboard</a>.  </p>
@@ -2217,7 +2220,7 @@ Behavior | Old Analytics | New Analytics
 <p>Webhooks, like data integratons, is no longer session based. This means we will send more webhooks to you automatically. This update hasn't completed yet.</p>
 <h2 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
 <h3 id="data-speed">Data speed<a class="headerlink" href="#data-speed" title="Permanent link">&para;</a></h3>
-<p>This new analytics platform isn't real time like the old dashboard analytics, but does not have a significant delay. We're continually improving the speed, and hope to have a standard SLA for dashboard reporting. </p>
+<p>This new analytics platform isn't real time like the old dashboard analytics, but does not have a significant delay. We're continually improving the speed, and hope to have a standard SLA for dashboard reporting.</p>
                 
                   
                 

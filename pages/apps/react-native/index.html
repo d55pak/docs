@@ -570,6 +570,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#adjust-cached-link-ttl" title="Adjust cached link TTL" class="md-nav__link">
+    Adjust cached link TTL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#display-content" title="Display content" class="md-nav__link">
     Display content
   </a>
@@ -2287,6 +2294,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#adjust-cached-link-ttl" title="Adjust cached link TTL" class="md-nav__link">
+    Adjust cached link TTL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#display-content" title="Display content" class="md-nav__link">
     Display content
   </a>
@@ -3041,6 +3055,30 @@ only the symbols you are using.</p>
 
   <span class="c1">// Now push the view for this URL</span>
   <span class="k">this</span><span class="p">.</span><span class="nx">navigator</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="nx">title</span><span class="o">:</span> <span class="nx">title</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="nx">url</span><span class="p">,</span> <span class="nx">image</span><span class="o">:</span> <span class="nx">image</span> <span class="p">})</span>
+<span class="p">})</span>
+</pre></div>
+
+</li>
+<li>
+<h3 id="adjust-cached-link-ttl">Adjust cached link TTL<a class="headerlink" href="#adjust-cached-link-ttl" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Any link that launched the app is cached by the native layers and returned
+    to the <code>branch.subscribe</code> listener after JavaScript finishes loading.</p>
+</li>
+<li>
+<p>By default, the initial link is cached for 5 seconds. This allows you to
+    unsubscribe and resubscribe later without receiving the initial link.</p>
+</li>
+<li>
+<p>If your app takes longer than this to load, you can adjust the TTL for
+    the initial link by adjusting <code>branch.initSessionTtl</code> to a value in
+    milliseconds.</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="hll"><span class="nx">branch</span><span class="p">.</span><span class="nx">initSessionTtl</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1">// Set to 10 seconds</span>
+</span><span class="nx">branch</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">({</span> <span class="nx">error</span><span class="p">,</span> <span class="nx">params</span> <span class="p">}</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
 <span class="p">})</span>
 </pre></div>
 
