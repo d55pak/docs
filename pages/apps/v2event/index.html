@@ -1939,6 +1939,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#available-events" title="Available Events" class="md-nav__link">
+    Available Events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#track-commerce-events" title="Track Commerce Events" class="md-nav__link">
     Track Commerce Events
   </a>
@@ -2373,8 +2380,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lifecycle-events" title="Lifecycle Events" class="md-nav__link">
-    Lifecycle Events
+  <a href="#track-lifecycle-events" title="Track Lifecycle Events" class="md-nav__link">
+    Track Lifecycle Events
   </a>
   
     <nav class="md-nav">
@@ -2530,8 +2537,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ios" title="iOS" class="md-nav__link">
-    iOS
+  <a href="#objective-c_16" title="Objective-C" class="md-nav__link">
+    Objective-C
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swift_16" title="Swift" class="md-nav__link">
+    Swift
   </a>
   
 </li>
@@ -2607,6 +2621,167 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>With event tracking, it's important to track the objects related to the event occurring. Branch provides a class to describe your in-app content items  called the <a href="../../../pages/apps/ios/#create-content-reference">Branch Universal Object</a>. For any of the events tracked below, make sure to include the universal object(s) involved. For example, if you want to track when someone purchases 3 items, you'd want to create a Branch Universal Object per item, and pass them along when tracking the event.</p>
 <p>Refer to the above document to set up Branch Universal Objects.</p>
+<h2 id="available-events">Available Events<a class="headerlink" href="#available-events" title="Permanent link">&para;</a></h2>
+<p>Use the table below to quickly find the event you want to track.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Event Name</th>
+<th align="center">Event Category</th>
+<th align="center">Objective C</th>
+<th align="center">Swift</th>
+<th align="center">Java</th>
+<th align="center">HTTP API</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Add To Cart</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Add To Wishlist</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_1">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_1">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_1">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">View Cart</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_2">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_2">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_2">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Initiate Purchase</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_3">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_3">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_3">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Add Payment Info</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_4">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_4">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_4">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Purchase</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_5">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_5">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_5">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Spend Credits</td>
+<td align="center">Commerce Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_6">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_6">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_6">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Search</td>
+<td align="center">Content Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_7">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_7">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_7">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">View Item</td>
+<td align="center">Content Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_8">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_8">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_8">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">View Items</td>
+<td align="center">Content Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_9">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_9">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_9">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Rate</td>
+<td align="center">Content Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_10">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_10">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_10">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Share</td>
+<td align="center">Content Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_11">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_11">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_11">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Complete Registration</td>
+<td align="center">Lifecycle Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_12">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_12">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_12">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Complete Tutorial</td>
+<td align="center">Lifecycle Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_13">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_13">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_13">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Achieve Level</td>
+<td align="center">Lifecycle Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_14">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_14">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_14">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Unlock Achievement</td>
+<td align="center">Lifecycle Event</td>
+<td align="center"><a href="../../../pages/apps/v2event/#objective-c_15">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#swift_15">Code</a></td>
+<td align="center"><a href="../../../pages/apps/v2event/#android_15">Code</a></td>
+<td align="center"><a href="">Code</a></td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
 <h2 id="track-commerce-events">Track Commerce Events<a class="headerlink" href="#track-commerce-events" title="Permanent link">&para;</a></h2>
 <p>Commerce events describe events that relate to a customer interacting with your products and converting by purchasing. These are events like adding payment information, purchasing, viewing products, etc. If you have enabled Branch Universal Ads, these events will automatically map to certain Ad Partners.</p>
 <h3 id="add-to-cart">Add to Cart<a class="headerlink" href="#add-to-cart" title="Permanent link">&para;</a></h3>
@@ -3318,7 +3493,7 @@
     <span class="o">.</span><span class="na">logEvent</span><span class="o">(</span><span class="n">context</span><span class="o">);</span>
 </pre></div>
 
-<h2 id="lifecycle-events">Lifecycle Events<a class="headerlink" href="#lifecycle-events" title="Permanent link">&para;</a></h2>
+<h2 id="track-lifecycle-events">Track Lifecycle Events<a class="headerlink" href="#track-lifecycle-events" title="Permanent link">&para;</a></h2>
 <p>Lifecycle events can be described as events a user takes in your app to continue progressing. These events can apply to game apps, as well as non game apps, for when a user completes a user profile, registration or tutorial.</p>
 <h3 id="complete-registration">Complete Registration<a class="headerlink" href="#complete-registration" title="Permanent link">&para;</a></h3>
 <p>Log this event when a user successfully registers for an account.</p>
@@ -3419,8 +3594,12 @@
 <p>Fire this event when a user hits an achievement point in your app.</p>
 <h2 id="track-custom-events">Track Custom Events<a class="headerlink" href="#track-custom-events" title="Permanent link">&para;</a></h2>
 <p>If you want to track an event that isn't a pre-defined event, simply do the following:</p>
-<h3 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h3>
+<h3 id="objective-c_16">Objective-C<a class="headerlink" href="#objective-c_16" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">BranchEvent</span><span class="p">.</span><span class="n">customEventWithName</span><span class="p">(</span><span class="s">@&quot;User_Scanned_Item&quot;</span><span class="p">)</span> <span class="n">logEvent</span><span class="p">];</span>
+</pre></div>
+
+<h3 id="swift_16">Swift<a class="headerlink" href="#swift_16" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span> <span class="n">BranchEvent</span><span class="p">.</span><span class="n">customEventWithName</span><span class="p">(</span><span class="s">&quot;User_Scanned_Item&quot;</span><span class="p">).</span><span class="n">logEvent</span><span class="p">()</span>
 </pre></div>
 
 <h3 id="android_16">Android<a class="headerlink" href="#android_16" title="Permanent link">&para;</a></h3>
@@ -3432,8 +3611,9 @@
 </pre></div>
 
 <h2 id="current-support">Current Support<a class="headerlink" href="#current-support" title="Permanent link">&para;</a></h2>
+<p>There are a few products and features unsupported by this new method of tracking events. We clarify what's currently supported and what isn't below.</p>
 <h3 id="acceptance">Acceptance<a class="headerlink" href="#acceptance" title="Permanent link">&para;</a></h3>
-<p>These events tracked through the SDK will appear to ad networks, like Criteo.</p>
+<p>Tracking these events will propagate to Ad Networks, like Criteo. For example, if you track the purchae event through Branch, this will map to Criteo's Purchase event.</p>
 <p>These events will also have analytics, so you can understand their performance, using the new Analytics Platform. Read more about the new Analytics Platform [here]((<a href="https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics">https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics</a>).</p>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
 <p>As of now, any calls made through these SDK methods will <strong>not</strong>:</p>
