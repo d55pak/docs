@@ -2223,19 +2223,19 @@
 
 <h3 id="configure-your-branch-links-as-android-app-links">Configure your Branch links as Android App Links<a class="headerlink" href="#configure-your-branch-links-as-android-app-links" title="Permanent link">&para;</a></h3>
 <p>This guide presumes that you've already configured Branch for Android App Links in the past. If you haven't configured your full native app to use Branch as Android App Links, <a href="../../../pages/apps/universal-app-links">please complete this guide</a> which will correctly configure the dashboard and manifest.</p>
-<p>Now, you simply need to edit the above manifest and paste in the following snippet <em>inside</em> the <code>application</code> element. Then you'll need to replace the <code>xxxx</code> with your own custom subdomain which will be visible on <a href="https://dashboard.branch.io/link-settings" target="_blank">the Branch link settings dashboard</a> at the bottom of the page. If you're using a custom subdomain, you can find the advanced instructions in the above link regarding configuring Android App Links.</p>
+<p>Now, you simply need to edit the above manifest and paste in the following snippet <em>inside</em> the desired <code>activity.</code> Then you'll need to replace the <code>xxxx</code> with your own custom subdomain which will be visible on <a href="https://dashboard.branch.io/link-settings" target="_blank">the Branch link settings dashboard</a> at the bottom of the page. If you're using a custom subdomain, you can find the advanced instructions in the above link regarding configuring Android App Links.</p>
 <div class="codehilite"><pre><span></span><span class="nt">&lt;application</span>
   <span class="err">......</span><span class="nt">&gt;</span>
 
-  ......
-
-  <span class="nt">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;activity...</span>
+  <span class="err">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
       <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;xxxx.app.link&quot;</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;xxxx-alternate.app.link&quot;</span> <span class="nt">/&gt;</span>
   <span class="nt">&lt;/intent-filter&gt;</span>
+<span class="nt">&lt;/activity&gt;</span>
 
 <span class="nt">&lt;/application&gt;</span>
 </pre></div>
