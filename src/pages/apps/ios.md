@@ -807,8 +807,9 @@
 
     - Use [Test deep link](#test-deep-link)
     
-    - Make sure you and not using wrapped links and redirecting to the Branch links i.e. Branch links are freestanding.
-
+    - Make sure your Branch links are freestanding and you are not using wrapped links. e.g. Clicking on a wrapped Bitly link:http://bit.ly/2yz3b8D which redirects to Branch link branchster.app.link/ZlFKLnIYlH will break Universal linking.
+    
+    
 - ### App not passing data
 
     - See if issue is related to [App not opening](#app-not-opening)
