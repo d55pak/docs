@@ -3600,11 +3600,14 @@
 <li>
 <h3 id="deep-links-do-not-open-app">Deep links do not open app<a class="headerlink" href="#deep-links-do-not-open-app" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Make sure you have completed <a href="../../../pages/dashboard/integrate/">Configure your dashboard</a> and <a href="#dialog-code">Configure your app</a></li>
-<li>Make sure the <code>Branch key</code> in your app (<a href="#dialog-code">Configure your app</a>) matches the <code>Branch key</code> in your deep link (<a href="#view-deep-link-data">View deep link data</a>)</li>
-<li>Make sure you have not disabled deep linking (<a href="../../../pages/apps/ios/#re-enable-universal-linking">Re-enable universal linking</a>)</li>
-<li>Make sure you meet the requirements for <a href="#expected-redirect-behavior">Supported platforms</a></li>
-<li>Make sure the link the user is click on matches your <code>link domain</code> from the <a href="https://dashboard.branch.io/link-settings">Branch Dashboard</a></li>
+<li>Make sure you are clicking on a deep link (e.g. <code>https://example.app.link/fzmLEhobLD</code>)</li>
+<li>Make sure you are not pasting a deep link in the address bar (in most cases, deep links must be clicked on)</li>
+<li>Make sure the deep link is not wrapped (e.g. <code>http://bit.ly/2yz3b8D</code> instead of <code>https://example.app.link/fzmLEhobLD</code>)</li>
+<li>Make sure you have <a href="../../../pages/dashboard/integrate/">configure your dashboard</a> and <a href="#dialog-code">configure your app</a></li>
+<li>Make sure the <code>Branch key</code> <a href="#dialog-code">in your app</a> matches the <code>Branch key</code> <a href="#view-deep-link-data">in your deep link</a></li>
+<li>Make sure you have not <a href="../../../pages/apps/ios/#re-enable-universal-linking">disabled universal linking on iOS</a></li>
+<li>Make sure you understand the <a href="#expected-redirect-behavior">expected behavior of deep links</a></li>
+<li>Make sure the deep link domain matches your <a href="https://dashboard.branch.io/link-settings">link domain</a> (e.g. link domain = <code>example.app.link</code>, deep link = <code>https://example.app.link/fzmLEhobLD</code>)</li>
 </ul>
 </li>
 <li>
