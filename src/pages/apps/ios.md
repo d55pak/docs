@@ -793,7 +793,7 @@
 
     - Need to select `app uses IDFA or GAID` when publishing your app (for better deep link matching)
 
-- ### App not opening
+- ### App not opening (via Universal links)
 
     - Double check [Integrate Branch](#integrate-branch)
 
@@ -806,6 +806,8 @@
     - Use [AASA validator](https://branch.io/resources/aasa-validator/)
 
     - Use [Test deep link](#test-deep-link)
+    
+    - Make sure you and not using wrapped links and redirecting to the Branch links i.e. Branch links are freestanding.
 
 - ### App not passing data
 
