@@ -177,6 +177,8 @@
     - Used for [Change link domain](#change-link-domain)
     - You can test your domain record changes with `dig ns <domain>` or `dig cname <domain>`
     - We recommend that you choose one domain or subdomain to use with Branch and stick with it, as switching can cause significant problems with your existing links
-    - If you are configuring the domain through AWS's Route 53, make sure you are editing the nameservers under the `Registered Domains` tab, and not the `Hosted zones` section
     - You cannot use your main website domain for hosting Branch links
     - Do not include `www` when adding your custom link domain
+    
+    !!! warning
+        If you are configuring the domain through AWS's Route 53, please make sure you are editing the nameservers under the `Registered Domains` tab, and not the `Hosted zones` section.
