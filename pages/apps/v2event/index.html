@@ -2143,7 +2143,7 @@
 <h2 id="current-compatibility">Current Compatibility<a class="headerlink" href="#current-compatibility" title="Permanent link">&para;</a></h2>
 <p>There are a few products and features unsupported by this new method of tracking events. We clarify what's currently supported and what isn't below.</p>
 <h3 id="acceptance">Acceptance<a class="headerlink" href="#acceptance" title="Permanent link">&para;</a></h3>
-<p>Tracking these events will propagate to Ad Networks, like Criteo. For example, if you track the purchae event through Branch, this will map to Criteo's Purchase event.</p>
+<p>Tracking these events will propagate to Ad Networks, like Criteo. For example, if you track the purchase event through Branch, this will map to Criteo's Purchase event.</p>
 <p>These events will also have analytics, so you can understand their performance, using the new Analytics Platform. Read more about the new Analytics Platform <a href="https://docs.branch.io/pages/deep-linked-ads/branch-universal-ads/#view-your-data-with-unified-analytics">here</a>.</p>
 <h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
 <p>As of now, any calls made through these SDK methods will <strong>not</strong>:</p>
@@ -2160,78 +2160,129 @@
 <tr>
 <th align="center">Event Name</th>
 <th align="center">Event Category</th>
+<th align="center">iOS</th>
+<th align="center">Android</th>
+<th align="center">API</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="center">Add To Cart</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventAddToCart</td>
+<td align="center">BRANCH_STANDARD_EVENT.ADD_TO_CART</td>
+<td align="center">ADD_TO_CART</td>
 </tr>
 <tr>
 <td align="center">Add To Wishlist</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventAddToWishlist</td>
+<td align="center">BRANCH_STANDARD_EVENT.ADD_TO_WISHLIST</td>
+<td align="center">ADD_TO_WISHLIST</td>
 </tr>
 <tr>
 <td align="center">View Cart</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventViewCart</td>
+<td align="center">BRANCH_STANDARD_EVENT.VIEW_CART</td>
+<td align="center">VIEW_CART</td>
 </tr>
 <tr>
 <td align="center">Initiate Purchase</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventInitiatePurchase</td>
+<td align="center">BRANCH_STANDARD_EVENT.INITIATE_PURCHASE</td>
+<td align="center">INITIATE_PURCHASE</td>
 </tr>
 <tr>
 <td align="center">Add Payment Info</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventAddPaymentInfo</td>
+<td align="center">BRANCH_STANDARD_EVENT.ADD_PAYMENT_INFO</td>
+<td align="center">ADD_PAYMENT_INFO</td>
 </tr>
 <tr>
 <td align="center">Purchase</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventPurchase</td>
+<td align="center">BRANCH_STANDARD_EVENT.PURCHASE</td>
+<td align="center">PURCHASE</td>
 </tr>
 <tr>
 <td align="center">Spend Credits</td>
 <td align="center"><a href="#track-commerce-events">Commerce Event</a></td>
+<td align="center">BranchStandardEventSpendCredits</td>
+<td align="center">BRANCH_STANDARD_EVENT.SPEND_CREDITS</td>
+<td align="center">SPEND_CREDITS</td>
 </tr>
 <tr>
 <td align="center">Search</td>
 <td align="center"><a href="#track-content-events">Content Event</a></td>
+<td align="center">BranchStandardEventSearch</td>
+<td align="center">BRANCH_STANDARD_EVENT.SEARCH</td>
+<td align="center">SEARCH</td>
 </tr>
 <tr>
 <td align="center">View Item</td>
 <td align="center"><a href="#track-content-events">Content Event</a></td>
+<td align="center">BranchStandardEventViewItem</td>
+<td align="center">BRANCH_STANDARD_EVENT.VIEW_ITEM</td>
+<td align="center">VIEW_ITEM</td>
 </tr>
 <tr>
 <td align="center">View Items</td>
 <td align="center"><a href="#track-content-events">Content Event</a></td>
+<td align="center">BranchStandardEventViewItems</td>
+<td align="center">BRANCH_STANDARD_EVENT.VIEW_ITEMS</td>
+<td align="center">VIEW_ITEMS</td>
 </tr>
 <tr>
 <td align="center">Rate</td>
 <td align="center"><a href="#track-content-events">Content Event</a></td>
+<td align="center">BranchStandardEventRate</td>
+<td align="center">BRANCH_STANDARD_EVENT.RATE</td>
+<td align="center">RATE</td>
 </tr>
 <tr>
 <td align="center">Share</td>
 <td align="center"><a href="#track-content-events">Content Event</a></td>
+<td align="center">BranchStandardEventShare</td>
+<td align="center">BRANCH_STANDARD_EVENT.SHARE</td>
+<td align="center">SHARE</td>
 </tr>
 <tr>
 <td align="center">Complete Registration</td>
 <td align="center"><a href="#track-lifecycle-events">Lifecycle Event</a></td>
+<td align="center">BranchStandardEventCompleteRegistration</td>
+<td align="center">BRANCH_STANDARD_EVENT.COMPLETE_REGISTRATION</td>
+<td align="center">COMPLETE_REGISTRATION</td>
 </tr>
 <tr>
 <td align="center">Complete Tutorial</td>
 <td align="center"><a href="#track-lifecycle-events">Lifecycle Event</a></td>
+<td align="center">BranchStandardEventCompleteTutorial</td>
+<td align="center">BRANCH_STANDARD_EVENT.COMPLETE_TUTORIAL</td>
+<td align="center">COMPLETE_TUTORIAL</td>
 </tr>
 <tr>
 <td align="center">Achieve Level</td>
 <td align="center"><a href="#track-lifecycle-events">Lifecycle Event</a></td>
+<td align="center">BranchStandardEventAchieveLevel</td>
+<td align="center">BRANCH_STANDARD_EVENT.ACHIEVE_LEVEL</td>
+<td align="center">ACHIEVE_LEVEL</td>
 </tr>
 <tr>
 <td align="center">Unlock Achievement</td>
 <td align="center"><a href="#track-lifecycle-events">Lifecycle Event</a></td>
+<td align="center">BranchStandardEventUnlockAchievement</td>
+<td align="center">BRANCH_STANDARD_EVENT.UNLOCK_ACHIEVEMENT</td>
+<td align="center">UNLOCK_ACHIEVEMENT</td>
 </tr>
 </tbody>
 </table>
 <h2 id="track-commerce-events">Track Commerce Events<a class="headerlink" href="#track-commerce-events" title="Permanent link">&para;</a></h2>
 <p>Commerce events describe events that relate to a customer interacting with your products and converting by purchasing. These are events like adding payment information, purchasing, viewing products, etc. If you have enabled Branch Universal Ads, these events will automatically map to certain Ad Partners. Start by creating a Branch Universal Object for each product that is associated with the event you're tracking.</p>
-<p>From there, add the Branch universal object to the tracked event, and use the right pre-defined constant. For example, the code snippet below is to track when a user adds to cart, but simply replace that constant with another constant to track a different event.</p>
+<p>From there, add the Branch universal object to the tracked event, and use the right predefined constant. For example, the code snippet below is to track when a user adds to cart, but simply replace that constant with another constant to track a different event.</p>
 <h3 id="ios">iOS<a class="headerlink" href="#ios" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="c1">// Create a BranchUniversalObject with your content data:</span>
 <span class="n">BranchUniversalObject</span> <span class="o">*</span><span class="n">branchUniversalObject</span> <span class="o">=</span> <span class="p">[</span><span class="n">BranchUniversalObject</span> <span class="n">new</span><span class="p">];</span>
@@ -2623,7 +2674,7 @@
 </pre></div>
 
 <h2 id="track-custom-events">Track Custom Events<a class="headerlink" href="#track-custom-events" title="Permanent link">&para;</a></h2>
-<p>If you want to track an event that isn't a pre-defined event, simply do the following:</p>
+<p>If you want to track an event that isn't a predefined event, simply do the following:</p>
 <h3 id="ios_3">iOS<a class="headerlink" href="#ios_3" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">BranchEvent</span><span class="p">.</span><span class="n">customEventWithName</span><span class="p">(</span><span class="s">@&quot;User_Scanned_Item&quot;</span><span class="p">)</span> <span class="n">logEvent</span><span class="p">];</span>
 </pre></div>
