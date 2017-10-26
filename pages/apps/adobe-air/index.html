@@ -2389,6 +2389,10 @@
 <span class="n">branch</span><span class="o">.</span><span class="na">getShortUrl</span><span class="o">(</span><span class="n">tags</span><span class="o">,</span> <span class="s2">&quot;sms&quot;</span><span class="o">,</span> <span class="n">BranchConst</span><span class="o">.</span><span class="na">FEATURE_TAG_SHARE</span><span class="o">,</span> <span class="n">JSON</span><span class="o">.</span><span class="na">stringify</span><span class="o">(</span><span class="n">dataToInclude</span><span class="o">));</span>
 </pre></div>
 
+<div class="admonition warning">
+<p class="admonition-title">Deep linking is not fully supported at the moment</p>
+<p>Deferred deep linking will still pass data through install, but if the user already has the app installed, the user must click the Branch link twice to pass data. Recommended use case: referrals.</p>
+</div>
 </li>
 <li>
 <h3 id="read-deep-link">Read deep link<a class="headerlink" href="#read-deep-link" title="Permanent link">&para;</a></h3>

@@ -1045,6 +1045,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#auto-open" title="Auto-open" class="md-nav__link">
+    Auto-open
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-open-the-app-on-ios" title="Auto-open the app on iOS" class="md-nav__link">
+    Auto-open the app on iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#preserve-or-discard-referring-link-data" title="Preserve or discard referring link data" class="md-nav__link">
     Preserve or discard referring link data
   </a>
@@ -1178,6 +1198,19 @@
   <a href="#css-editor" title="CSS Editor" class="md-nav__link">
     CSS Editor
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-fonts-with-journeys" title="Custom fonts with Journeys" class="md-nav__link">
+    Custom fonts with Journeys
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1354,13 +1387,6 @@
           <li class="md-nav__item">
   <a href="#add-an-install-call-to-action" title="Add an install call to action" class="md-nav__link">
     Add an install call to action
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-fonts-with-journeys" title="Custom fonts with Journeys" class="md-nav__link">
-    Custom fonts with Journeys
   </a>
   
 </li>
@@ -2878,6 +2904,26 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#auto-open" title="Auto-open" class="md-nav__link">
+    Auto-open
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auto-open-the-app-on-ios" title="Auto-open the app on iOS" class="md-nav__link">
+    Auto-open the app on iOS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#preserve-or-discard-referring-link-data" title="Preserve or discard referring link data" class="md-nav__link">
     Preserve or discard referring link data
   </a>
@@ -3011,6 +3057,19 @@
   <a href="#css-editor" title="CSS Editor" class="md-nav__link">
     CSS Editor
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#custom-fonts-with-journeys" title="Custom fonts with Journeys" class="md-nav__link">
+    Custom fonts with Journeys
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3191,13 +3250,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#custom-fonts-with-journeys" title="Custom fonts with Journeys" class="md-nav__link">
-    Custom fonts with Journeys
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -3370,12 +3422,6 @@
         <span class="s1">&#39;$deeplink_path&#39;</span><span class="o">:</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">search</span> <span class="o">+</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">hash</span><span class="p">,</span>
         <span class="s1">&#39;user_id&#39;</span><span class="o">:</span> <span class="s1">&#39;45123&#39;</span>
     <span class="p">}</span>
-<span class="p">});</span>
-</pre></div>
-
-<p>Also, if the user has the app installed on their phone, we can try to open the app automaticaly and deeplink them.</p>
-<div class="codehilite"><pre><span></span><span class="nx">branch</span><span class="p">.</span><span class="nx">setBranchViewData</span><span class="p">({</span>
-    <span class="nx">open_app</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">});</span>
 </pre></div>
 
@@ -3595,6 +3641,35 @@ You can target a user based on the last touch point before they entered your web
 <p class="admonition-title">Variation Display Limitations</p>
 <p>You may have up to three variations in each Journey. Your total percentage allocation must not equal more than <strong>100%</strong>. Your total percentage allocation may be <em>less</em> than <strong>100%</strong>. In this situation, the remainder of your audience will be shown your standard website without a Journey. This allows you to A/B test against your non-Journeys website experience.</p>
 </div>
+<h3 id="auto-open">Auto-open<a class="headerlink" href="#auto-open" title="Permanent link">&para;</a></h3>
+<p>You can auto-open the app for users have your app installed with Journeys. You can find this setting by selecting the CTA in the template editor:</p>
+<p><img alt="image" src="../../../img/pages/journeys/auto-open-find.png" /></p>
+<p>When this box is checked, if a user views this Journey variation on your website and they have the app installed, the app will automatically open without them clicking.</p>
+<p><img alt="image" src="../../../img/pages/journeys/auto-open.png" /></p>
+<p>As opening the app automatically is the best user experience in most cases, this is checked by default for all new templates. </p>
+<div class="admonition caution">
+<p class="admonition-title">Web SDK open app setting</p>
+<p>If you use the open_app setting within the web SDK, this setting will still work for old Journeys (older than 10/25). For all new Journeys, the template setting will take precedence.</p>
+</div>
+<h4 id="auto-open-the-app-on-ios">Auto-open the app on iOS<a class="headerlink" href="#auto-open-the-app-on-ios" title="Permanent link">&para;</a></h4>
+<p>The auto-open setting in the template editor will work on iOS Chrome and Android. Because auto-open is powered by URI schemes and these can lead to error messages on iOS Safari for users without your app, this is not enabled on iOS by default. </p>
+<p>If you would like the app to open automatically on iOS Safari as well, you'll need to use a setting called <code>$uri_redirect_mode</code>. Since Branch has a massive pool of cookies tied to device identifiers, we know if your app is installed when the user clicks a link. We use this intelligence to determine when to use URI schemes. If we have the history that the user installed your app, we’ll use URI schemes to open up the app. </p>
+<p>You can <a href="https://support.branch.io/support/tickets/new" target="_blank">reach out to support</a> to enable this behavior across all your links, or set it just for Journeys in the web SDK:</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;script</span> <span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
+// load the Branch web lib
+(function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<span class="nt">&lt;_.length</span><span class="err">;)c(h,_[s++]);</span><span class="na">d=</span><span class="s">r.createElement(a);d.async=1;d.src=&quot;build.min.js&quot;;k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,&quot;script&quot;,&quot;branch&quot;,function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},&quot;addListener</span> <span class="err">applyCode</span> <span class="err">banner</span> <span class="err">closeBanner</span> <span class="err">creditHistory</span> <span class="err">credits</span> <span class="err">data</span> <span class="err">deepview</span> <span class="err">deepviewCta</span> <span class="err">first</span> <span class="err">getCode</span> <span class="err">init</span> <span class="err">link</span> <span class="err">logout</span> <span class="err">redeem</span> <span class="err">referrals</span> <span class="err">removeListener</span> <span class="err">sendSMS</span> <span class="err">setBranchViewData</span> <span class="err">setIdentity</span> <span class="err">track</span> <span class="err">validateCode&quot;.split(&quot;</span> <span class="err">&quot;),</span> <span class="err">0);</span>
+<span class="err">//</span> <span class="err">init</span> <span class="err">Branch</span> <span class="err">and</span> <span class="err">pass</span> <span class="err">in</span> <span class="err">your</span> <span class="err">preference</span> <span class="err">to</span> <span class="err">open</span> <span class="err">the</span> <span class="err">app</span>
+<span class="err">branch.init(&#39;BRANCH_KEY&#39;);</span>
+<span class="err">//</span> <span class="err">Trigger</span> <span class="err">your</span> <span class="err">Journeys</span> <span class="err">banner</span> <span class="err">to</span> <span class="err">use</span> <span class="err">the</span> <span class="err">correct</span> <span class="err">redirect</span> <span class="err">mode</span>
+<span class="err">branch.setBranchViewData({</span>
+        <span class="err">&#39;$uri_redirect_mode&#39;:</span> <span class="err">1</span>
+<span class="err">});</span>
+<span class="err">&lt;/script</span><span class="nt">&gt;</span>
+</pre></div>
+
+<p>Or, set it for individual templates by adding deep link data <code>$uri_redirect_mode:1</code>:</p>
+<p><img alt="image" src="../../../img/pages/journeys/uri-redirect-mode.png" /></p>
+<p><a href="https://blog.branch.io/making-uri-schemes-great-again-uri_redirect_mode/" target="_blank">Read our blog</a> to learn more about the challenges of URI schemes on iOS and the URI redirect mode feature.</p>
 <h3 id="preserve-or-discard-referring-link-data">Preserve or discard referring link data<a class="headerlink" href="#preserve-or-discard-referring-link-data" title="Permanent link">&para;</a></h3>
 <p>By default, when users arrive on a page running Journeys via a Branch link and <code>make_new_link</code> is not set to <code>true</code>, then any interaction with the Journey (click/install/re-open) will be attributed to the referring Branch link, rather than to the Journey. If <code>make_new_link</code> is set to <code>true</code>, the same events will be attributed to the Journey, instead.</p>
 <p>This can help you collect data on how the referring links are contributing to app growth/engagement, even when users aren’t installing from those links directly. For example, if a user clicked a Branch link on Facebook, landed on your website, and installed from a Journey, this would allow you to attribute the install to the link on Facebook. If the original link was also configured to deep link into your app, that deep link would be preserved, too.</p>
@@ -3778,6 +3853,11 @@ In this case, closing the Journey is very simple by calling:</p>
 <h3 id="css-editor">CSS Editor<a class="headerlink" href="#css-editor" title="Permanent link">&para;</a></h3>
 <p>If you have an upgraded premium account, you may also modify your CSS code directly in addition to using the WYSIWYG View Editor. To do so, go to the <strong>Configure Views</strong> step, click to edit a template, and then select the <strong>CSS Editor</strong> tab on the <strong>Customize Template</strong> screen.</p>
 <p><img alt="image" src="../../../img/pages/journeys/view-css-editor.png" /></p>
+<h4 id="custom-fonts-with-journeys">Custom fonts with Journeys<a class="headerlink" href="#custom-fonts-with-journeys" title="Permanent link">&para;</a></h4>
+<p>1) Go to <a href="https://fonts.google.com/">Google Fonts</a> and select a font.</p>
+<p><img alt="image" src="../../../img/pages/journeys/font_embedding.png" /></p>
+<p>2) Add to CSS EDITOR in Journeys. Please note: trailing semicolon on @import line is important. It's always good to have a fallback web font in case the google font fails to load.</p>
+<p><img alt="image" src="../../../img/pages/journeys/custom_font.png" /></p>
 <h3 id="template-customization-options">Template customization options<a class="headerlink" href="#template-customization-options" title="Permanent link">&para;</a></h3>
 <p>The customization options available depend on the template chosen:</p>
 <ul>
@@ -4211,11 +4291,6 @@ In this case, closing the Journey is very simple by calling:</p>
 <div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&#39;downloadapp&#39;</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#39;branch.deepviewCta()&#39;</span><span class="p">&gt;</span>View this in app<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 
-<h3 id="custom-fonts-with-journeys">Custom fonts with Journeys<a class="headerlink" href="#custom-fonts-with-journeys" title="Permanent link">&para;</a></h3>
-<p>1) Go to <a href="https://fonts.google.com/">Google Fonts</a> and select a font.</p>
-<p><img alt="image" src="../../../img/pages/journeys/font_embedding.png" /></p>
-<p>2) Add to CSS EDITOR in Journeys. Please note: trailing semicolon on @import line is important. It's always good to have a fallback web font in case the google font fails to load.</p>
-<p><img alt="image" src="../../../img/pages/journeys/custom_font.png" /></p>
 <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
 <h3 id="calls-to-branchsubdomain-blocked">Calls to [branchsubdomain] blocked<a class="headerlink" href="#calls-to-branchsubdomain-blocked" title="Permanent link">&para;</a></h3>
 <div class="admonition protip">
