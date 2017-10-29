@@ -2139,14 +2139,6 @@
 <div class="admonition note">
 <p>Looking for other Facebook Ad campaign types? Please check out our <a href="../../../pages/deep-linked-ads/facebook-ads-overview">Facebook Ads Overview guide</a>.</p>
 </div>
-<div class="admonition summary">
-<p class="admonition-title">Ideas for deep linked ads</p>
-<ul>
-<li>A user clicks on an ad for 20% off all purchases before the end of the week, and upon opening the app sees the coupon and has it automatically added to the shopping cart.</li>
-<li>A user clicks on an ad for blue sneakers. You show him the blue sneakers as soon as he opens the app.</li>
-<li>You know that users clicking on your ads are already familiar with your product. So in your app you reduce the carousel shown to new users from 5 to 2 if they've come in through an ad.</li>
-</ul>
-</div>
 <div class="admonition warning">
 <p class="admonition-title">Prerequisites</p>
 <ul class="task-list">
@@ -2285,8 +2277,6 @@
 <p>If it's close, you know that this is the root cause.</p>
 <p><strong>Don't Use setDebug</strong></p>
 <p>Facebook ads are incompatible with <a href="../../../pages/apps/ios/#simulate-an-install">debug mode</a>, as this prevents us from sending the correct hardware ID to Facebook.</p>
-<p><strong>Conflicts with Facebook SDK (iOS)</strong></p>
-<p>If your app integrates the FBSDK, be certain you are <em>not</em> using the <a href="https://developers.facebook.com/docs/reference/ios/current/class/FBSDKAppLinkUtility/"><code>FBSDKAppLinkUtility</code> method</a>. This has been known to cause conflicts with Branch when handling incoming deep links.</p>
 <h4 id="testing-deep-linked-ads">Testing Deep Linked Ads<a class="headerlink" href="#testing-deep-linked-ads" title="Permanent link">&para;</a></h4>
 <p>Unfortunately, the demo/preview ads used during the ads creation flow on Facebook use a different mechanism than live Facebook ads. <strong>This prevents you from testing deep linking from your Facebook ads</strong>. Do not waste time trying to get this to work. We've confirmed with Facebook representatives that this is broken.</p>
 <p>The only way to test the deep linking functionality is outside of the actual ads system is a helper tool from Facebook. Follow these instructions to test the deep linking functionality:</p>
@@ -2300,12 +2290,18 @@
 <li>Install the app and it should deep link!</li>
 </ol>
 <div class="admonition note">
-<p>If you see that someone liked your ad, do not bother trying to click and test it. Clicking your own ad that shows up in notifications <strong>will not deep link</strong>.</p>
+<p class="admonition-title">Note the following common mistakes for testing</p>
+<ol>
+<li>If you reset the GAID or IDFA on a device, you must uninstall Facebook and re-install prior to testing. Facebook does not update the IDFA/GAID every time it's opened.</li>
+<li>Send deferred does not require a notification to be sent or to be clicked. Checking "Send Deferred" will automatically queue up a match for the test device with the deep link data. The notifiation is completely separate from deferred deep linking.</li>
+<li>The Facebook account on the desktop where you click "Send Deferred" must match the account logged into the test device for deferred deep link data to be queued up. Note that we've observed issues where you log in and out of multiple accounts on test devices that cause Facebook to not correctly queue up a match.</li>
+<li>If you see that someone liked your ad, do not bother trying to click and test it. Clicking your own, live advertisement that shows up in notifications will not deep link.</li>
+</ol>
 </div>
 <h4 id="issues-reading-facebook-app-links">Issues Reading Facebook App Links<a class="headerlink" href="#issues-reading-facebook-app-links" title="Permanent link">&para;</a></h4>
 <p>If Facebook is having trouble reading the App Links from the Branch link, you might see messages like these while trying to test out the flow. This means that there is something corrupted in the OG tags causing Facebook to not parse your link.</p>
 <p><img src="/img/ingredients/deep-linked-ads/fb-ads-support/invalid-app-links-error.png" alt="Invalid App Links" class="center three-quarters">
-<img src="/img/ingredients/deep-linked-ads/fb-ads-support/missing_applinks.png" alt="Troubleshooting" class="center half"></p>
+<img src="/img/ingredients/deep-linked-ads/fb-ads-support/missing_applinks.png" alt="Troubleshooting" class="center"></p>
 <p><strong>Rescrape the OG Tags</strong></p>
 <p>You can test the OG tags using the <a href="https://developers.facebook.com/tools/debug/og/object">OG tag tester tool</a> provided by Facebook:</p>
 <ol>
