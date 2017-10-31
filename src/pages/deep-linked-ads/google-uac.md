@@ -19,7 +19,7 @@ Google Campaign | Campaign Type/Objective | Branch Ad Format
 --- | --- | ---
 Universal App Campaign | Mobile App Install | App Only: Install
 
-#### OS Support and Major Differences
+### OS Support and Major Differences
 
 Operating System | Supported by Universal App Campaigns? | Key Differences | Documentation
 --- | --- | --- | ---
@@ -37,7 +37,17 @@ Universal App Campaigns don’t use traditional ads and ad groups. Instead diffe
 	* [x] If you want to deep link from your ads directly to content, you should configure deep link routing.
 	* [x] Ads is a premium product priced on Monthly Active Users. Sign up for the Ads product to enable this functionality.
 
-#### Enable Google as an ad partner
+### Link ID
+
+If you are using our newer AdWords integration, you will need to retrieve your Link ID. You will need to reach out to your AdWords account manager, and let them know you want a Link ID generated for your iOS and Android app. You will need to provide the following information:
+
+- iOS and Android app package Name
+- Your AdWords customer account (123-456-789)
+- Branch CID
+
+In order to get the Branch CID, please send an email to sahil@branch.io.
+
+### Enable Google as an ad partner
 
 Set up Google as an Ad Partner and conversion tracking from Adwords on the Branch dashboard. If you already have Google enabled as an ad partner, follow the conversion tracking steps to ensure the conversion ID and label parameters are setup.
 
@@ -51,7 +61,7 @@ Set up Google as an Ad Partner and conversion tracking from Adwords on the Branc
 
 - We will now fill in the conversion ID and Label fields.
 
-#### Enable Adwords Conversions
+### Enable Adwords Conversions
 
 1. Go to your [Adwords dashboard](https://adwords.google.com/cm/CampaignMgmt){:target="\_blank"}.
 1. In the top nav bar, click into `Tools` > `Conversions`.
@@ -82,7 +92,7 @@ Set up Google as an Ad Partner and conversion tracking from Adwords on the Branc
 !!! tip "Universal App Campaigns for both Android & iOS"
 	If you're running a Universal App Campaign for both iOS and Android, all four fields under your Adwords Partner Settings should be populated, even if you have the same conversion ID and Label for iOS and Android. If you want to stop running Universal App Campaign reporting for a platform, just remove the two fields for that platform.
 
-#### Create an Ad Link
+### Create an Ad Link
 
 1. Create a Branch Ad link from the [Partner Management page](https://dashboard.branch.io/ads/partner-management){:target="\_blank"}'s `Create Google Adwords Link` button under the Google Adwords Partner and select `App Install or Engagement`
 <img src="/img/pages/deep-linked-ads/reusable-images/create-link-install-engagement.png" alt="Link Creation" class="three-quarters center">
@@ -93,17 +103,17 @@ Set up Google as an Ad Partner and conversion tracking from Adwords on the Branc
 ![Analytics Tags](/img/pages/deep-linked-ads/reusable-images/adwords-analytics-tags.png)
 
 
-#### Configure an Add
+### Configure an Add
 
 To setup a Universal App Campaign we will place our unique Branch Ad link into a Adwords Conversion Postback setting. Adwords campaign documentation is available **[here](https://support.google.com/adwords/answer/6247380?hl=en){:target="_blank"}**.
 
-#### Create Your Campaign
+### Create Your Campaign
 
 1. Select `Universal app campaign` on Adwords
 <img src="/img/pages/deep-linked-ads/reusable-images/adwords-uac-network.png" alt="Adwords Network" class="half center">
 1. Complete setting up the campaign completely with your desired app to promote
 
-#### Setup the Branch Link
+### Setup the Branch Link
 
 1. Copy the generated Branch Ad link from the last section which should be in the general form shown below (there are slight differences between iOS/Android). Ensure that the `link-identifier` param of the link has a unique id filled in.
 ![Adwords Network](/img/pages/deep-linked-ads/google-uac/full-branch-link.png)
@@ -120,8 +130,6 @@ The setup to measure your Universal App Campaign is complete and Adwords will se
 {! ingredients/deep-linked-ads/view-ad-link-data.md !}
 
 ## Troubleshooting
-
-#### FAQ / Debugging
 
 **Q: I'm not seeing any click data for my campaign.**
 
